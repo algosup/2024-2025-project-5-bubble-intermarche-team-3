@@ -35,6 +35,16 @@ This project should be done using the no-code platform Bubble, and be compatible
 |Lucas AUBARD|Technical Writer|User Manual|Clear, user-friendly documentation|
 
 ## Project Plan
+
+On April 25th 2025, we had a meeting with the clients to explain in the details the project answer the question we have.<br>
+It was decided that additional questions would be sent via email. To avoid duplicate questions and reduce the volume of messages that clients need to respond to, we agreed that all Program Managers will share the questions and answers they receive with each other and update them in a Google Sheet.
+
+
+
+
+
+One day before the final presentation which will take place on June, 20st 2025, we will do a post-mortem analysis to summarize what happened and make a report to the client.
+
 ## Milestones
 
 | Date       | Time   | Milestones                        |

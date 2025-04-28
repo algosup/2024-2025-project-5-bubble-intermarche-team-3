@@ -5,8 +5,13 @@
 ## Project definition
 This project aims to create a web application that recommends which wine or cheese to pair with a dish.
 
-The client is the retail chain "Intermarché", . Our contact point are Célia(The supermarket's quality assurance) and Chrys(an apprentice), the communication intern.
+The client is the retail chain "Intermarché", more specifically the Intermarché of Saint-Rémy-de-Provence. Our contact points are Célia, The supermarket's quality assurance, and Chrys, an apprentice.
+
 ## Scope
+
+This project should be done using the no-code platform Bubble, and be compatible with any type of of phone.
+
+
 
 ### MOSCOW
 
@@ -22,12 +27,12 @@ The client is the retail chain "Intermarché", . Our contact point are Célia(Th
 
 |Name|Role|Responsibilities|Performance criteria|
 |-|-|-|-|
-|Léna DE GERMAIN|Project Manager|||
-|Camille GAYAT|Program Manager|
-|Julian REINE|Technical Lead|
-|Guillaume DESPAUX|Software Engineer|
-|Vivien Bistrel TSANGUE CHOUNGOU|Quality Assurance|
-|Lucas AUBARD|Technical Writer|
+|Léna DE GERMAIN|Project Manager|Manage timeline and resources <br> Distribute workload <br> Report progress to stakeholders <br> Identify and mitigate risks|On-time project delivery <br> Complete and functional software <br> Efficient resource management <br> Smooth project execution|
+|Camille GAYAT|Program Manager|Mock-ups and general design of the software <br> Communication with the client <br> Functional specification delivery |Approved functional specifications <br> Positive client feedback on design and functionalities|
+|Julian REINE|Technical Lead|Define coding conventions <br> Choose technical tools used <br> Technical specification delivery <br> Manages developer tasks |Comprehensive technical specifications|
+|Guillaume DESPAUX|Software Engineer|Design User Interface <br> Define workflows<br>Manage database <br> Fix bugs|Full implementation of required features <br> Minimal bug count|
+|Vivien Bistrel TSANGUE CHOUNGOU|Quality Assurance|Review <br> documentation <br> Test the software <br>Ensure alignment with client expectations <br> Deliver a detailed test plan|Test Strategy <br>Bug identification <br> Detailed and thorough documentation|
+|Lucas AUBARD|Technical Writer|User Manual|Clear, user-friendly documentation|
 
 ## Project Plan
 ## Milestones
@@ -52,7 +57,7 @@ The main deliverable for this project is the source code of the application. Add
 - User Manual
 - Project Management Plan & Weekly Reports
 
-Finally, a presentation of our work will be done to the client as a 15-minute long presentation.
+Finally, a presentation of our work will be done to the clients as a 15-minute long presentation.
 
 ## Allocated Resources
 

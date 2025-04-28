@@ -36,12 +36,14 @@ This project should be done using the no-code platform Bubble, and be compatible
 
 ## Project Plan
 
-On April 25th 2025, we had a meeting with the clients to explain in the details the project answer the question we have.<br>
+On April 25th, 2025, we had a meeting with the clients to explain in detail the project and answer the questions we had.<br>
 It was decided that additional questions would be sent via email. To avoid duplicate questions and reduce the volume of messages that clients need to respond to, we agreed that all Program Managers will share the questions and answers they receive with each other and update them in a Google Sheet.
 
+To manage the various tasks and track each teammate's progress, we will use a GitHub repository to centralize all resources and documents.<br>
+Plus, we will use other resources like Google Drive to stock our research during the project.
 
 
-
+This project will use the Waterfall project management method due to the limited timeframe. However, we will incorporate some aspects of Scrum. With this combination, the project can still be completed despite the time constraints.
 
 One day before the final presentation which will take place on June, 20st 2025, we will do a post-mortem analysis to summarize what happened and make a report to the client.
 

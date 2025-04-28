@@ -3,10 +3,11 @@
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Project definition
+This project aims to create a web application that recommends which wine or cheese to pair with a dish.
 
-
-
+The client is the retail chain "Intermarché", . Our contact point are Célia(The quality assurance ) and Chrys(an apprentice), the communication intern.
 ## Scope
+
 ### MOSCOW
 
 ## Stakeholders

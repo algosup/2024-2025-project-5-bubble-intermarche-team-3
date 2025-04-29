@@ -11,7 +11,7 @@ The client is the retail chain "Intermarché", more specifically the Intermarch�
 
 This project should be done using the no-code platform Bubble, and be compatible with any type of of phone.
 
-
+The application will be fast and accessible, it must be easy to use to avoid a waste of time for the client.
 
 ### MOSCOW
 
@@ -75,8 +75,8 @@ Finally, a presentation of our work will be done to the clients as a 15-minute l
 
 - **Budget**: €0 (No external funding)
 - **Team:** 6 members
-- **Work Hours:** 
+- **Work Hours:** -- half-days of 3 hours and 15 minutes each
 
-**Total estimated working hours :**  hours
+**Total estimated working hours :** 9h45 hours(Currently)
 ## Risks
 

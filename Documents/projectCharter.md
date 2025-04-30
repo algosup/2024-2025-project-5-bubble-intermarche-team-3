@@ -1,5 +1,14 @@
 # Project Charter
 
+<div align="center">
+
+**Project Name:** Bubble Intermarché
+**Team:** Team 3  
+**Document Edited by:** Léna<br>
+**Last Time Modified:** 04/30/2025
+
+</div>
+
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Project definition
@@ -14,6 +23,10 @@ This project should be done using the no-code platform Bubble, and be compatible
 The application will be fast and accessible, it must be easy to use to avoid a waste of time for the client.
 
 ### MOSCOW
+
+This is the MosCoW made for the project :
+
+![moscow](images/MoSCoW.png)
 
 ## Stakeholders
 
@@ -77,6 +90,10 @@ Finally, a presentation of our work will be done to the clients as a 15-minute l
 - **Team:** 6 members
 - **Work Hours:** -- half-days of 3 hours and 15 minutes each
 
-**Total estimated working hours :** 9h45 hours(Currently)
+**Total estimated working hours :** 13h00 hours(Currently)
 ## Risks
 
+|Type|Description|Likelihood|Impact|Mitigation Strategy|
+|-|-|-|-|-|
+|Misinterpretation of Requirements|Essential requirements might be misinterpreted or overlooked.|Medium|High|Frequent communication and clarification meetings with the client.|
+|New requirements|The client may request modifications at any stage, requiring adjustments to our specifications and possibly leading to delays.|Medium|Medium|The client is regularly consulted to confirm that the ongoing work meets their expectations.|

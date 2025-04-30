@@ -26,7 +26,7 @@ The application will be fast and accessible, it must be easy to use to avoid a w
 
 This is the MosCoW made for the project :
 
-![moscow](images/MoSCoW.png)
+![moscow](Images/MoSCoW.png)
 
 ## Stakeholders
 
@@ -53,12 +53,12 @@ On April 25th, 2025, we had a meeting with the clients to explain in detail the 
 It was decided that additional questions would be sent via email. To avoid duplicate questions and reduce the volume of messages that clients need to respond to, we agreed that all Program Managers will share the questions and answers they receive with each other and update them in a Google Sheet.
 
 To manage the various tasks and track each teammate's progress, we will use a GitHub repository to centralize all resources and documents.<br>
-Plus, we will use other resources like Google Drive to stock our research during the project.
+Additionally, we will use Google Drive to store our research throughout the project, and we will use Slack as our means of communication.
 
 
-This project will use the Waterfall project management method due to the limited timeframe. However, we will incorporate some aspects of Scrum. With this combination, the project can still be completed despite the time constraints.
+This project will adopt the Waterfall project management method due to the limited timeframe. However, we will also incorporate some aspects of Scrum. By combining these methodologies, we can ensure the project is completed despite time constraints.
 
-One day before the final presentation which will take place on June, 20st 2025, we will do a post-mortem analysis to summarize what happened and make a report to the client.
+One day before the final presentation, scheduled for June 20, 2025, we will conduct a post-mortem analysis to summarize the project outcomes and prepare a report for the client.
 
 ## Milestones
 
@@ -82,7 +82,7 @@ The main deliverable for this project is the source code of the application. Add
 - User Manual
 - Project Management Plan & Weekly Reports
 
-Finally, a presentation of our work will be done to the clients as a 15-minute long presentation.
+Finally, we will deliver a 15-minute presentation of our work to the clients.
 
 ## Allocated Resources
 

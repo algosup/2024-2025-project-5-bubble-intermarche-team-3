@@ -9,19 +9,19 @@ This week marked the beginning of our project. It was mainly about communicating
 ## Accomplishments
 
 1. Project Analysis
-   - We made a MoSCoW to define the project to match clients's expectations.
+   - We made a MoSCoW to define the project to match Clients's expectations.
 2. Design
-    - We've started to create the mock up so we know what the web application will look like.
+    - We have initiated the creation of the mock-up to determine the web application’s appearance.
 3. GitHub Initialization
-    - The repository was organized and naming conventions were decided.
+    - The repository was organized, and naming conventions were established.
 
 
 ## Challenges
 
 1. New Team
-   - The main challenge is to ensure group cohesion between the new members.
+   - The primary challenge was ensuring group cohesion among the new members.
 2. Missing Team Member
-   - One member missing during the first project time.
+   - One member was absent during the first project time.
 
 3. New Role
    - Some have been given a role they never had, and need time to adapt to their new responsibilities.
@@ -31,12 +31,12 @@ This week marked the beginning of our project. It was mainly about communicating
 
 - Documents
   - most of these documents will either be finished or started.
-    - Project Charter
-    - Mock up
-    - functional
+    - Project Charter.
+    - Mock up.
+    - Functional.
 
 - Research
-    - find all picture we need for the project(cheese and wine).
+    - Search for and organize all necessary images (wine and cheese) for the project.
 
 ## Conclusion
 

@@ -3,11 +3,11 @@ name: Auto-Merge Main into Sub-Branches
 on:
   push:
     branches:
-      - main
-      - Functional
-      - Technical
-      - Management
-      - quality-assurance
+      - origin/main
+      - origin/functional
+      - origin/technical
+      - origin/management
+      - origin/quality-assurance
 
 permissions:
   contents: write

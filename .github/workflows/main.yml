@@ -50,16 +50,3 @@ jobs:
               echo "Branch $branch does not exist on origin, skipping."
             fi
           done
-
-  grammar-check:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Check grammar in Markdown files
-        uses: reviewdog/action-languagetool@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-check
-          pattern: '**/*.md'

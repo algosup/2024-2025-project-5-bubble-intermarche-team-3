@@ -31,8 +31,8 @@ This week marked the beginning of our project. It was mainly about communicating
 
 - Documents
     - Finish the Project Charter.
-    - Completed the first Mock up version.
-    - Star the Functional.
+    - Complete the first Mock up version.
+    - Start the Functional.
 
 - Research
     - Search for and organize all necessary images (wine and cheese) for the project.

@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**Project Name:** Bubble Intermarché
+**Project Name:** Bubble Intermarché <br>
 **Team:** Team 3  
 **Document Edited by:** Léna<br>
 **Last Time Modified:** 04/30/2025

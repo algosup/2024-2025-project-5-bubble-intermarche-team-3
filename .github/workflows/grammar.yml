@@ -2,13 +2,13 @@ name: Markdown Grammar and Spelling Check
 
 on:
   push:
-    branches: 
-      - QualityAssurance  
+    branches-ignore:
+      - main
     paths:
       - '**.md'
   pull_request:
-    branches: 
-      - QualityAssurance  
+    branches-ignore:
+      - main
     paths:
       - '**.md'
   # Allow manual trigger

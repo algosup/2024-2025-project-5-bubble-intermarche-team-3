@@ -153,12 +153,12 @@ The tasks will be distributed among the team members:
 
 The project will be divided in 6 weeks, with the following milestones:
 
-Week 1: Overview of the project, creation of the roadmap.
-Week 2: Mockup creation, starting the functional specification.
-Week 3: Functional specification completion, starting the technical specification. Code should be in progress based on the mockup.
-Week 4: Technical Specification completion, starting the usermanual.
-Week 5: Code should be almost done, Quality Assurance testing is starting.
-Week 6: Oral presentation preparation.
+- Week 1: Overview of the project, creation of the roadmap.
+- Week 2: Mockup creation, starting the functional specification.
+- Week 3: Functional specification completion, starting the technical specification. Code should be in progress based on the mockup.
+- Week 4: Technical Specification completion, starting the usermanual.
+- Week 5: Code should be almost done, Quality Assurance testing is starting.
+- Week 6: Oral presentation preparation.
 
 ---
 

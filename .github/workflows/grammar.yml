@@ -30,71 +30,73 @@ jobs:
       - name: Install dependencies
         run: |
           npm install -g textlint
-          npm install -g textlint-rule-spellcheck-tech-word
           npm install -g textlint-rule-common-misspellings
           npm install -g textlint-rule-no-dead-link
-          npm install -g textlint-rule-sentence-length
-          npm install -g textlint-rule-max-ten
+          npm install -g textlint-rule-terminology
+          npm install -g textlint-rule-en-spell
+          npm install -g textlint-rule-write-good
+          npm install -g textlint-rule-en-capitalization
+          npm install -g textlint-rule-apostrophe
+          npm install -g textlint-rule-diacritics
+          npm install -g textlint-rule-stop-words
 
       - name: Create textlint configuration
         run: |
           echo '{
             "rules": {
-              "spellcheck-tech-word": {
-                "max": 100,
-                "skipPatterns": []
-              },
-              "common-misspellings": {
-                "ignore": []
-              },
+              "common-misspellings": true,
               "no-dead-link": true,
-              "sentence-length": {
-                "max": 100
+              "en-spell": true,
+              "terminology": true,
+              "write-good": {
+                "passive": true,
+                "thereIs": true,
+                "adverb": true,
+                "tooWordy": true,
+                "cliches": true
               },
-              "max-ten": {
-                "max": 3
-              }
+              "en-capitalization": true,
+              "apostrophe": true,
+              "diacritics": true,
+              "stop-words": true
             }
           }' > .textlintrc
 
-      - name: Debug - List all markdown files
+      - name: Create error file
         run: |
-          echo "Found markdown files:"
-          find . -type f -name "*.md" -not -path "*/node_modules/*" -not -path "*/\.*"
+          echo "[]" > errors.json
 
-      - name: Run spell and grammar check and capture errors
+      - name: Run spell and grammar check
         id: check
         run: |
-          # Initialize errors array
-          echo "[]" > errors.json
-          
-          # Debug: Print the textlint configuration
-          echo "Textlint configuration:"
-          cat .textlintrc
-          
           # Find only markdown files and check them
           find . -type f -name "*.md" -not -path "*/node_modules/*" -not -path "*/\.*" | while read file; do
             echo "Checking $file..."
-            # Run textlint and capture the output
-            textlint --format json "$file" > lint_output.json || true
-            
-            # Debug: Print the content of lint_output.json
-            echo "Content of lint_output.json for $file:"
-            cat lint_output.json
+            # Run textlint with all installed rules
+            textlint --format json "$file" > "lint_output_$file.json" || true
             
             # Process the output and add to errors.json if there are issues
-            if [ -s lint_output.json ]; then
-              # Extract file path, line numbers, and messages
-              jq -r '.[].messages[] | {file: .filePath, line: .line, message: .message}' lint_output.json >> errors.json
+            if [ -s "lint_output_$file.json" ]; then
+              errors=$(jq -r '.[].messages | length' "lint_output_$file.json")
+              if [ "$errors" -gt 0 ]; then
+                echo "Found $errors issues in $file"
+                jq -r '.[].messages[] | {file: input_filename, line: .line, column: .column, message: .message, ruleId: .ruleId}' --arg input_filename "$file" "lint_output_$file.json" >> errors_temp.json
+              fi
             fi
           done
           
-          # Debug: Print the content of errors.json
-          echo "Content of errors.json:"
-          cat errors.json
+          # Combine all errors and format as proper JSON array
+          echo "[" > errors.json
+          if [ -f "errors_temp.json" ]; then
+            cat errors_temp.json | tr '\n' ',' | sed 's/,$//' >> errors.json
+          fi
+          echo "]" >> errors.json
           
-          # Check if errors.json contains any errors
-          if [ -s errors.json ] && [ "$(jq 'length' errors.json)" -gt 0 ]; then
+          # Check if any errors were found
+          errorCount=$(jq '. | length' errors.json)
+          echo "Found $errorCount total issues."
+          
+          if [ "$errorCount" -gt 0 ]; then
             echo "Errors found in markdown files"
             exit 1
           fi
@@ -126,39 +128,66 @@ jobs:
               }
               errorsByFile[error.file].push({
                 line: error.line,
-                message: error.message
+                column: error.column,
+                message: error.message,
+                ruleId: error.ruleId
               });
             });
             
             // Create the issue body
-            let issueBody = `Spelling and writing style issues were found in markdown files in the ${branch} branch.\n\n`;
+            let issueBody = `# Spelling and Grammar Issues Found\n\nBranch: \`${branch}\`\n\n`;
             
             // Add details for each file
             for (const [file, fileErrors] of Object.entries(errorsByFile)) {
-              issueBody += `### ${file}\n`;
+              issueBody += `## ${file}\n`;
               fileErrors.forEach(error => {
-                issueBody += `- Line ${error.line}: ${error.message}\n`;
+                issueBody += `- **Line ${error.line}:${error.column}** - ${error.message}\n`;
+                
+                // Add suggestions based on rule type
+                switch(error.ruleId) {
+                  case "common-misspellings":
+                    issueBody += `  - *Suggestion*: This appears to be a common misspelling. Check the correct spelling.\n`;
+                    break;
+                  case "en-spell":
+                    issueBody += `  - *Suggestion*: This word may be misspelled. Verify the correct spelling.\n`;
+                    break;
+                  case "write-good":
+                    issueBody += `  - *Suggestion*: Consider rephrasing for clarity and conciseness.\n`;
+                    break;
+                  case "en-capitalization":
+                    issueBody += `  - *Suggestion*: Check capitalization rules for proper nouns, titles, and sentence beginnings.\n`;
+                    break;
+                  case "apostrophe":
+                    issueBody += `  - *Suggestion*: Verify apostrophe usage for possessives and contractions.\n`;
+                    break;
+                  case "stop-words":
+                    issueBody += `  - *Suggestion*: Consider using more precise language instead of vague words.\n`;
+                    break;
+                  default:
+                    issueBody += `  - *Suggestion*: Review and correct according to English grammar and spelling rules.\n`;
+                }
               });
               issueBody += '\n';
             }
             
-            // If no specific errors were found, add a generic message
-            if (Object.keys(errorsByFile).length === 0) {
-              issueBody += "No specific errors were captured. Please check the GitHub Actions logs for details.\n";
-            }
-            
-            issueBody += `\nPlease fix these issues to maintain document quality.`;
+            issueBody += `## How to fix these issues\n\n`;
+            issueBody += `1. Review each error and make the necessary corrections\n`;
+            issueBody += `2. For spelling errors, verify the correct spelling in a dictionary\n`;
+            issueBody += `3. For grammar errors, consider rephrasing sentences for clarity\n`;
+            issueBody += `4. For capitalization errors, follow standard English capitalization rules\n`;
+            issueBody += `5. For punctuation errors, verify proper usage of commas, apostrophes, etc.\n\n`;
+            issueBody += `Please fix these issues to maintain document quality.`;
             
             try {
               await github.rest.issues.create({
                 owner,
                 repo,
-                title: `Spelling and Writing Style Issues Found in ${branch}`,
+                title: `Spelling and Grammar Issues Found in ${branch} Branch`,
                 body: issueBody,
-                labels: ['spelling', 'writing-style', 'documentation']
+                labels: ['spelling', 'grammar', 'documentation']
               });
+              console.log("Issue created successfully");
             } catch (error) {
               console.error('Error creating issue:', error);
-              // Log the error details for debugging
               console.error('Error details:', JSON.stringify(error, null, 2));
             }

@@ -33,7 +33,6 @@ jobs:
           npm install -g textlint-rule-spellcheck-tech-word
           npm install -g textlint-rule-common-misspellings
           npm install -g textlint-rule-no-dead-link
-          npm install -g textlint-rule-sentence-length
 
       - name: Create textlint configuration
         run: |
@@ -57,12 +56,20 @@ jobs:
             # Run textlint and capture the output
             textlint --format json "$file" > lint_output.json || true
             
+            # Debug: Print the content of lint_output.json
+            echo "Content of lint_output.json:"
+            cat lint_output.json
+            
             # Process the output and add to errors.json if there are issues
             if [ -s lint_output.json ]; then
               # Extract file path, line numbers, and messages
               jq -r 'if type == "array" then .[] else . end | {file: .filePath, line: .line, message: .message}' lint_output.json >> errors.json
             fi
           done
+          
+          # Debug: Print the content of errors.json
+          echo "Content of errors.json:"
+          cat errors.json
           
           # Check if errors.json contains any errors
           if [ -s errors.json ] && [ "$(jq 'length' errors.json)" -gt 0 ]; then

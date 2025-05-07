@@ -14,6 +14,67 @@
 
 ## Table of Content
 
+- [Technical Specifications - Team 3](#technical-specifications---team-3)
+  - [Table of Content](#table-of-content)
+- [I. Project Overview](#i-project-overview)
+  - [1. Introduction](#1-introduction)
+    - [1.1 Objectives](#11-objectives)
+  - [2. Project Scope](#2-project-scope)
+    - [2.1 In Scope](#21-in-scope)
+    - [2.3 Out Of Scope](#23-out-of-scope)
+  - [3. Task Management](#3-task-management)
+    - [3.1 Task Distribution](#31-task-distribution)
+    - [3.2 Shedule](#32-shedule)
+  - [4. Developement Environement](#4-developement-environement)
+    - [4.1 Technologies Used](#41-technologies-used)
+    - [4.2 Naming Conventions](#42-naming-conventions)
+    - [4.3 Github Repository Rules](#43-github-repository-rules)
+      - [4.3.1 Github Commits](#431-github-commits)
+        - [A. Commit Titles](#a-commit-titles)
+        - [B. Commit Body](#b-commit-body)
+        - [C. Examples](#c-examples)
+      - [4.3.2 Github Comments](#432-github-comments)
+    - [4.5 File and folder architecture](#45-file-and-folder-architecture)
+- [II. Technical Aspect](#ii-technical-aspect)
+  - [1. Application Overview](#1-application-overview)
+    - [1.1 Front-End Specifications](#11-front-end-specifications)
+      - [A. **Main Page**](#a-main-page)
+      - [B. **Filter Page**](#b-filter-page)
+      - [C. **Research Page**](#c-research-page)
+      - [D. **Product Page**](#d-product-page)
+      - [E. **Favorites Page**](#e-favorites-page)
+    - [1.2 Database structure](#12-database-structure)
+    - [1.2.1 Database breakdown](#121-database-breakdown)
+    - [1.2.2 Bubble Database breakdown](#122-bubble-database-breakdown)
+      - [A. Data Types](#a-data-types)
+      - [B. Fields](#b-fields)
+      - [C. Things](#c-things)
+      - [D. Relationships](#d-relationships)
+    - [1.3 API database](#13-api-database)
+      - [A. Data Pull](#a-data-pull)
+        - [Data Isn’t Stored in Bubble](#data-isnt-stored-in-bubble)
+        - [API Connector](#api-connector)
+        - [Data Usage](#data-usage)
+        - [Data Connexion to Bubble](#data-connexion-to-bubble)
+      - [B. Data Push](#b-data-push)
+        - [How This Maps in Bubble](#how-this-maps-in-bubble)
+    - [1.4 Bubble breakdown](#14-bubble-breakdown)
+      - [A. Visual Editor (Design Tab)](#a-visual-editor-design-tab)
+      - [B. Workflow Editor](#b-workflow-editor)
+      - [C. Database (Data Tab)](#c-database-data-tab)
+      - [D. Plugins](#d-plugins)
+      - [E. API Connector](#e-api-connector)
+      - [F. Responsive Engine](#f-responsive-engine)
+      - [G. Custom States](#g-custom-states)
+      - [H. Version Control \& Deployment](#h-version-control--deployment)
+      - [I. SEO and Hosting](#i-seo-and-hosting)
+    - [1.1 Development Rules](#11-development-rules)
+    - [1.2 Risks and Mitigation Strategies](#12-risks-and-mitigation-strategies)
+    - [1.3 Testing](#13-testing)
+      - [A. Testing Strategy](#a-testing-strategy)
+      - [B. Scalability and Performance](#b-scalability-and-performance)
+    - [1.4 Future Improvements](#14-future-improvements)
+
 ---
 
 # I. Project Overview
@@ -199,10 +260,15 @@ Team members have to **follow the same rules** said before for the comment secti
 │   │       ├── TestCase.md  
 │   │       └── testPlan.md   
 │   │              
-│   └── Technical                                
-│           ├── Images
-│           ├── TechnicalSpecification.md
-│           └── convention.md
+│   ├── Technical                                
+│   │       ├── Images
+│   │       ├── TechnicalSpecification.md
+│   │       └── convention.md
+│   │            
+│   └── dev                                
+│           ├── 
+│           ├── 
+│           └── 
 │
 ├── .gitignore
 └── README.md
@@ -217,6 +283,8 @@ This is the **section where the technical aspect of the project** will be explai
 
 > [!Note]
 > As we are using Bubble, there is not real Back-End developement. Bubble's functions for developing will be explained, but i will not be able to provide to you futher informations on how every modules works.
+
+---
 
 ## 1. Application Overview
 
@@ -421,7 +489,9 @@ Cheese --> "1" Origin : from
 
 ```
 
-#### 1.2.1 Database breakdown
+---
+
+### 1.2.1 Database breakdown
 
 In this database structure, each product is described with detailed specifications. For instance, when a wine is selected, all of its associated attributes will be displayed on the app's "Product Page."
 
@@ -486,7 +556,9 @@ This is the core class for all wine-related items.
 
 The subcatergories are connected together to thoses two categories allowing the user to find the best wine / cheese combination when checking one of the criterias givens.
 
-#### 1.2.2 Bubble Database breakdown
+---
+
+### 1.2.2 Bubble Database breakdown
 
 Bubble uses a built-in, no-code database that stores data in "Data Types", which are like tables in a **traditional** database. Each "Data Type" has Fields, which are like **columns**, and each Entry is a **row or object**.
 
@@ -580,9 +652,10 @@ Headers:
 
 Body: ```Raw JSON```
 
->[Note]
-> You can insert dynamic values using `dynamic` placeholders.
+> [Note]
+> You can insert dynamic values using dynamic placeholders.
 
+---
 
 ### 1.4 Bubble breakdown
 
@@ -610,8 +683,8 @@ Body: ```Raw JSON```
 
 - Extend functionality with third-party or Bubble-made plugins (e.g., API connector, Style animations etc...).
 
->[!Note]
->You can also create your own plugins if needed.
+> [!Note]
+> You can also create your own plugins if needed.
 
 #### E. API Connector
 
@@ -647,6 +720,8 @@ Body: ```Raw JSON```
 
 - Support for SEO-friendly URLs and content.
 
+---
+
 ### 1.1 Development Rules
 
 To maintain quality and consistency, the following rules will be followed:
@@ -656,6 +731,8 @@ To maintain quality and consistency, the following rules will be followed:
 - **Cross-Platform Testing:** The app will be tested across various devices and browsers to ensure accessibility and responsiveness.
 - **Performance Optimization:** The team will ensure fast load times and a smooth user experience across all platforms.
   
+---
+
 ### 1.2 Risks and Mitigation Strategies
 
 During development, the project may encounter a range of risks, including technical limitations, resource constraints, and scheduling issues. To address these proactively, the team has outlined the following mitigation strategies:
@@ -665,6 +742,8 @@ During development, the project may encounter a range of risks, including techni
 3. **Timeline Delays**: Unexpected setbacks such as technical hurdles, evolving requirements, or limited team availability may delay progress. To reduce this risk, the team will maintain clear communication, monitor project milestones, and revise schedules as necessary to stay aligned with delivery goals.
 
 By identifying these potential risks early and planning responsive mitigation strategies, the team aims to reduce disruptions and ensure the project stays on track for a successful and timely completion.
+
+---
 
 ### 1.3 Testing
 

@@ -43,14 +43,18 @@
       - [C. **Research Page**](#c-research-page)
       - [D. **Product Page**](#d-product-page)
       - [E. **Favorites Page**](#e-favorites-page)
-    - [1.2 Database structure](#12-database-structure)
-    - [1.2.1 Database breakdown](#121-database-breakdown)
-    - [1.2.2 Bubble Database breakdown](#122-bubble-database-breakdown)
+    - [1.2 Backend Overview (Workflow)](#12-backend-overview-workflow)
+      - [A. Trigger/Event](#a-triggerevent)
+      - [B. Series of Actions](#b-series-of-actions)
+      - [C. Conditions](#c-conditions)
+  - [2. Database structure](#2-database-structure)
+    - [2.1 Database breakdown](#21-database-breakdown)
+    - [2.3 Bubble Database breakdown](#23-bubble-database-breakdown)
       - [A. Data Types](#a-data-types)
       - [B. Fields](#b-fields)
       - [C. Things](#c-things)
       - [D. Relationships](#d-relationships)
-    - [1.3 API database](#13-api-database)
+    - [2.4 API database](#24-api-database)
       - [A. Data Pull](#a-data-pull)
         - [Data Isn’t Stored in Bubble](#data-isnt-stored-in-bubble)
         - [API Connector](#api-connector)
@@ -58,22 +62,24 @@
         - [Data Connexion to Bubble](#data-connexion-to-bubble)
       - [B. Data Push](#b-data-push)
         - [How This Maps in Bubble](#how-this-maps-in-bubble)
-    - [1.4 Bubble breakdown](#14-bubble-breakdown)
-      - [A. Visual Editor (Design Tab)](#a-visual-editor-design-tab)
-      - [B. Workflow Editor](#b-workflow-editor)
-      - [C. Database (Data Tab)](#c-database-data-tab)
-      - [D. Plugins](#d-plugins)
-      - [E. API Connector](#e-api-connector)
-      - [F. Responsive Engine](#f-responsive-engine)
-      - [G. Custom States](#g-custom-states)
-      - [H. Version Control \& Deployment](#h-version-control--deployment)
-      - [I. SEO and Hosting](#i-seo-and-hosting)
-    - [1.1 Development Rules](#11-development-rules)
-    - [1.2 Risks and Mitigation Strategies](#12-risks-and-mitigation-strategies)
-    - [1.3 Testing](#13-testing)
-      - [A. Testing Strategy](#a-testing-strategy)
-      - [B. Scalability and Performance](#b-scalability-and-performance)
-    - [1.4 Future Improvements](#14-future-improvements)
+  - [3. Bubble building features breakdown](#3-bubble-building-features-breakdown)
+    - [A. Visual Editor (Design Tab)](#a-visual-editor-design-tab)
+    - [B. Workflow Editor](#b-workflow-editor)
+    - [C. Database (Data Tab)](#c-database-data-tab)
+    - [D. Plugins](#d-plugins)
+    - [E. API Connector](#e-api-connector)
+    - [F. Responsive Engine](#f-responsive-engine)
+    - [G. Custom States](#g-custom-states)
+    - [H. Version Control \& Deployment](#h-version-control--deployment)
+    - [I. SEO and Hosting](#i-seo-and-hosting)
+  - [4. Features usage](#4-features-usage)
+- [III. Development Process](#iii-development-process)
+  - [1. Developement rules](#1-developement-rules)
+  - [2. Risks and Mitigation Strategies](#2-risks-and-mitigation-strategies)
+  - [3. Testing](#3-testing)
+    - [3.1 Testing Strategy](#31-testing-strategy)
+    - [3.2 Scalability and Performance](#32-scalability-and-performance)
+  - [4. Future Improvements](#4-future-improvements)
 
 ---
 
@@ -360,9 +366,38 @@ The Favorites Page allows users to manage their saved products.
   <img src="Images/FavoritePage.png" width="200" alt="Main Page">
 </p>
 
+### 1.2 Backend Overview (Workflow)
+
+Bubble's workflow is the brain behind the intuitive user interface. You can see it as the backend of the project. Bubble workflow is mainely composed of:
+
+#### A. Trigger/Event
+
+The trigger event is a block that starts the workflow, such as:
+
+- A button click
+- A page load
+- A user logging in
+- A custom event
+- An API workflow
+
+#### B. Series of Actions
+
+These are executed sequentially, for example:
+
+- Create a new thing (add to Bubble’s DB)
+- Make an API call (to Firebase, for example)
+- Show an element or “Navigate to another page”
+
+#### C. Conditions
+
+Each action can run only when certain conditions are met, e.g.:
+
+- Only if Input's value is not empty
+- Only if Current User's role is admin
+  
 ---
 
-### 1.2 Database structure
+## 2. Database structure
 
 Bubble provides a simple and efficient way to manage databases. Through the "Data" section of the platform, users can easily **add**, **modify**, and **retrieve** information from the database with minimal effort.
 
@@ -491,7 +526,7 @@ Cheese --> "1" Origin : from
 
 ---
 
-### 1.2.1 Database breakdown
+### 2.1 Database breakdown
 
 In this database structure, each product is described with detailed specifications. For instance, when a wine is selected, all of its associated attributes will be displayed on the app's "Product Page."
 
@@ -558,7 +593,7 @@ The subcatergories are connected together to thoses two categories allowing the 
 
 ---
 
-### 1.2.2 Bubble Database breakdown
+### 2.3 Bubble Database breakdown
 
 Bubble uses a built-in, no-code database that stores data in "Data Types", which are like tables in a **traditional** database. Each "Data Type" has Fields, which are like **columns**, and each Entry is a **row or object**.
 
@@ -590,7 +625,7 @@ You can also have lists: e.g., User → SavedPairings (list of Pairings)
 
 ---
 
-### 1.3 API database
+### 2.4 API database
 
 Because Bubble database's **is limited**, we decided to use an API to upload our database and **bypass this limit**. We decided to use [FireBase](https://firebase.google.com/) to create our own API dataset.
 
@@ -657,72 +692,80 @@ Body: ```Raw JSON```
 
 ---
 
-### 1.4 Bubble breakdown
+## 3. Bubble building features breakdown
 
-#### A. Visual Editor (Design Tab)
+### A. Visual Editor (Design Tab)
 
 - Drag-and-drop UI builder for creating responsive layouts.
-
 - Pre-built elements: text, buttons, inputs, repeating groups, icons, images, etc.
-
 - Custom styling via Bubble's style manager.
 
-#### B. Workflow Editor
+### B. Workflow Editor
 
 - Logic engine to handle actions and events (e.g., when a button is clicked, sign up a user, navigate, show a message).
-
 - Conditions and triggers (e.g., "Only when...").
 
-#### C. Database (Data Tab)
+### C. Database (Data Tab)
 
 - Built-in database for creating and managing custom data types (like tables) and fields.
-
 - Includes a dev and live database, and supports privacy rules.
 
-#### D. Plugins
+### D. Plugins
 
 - Extend functionality with third-party or Bubble-made plugins (e.g., API connector, Style animations etc...).
 
 > [!Note]
 > You can also create your own plugins if needed.
 
-#### E. API Connector
+### E. API Connector
 
 - Lets you connect to external APIs (RESTful APIs) without code.
-
 - Define API calls and use them in workflows or data sources.
 
-#### F. Responsive Engine
+### F. Responsive Engine
 
 - Helps design layouts that adapt to different screen sizes.
-
 - Use conditionals and breakpoints to tweak mobile/tablet/desktop experiences.
 
-#### G. Custom States
+### G. Custom States
 
 - Store temporary data on the front end (like UI state) without writing to the database.
 
-#### H. Version Control & Deployment
+### H. Version Control & Deployment
 
 - Built-in version control, including autosave and deployment from dev to live.
-
 - Ability to create “development versions” for testing.
-
 - Security & Privacy Rules
-
 - Fine-grained privacy controls for data access.
-
 - Set rules per data type for who can view/edit/delete entries.
 
-#### I. SEO and Hosting
+### I. SEO and Hosting
 
 - Built-in hosting, with options to add meta tags, custom domains, and SSL.
-
 - Support for SEO-friendly URLs and content.
 
 ---
 
-### 1.1 Development Rules
+## 4. Features usage
+
+During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the web app based on this. But for the app to work correctly it needs a "backend" logic named the workflow.
+
+For example, here is the workflow behind a simple login / register user page
+
+**Front-End**
+
+<p align="center">
+  <img src="Images/LoginFrontIMG.png" width="200" alt="Main Page">
+</p>
+**Back-end:**
+
+<p align="center">
+  <img src="Images/LoginIMG.png" width="200" alt="Main Page">
+</p>
+
+# III. Development Process
+
+## 1. Developement rules
 
 To maintain quality and consistency, the following rules will be followed:
 
@@ -733,7 +776,7 @@ To maintain quality and consistency, the following rules will be followed:
   
 ---
 
-### 1.2 Risks and Mitigation Strategies
+## 2. Risks and Mitigation Strategies
 
 During development, the project may encounter a range of risks, including technical limitations, resource constraints, and scheduling issues. To address these proactively, the team has outlined the following mitigation strategies:
 
@@ -745,13 +788,13 @@ By identifying these potential risks early and planning responsive mitigation st
 
 ---
 
-### 1.3 Testing
+## 3. Testing
 
 The testing part of the project will be done using the following tools:
 
 - **Manual Testing**: For exploratory testing, usability testing, and edge case scenarios that may not be covered by automated tests.
 
-#### A. Testing Strategy
+### 3.1 Testing Strategy
 
 The testing strategy is built around key development principles to ensure the application's quality and stability throughout its lifecycle:
 
@@ -763,7 +806,7 @@ The testing strategy is built around key development principles to ensure the ap
 
 ---
 
-#### B. Scalability and Performance
+### 3.2 Scalability and Performance
 
 The system will be engineered for scalability and performance, enabling it to handle complex operations, high data volumes, and significant user traffic. Key practices include:
 
@@ -778,7 +821,7 @@ By following these practices, the application will be built to scale, perform ef
 
 ---
 
-### 1.4 Future Improvements
+## 4. Future Improvements
 
 Below is a list of potential enhancements that could be considered for future development:
 

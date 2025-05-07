@@ -750,19 +750,6 @@ Body: ```Raw JSON```
 
 During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the web app based on this. But for the app to work correctly it needs a "backend" logic named the workflow.
 
-For example, here is the workflow behind a simple login / register user page
-
-**Front-End**
-
-<p align="center">
-  <img src="Images/LoginFrontIMG.png" width="200" alt="Main Page">
-</p>
-**Back-end:**
-
-<p align="center">
-  <img src="Images/LoginIMG.png" width="200" alt="Main Page">
-</p>
-
 # III. Development Process
 
 ## 1. Developement rules

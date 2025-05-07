@@ -12,7 +12,7 @@ This week we progressed on the conception of the web application's design and al
    - All images of wines and cheeses are saved.
 
 3. Document
-   - The template for the Test Plan and Test Case are started.
+   - Initialization of the Test Plan and Test Cases documents.
    - The template for the Technical are started.
    - The Project Charter is complete.
 

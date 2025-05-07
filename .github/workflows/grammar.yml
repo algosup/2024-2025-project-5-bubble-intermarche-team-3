@@ -8,6 +8,11 @@ on:
     branches-ignore:
       - main
 
+# Add permissions block at the workflow level
+permissions:
+  issues: write
+  contents: read
+
 jobs:
   spell-check:
     runs-on: ubuntu-latest
@@ -45,7 +50,7 @@ jobs:
       - name: Run spell and grammar check and capture errors
         id: check
         run: |
-          # Create a temporary file to store errors
+          # Initialize errors array
           echo "[]" > errors.json
           
           # Find only markdown files and check them
@@ -72,7 +77,13 @@ jobs:
             
             // Read the errors.json file
             const fs = require('fs');
-            const errors = JSON.parse(fs.readFileSync('errors.json', 'utf8'));
+            let errors = [];
+            try {
+              const fileContent = fs.readFileSync('errors.json', 'utf8');
+              errors = JSON.parse(fileContent);
+            } catch (error) {
+              console.error('Error reading errors.json:', error);
+            }
             
             // Group errors by file
             const errorsByFile = {};
@@ -98,12 +109,23 @@ jobs:
               issueBody += '\n';
             }
             
+            // If no specific errors were found, add a generic message
+            if (Object.keys(errorsByFile).length === 0) {
+              issueBody += "No specific errors were captured. Please check the GitHub Actions logs for details.\n";
+            }
+            
             issueBody += `\nPlease fix these issues to maintain document quality.`;
             
-            await github.rest.issues.create({
-              owner,
-              repo,
-              title: `Spelling and Writing Style Issues Found in ${branch}`,
-              body: issueBody,
-              labels: ['spelling', 'writing-style', 'documentation']
-            });
+            try {
+              await github.rest.issues.create({
+                owner,
+                repo,
+                title: `Spelling and Writing Style Issues Found in ${branch}`,
+                body: issueBody,
+                labels: ['spelling', 'writing-style', 'documentation']
+              });
+            } catch (error) {
+              console.error('Error creating issue:', error);
+              // Log the error details for debugging
+              console.error('Error details:', JSON.stringify(error, null, 2));
+            }

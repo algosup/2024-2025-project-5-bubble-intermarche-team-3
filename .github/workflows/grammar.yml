@@ -33,9 +33,7 @@ jobs:
           npm install -g textlint-rule-spellcheck-tech-word
           npm install -g textlint-rule-common-misspellings
           npm install -g textlint-rule-no-dead-link
-          npm install -g textlint-rule-preset-ja-technical-writing
           npm install -g textlint-rule-sentence-length
-          npm install -g textlint-rule-no-mix-dearu-desumasu
 
       - name: Create textlint configuration
         run: |
@@ -65,6 +63,12 @@ jobs:
               jq -r 'if type == "array" then .[] else . end | {file: .filePath, line: .line, message: .message}' lint_output.json >> errors.json
             fi
           done
+          
+          # Check if errors.json contains any errors
+          if [ -s errors.json ] && [ "$(jq 'length' errors.json)" -gt 0 ]; then
+            echo "Errors found in markdown files"
+            exit 1
+          fi
 
       - name: Create Issue for Spelling and Grammar Issues
         if: failure()

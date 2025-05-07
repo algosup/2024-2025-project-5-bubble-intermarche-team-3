@@ -62,43 +62,61 @@ jobs:
             }
           }' > .textlintrc
 
-      - name: Create error file
-        run: |
-          echo "[]" > errors.json
-
       - name: Run spell and grammar check
         id: check
         run: |
-          # Find only markdown files and check them
+          # Create a temporary directory for output files
+          mkdir -p temp_output
+          
+          # Create error tracking file
+          echo "[]" > errors.json
+          
+          # Find markdown files and check them
+          found_errors=false
+          
           find . -type f -name "*.md" -not -path "*/node_modules/*" -not -path "*/\.*" | while read file; do
             echo "Checking $file..."
-            # Run textlint with all installed rules
-            textlint --format json "$file" > "lint_output_$file.json" || true
+            # Create a safe filename for the output
+            safe_filename=$(echo "$file" | sed 's/[^a-zA-Z0-9]/_/g')
+            output_file="temp_output/${safe_filename}.json"
             
-            # Process the output and add to errors.json if there are issues
-            if [ -s "lint_output_$file.json" ]; then
-              errors=$(jq -r '.[].messages | length' "lint_output_$file.json")
-              if [ "$errors" -gt 0 ]; then
-                echo "Found $errors issues in $file"
-                jq -r '.[].messages[] | {file: input_filename, line: .line, column: .column, message: .message, ruleId: .ruleId}' --arg input_filename "$file" "lint_output_$file.json" >> errors_temp.json
+            # Run textlint
+            textlint --format json "$file" > "$output_file" || true
+            
+            # Check if there are any issues
+            if [ -s "$output_file" ]; then
+              error_count=$(jq -r '.[].messages | length' "$output_file")
+              if [ "$error_count" -gt 0 ]; then
+                echo "Found $error_count issues in $file"
+                found_errors=true
+                
+                # Extract the errors and add file path
+                jq -r '.[].messages[] | {file: $file, line: .line, column: .column, message: .message, ruleId: .ruleId}' --arg file "$file" "$output_file" >> errors_temp.json
+              else
+                echo "No issues found in $file"
               fi
+            else
+              echo "No output for $file"
             fi
           done
           
-          # Combine all errors and format as proper JSON array
-          echo "[" > errors.json
-          if [ -f "errors_temp.json" ]; then
+          # Combine all errors into a single JSON array
+          if [ -f errors_temp.json ]; then
+            echo "[" > errors.json
             cat errors_temp.json | tr '\n' ',' | sed 's/,$//' >> errors.json
-          fi
-          echo "]" >> errors.json
-          
-          # Check if any errors were found
-          errorCount=$(jq '. | length' errors.json)
-          echo "Found $errorCount total issues."
-          
-          if [ "$errorCount" -gt 0 ]; then
-            echo "Errors found in markdown files"
-            exit 1
+            echo "]" >> errors.json
+            
+            # Check if any errors were found
+            error_count=$(jq '. | length' errors.json)
+            echo "Found $error_count total issues."
+            
+            if [ "$error_count" -gt 0 ]; then
+              echo "Errors found in markdown files"
+              exit 1
+            fi
+          else
+            echo "No issues found in any files"
+            echo "[]" > errors.json
           fi
 
       - name: Create Issue for Spelling and Grammar Issues

@@ -6,7 +6,7 @@
 This document's main objective is to outline the different testing strategies and ensure that everyone understands the structure of quality assurance before the final version of the app is released to the user.  
 
 ### Scope
-This section clearly defines what will and will not be tested. 
+This section clely defines what will and will not be tested. 
 
 - **In-Scope:**
   - Wine and cheese suggestion algorithm
@@ -16,7 +16,7 @@ This section clearly defines what will and will not be tested.
   - Mobile responsiveness
   - User Interface
   - Wine and cheese selection interface
-  - Language responsiveness
+  - Languge responsiveness
 
 - **Out-of-Scope:**
   - Third-party integrations
@@ -28,7 +28,7 @@ This section clearly defines what will and will not be tested.
 
 ### Objectives
 
-The testing process is to make sure the app is outlined clearly according to 
+The testing process i to make sure the app is outlined clearly according to 
 the client's requirements. Making sure unnecessary information is removed, 
 only relevant and important functionalities are applied.
 

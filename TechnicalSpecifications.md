@@ -80,6 +80,7 @@
     - [3.1 Testing Strategy](#31-testing-strategy)
     - [3.2 Scalability and Performance](#32-scalability-and-performance)
   - [4. Future Improvements](#4-future-improvements)
+  - [5. Glossary of Key Terms](#5-glossary-of-key-terms)
 
 ---
 
@@ -750,6 +751,8 @@ Body: ```Raw JSON```
 
 During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the web app based on this. But for the app to work correctly it needs a "backend" logic named the workflow.
 
+---
+
 # III. Development Process
 
 ## 1. Developement rules
@@ -817,3 +820,31 @@ Below is a list of potential enhancements that could be considered for future de
 - **Real time stock count:** We could implement, using a realtime database of the product availiability, create a tracker system to warn the user if the product they want is unavailiable in the store he want to go.
 - **Personalized Recommendations:** Learn from user behavior: saved pairings, ratings, dislikes. Offering tailored suggestions based on past activity or taste profiles
 - **Online shopping systeme:** being able to buy the desired product directly from the application.
+
+---
+
+## 5. Glossary of Key Terms
+
+| Term | Explanation |
+|------|-------------|
+| **Bubble** | A no-code web development platform used to create web applications without traditional programming. |
+| **API Connector** | A plugin in Bubble used to define and manage external API calls from within the no-code editor. |
+| **API (Application Programming Interface)** | A way for applications to communicate and exchange data; used here to connect Bubble with Firebase. |
+| **Firebase** | A backend-as-a-service platform by Google, used in this project to host the external database. |
+| **No-code** | Development using visual interfaces instead of writing source code; Bubble is a no-code tool. |
+| **Data Type** | A structured entity (like a database table) in Bubble used to define objects such as Wine or Cheese. |
+| **Field** | A property of a data type, like "price" or "region" in a Wine entry. Comparable to columns in a spreadsheet. |
+| **Thing** | A single entry or record in a Bubble data type (e.g., one specific wine). |
+| **Workflow** | A series of actions in Bubble triggered by an event (like clicking a button), similar to backend logic. |
+| **Trigger/Event** | The action that starts a workflow (e.g., page load, button click). |
+| **Condition** | A rule that determines whether a workflow action should be executed (e.g., only if user is logged in). |
+| **Custom State** | Temporary front-end memory in Bubble used to store UI information without saving to the database. |
+| **EAN / ITM** | EAN (European Article Number) and ITM (internal identifier) are used to uniquely identify products. |
+| **Responsive Engine** | Bubble’s tool to ensure the app layout adapts to different screen sizes (mobile/tablet/desktop). |
+| **Version Control** | System for managing and tracking changes in development; Bubble supports this natively. |
+| **Privacy Rules** | Permissions in Bubble that control who can view or modify data. |
+| **Lazy Loading** | Technique to delay loading of content until it's needed, improving performance. |
+| **Data Caching** | Temporarily storing data for faster access and better performance. |
+| **Repeating Group** | A UI element in Bubble used to display a list of things dynamically (e.g., a list of wines). |
+
+---

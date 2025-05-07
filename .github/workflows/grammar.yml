@@ -6,11 +6,7 @@ on:
       - main
     paths:
       - '**.md'
-  pull_request:
-    branches-ignore:
-      - main
-    paths:
-      - '**.md'
+
   # Allow manual trigger
   workflow_dispatch:
 

@@ -85,7 +85,7 @@ jobs:
             # Process the output and add to errors.json if there are issues
             if [ -s lint_output.json ]; then
               # Extract file path, line numbers, and messages
-              jq -r 'if type == "array" then .[] else . end | {file: .filePath, line: .line, message: .message}' lint_output.json >> errors.json
+              jq -r '.[].messages[] | {file: .filePath, line: .line, message: .message}' lint_output.json >> errors.json
             fi
           done
           

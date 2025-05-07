@@ -1,205 +1,221 @@
-name: Spell and Grammar Check
+name: Markdown Grammar and Spelling Check
 
 on:
   push:
-    branches-ignore:
-      - main
+    branches: 
+      - QualityAssurance  
+    paths:
+      - '**.md'
   pull_request:
-    branches-ignore:
-      - main
-
-# Add permissions block at the workflow level
-permissions:
-  issues: write
-  contents: read
+    branches: 
+      - QualityAssurance  
+    paths:
+      - '**.md'
+  # Allow manual trigger
+  workflow_dispatch:
 
 jobs:
-  spell-check:
+  lint-markdown:
+    name: Check Markdown Files
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-
-      - name: Set up Node.js
+      
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-
-      - name: Install dependencies
+          cache: 'npm'
+      
+      - name: Install textlint and rules
         run: |
-          npm install -g textlint
-          npm install -g textlint-rule-common-misspellings
-          npm install -g textlint-rule-no-dead-link
-          npm install -g textlint-rule-spelling
-          npm install -g textlint-rule-max-comma
-
-      - name: Create textlint configuration
+          npm init -y
+          npm install --save-dev \
+            textlint \
+            textlint-rule-spelling \
+            textlint-rule-common-misspellings \
+            textlint-rule-en-capitalization \
+            textlint-rule-terminology \
+            textlint-rule-no-dead-link \
+            textlint-rule-write-good \
+            textlint-rule-alex \
+            textlint-rule-no-empty-section \
+            textlint-rule-stop-words
+      
+      - name: Create textlint config
         run: |
-          echo '{
+          cat > .textlintrc <<EOF
+          {
             "rules": {
+              "spelling": true,
               "common-misspellings": true,
-              "no-dead-link": true,
-              "spelling": {
-                "language": "en",
-                "skipPatterns": [
-                  "/(http|https):\\/\\/[^\\s]*/",
-                  "/\\\\[.*?\\\\]\\\\(.*?\\\\)/",
-                  "/`[^`]*`/"
-                ]
+              "en-capitalization": true,
+              "terminology": true,
+              "write-good": {
+                "severity": "warning"
               },
-              "max-comma": {
-                "max": 4
+              "alex": {
+                "severity": "warning"
+              },
+              "no-empty-section": true,
+              "stop-words": {
+                "severity": "warning"
               }
             }
-          }' > .textlintrc
-
-      - name: Run spell check and collect all errors
-        id: check
+          }
+          EOF
+      
+      - name: Run Markdown linting
+        id: lint
         run: |
-          # Create an array to store all errors
-          echo "[]" > all_errors.json
-          
-          # Find all markdown files
-          files=$(find . -type f -name "*.md" -not -path "*/node_modules/*" -not -path "*/\.*")
-          
-          # Check each file and collect errors
-          has_errors=false
-          
-          for file in $files; do
+          # Create a temporary file to store errors
+          echo "[]" > errors.json
+          # Find only markdown files and check them
+          find . -type f -name "*.md" -not -path "*/node_modules/*" -not -path "*/\.*" | while read file; do
             echo "Checking $file..."
-            
-            # Run textlint on the file
-            textlint --format json "$file" > "temp_output.json" || true
-            
-            # Check if there are errors and append them to all_errors.json
-            if [ -s "temp_output.json" ]; then
-              # Extract errors and add file information
-              errors=$(jq -r '.[0].messages | length' "temp_output.json")
-              
-              if [ "$errors" -gt 0 ]; then
-                echo "Found $errors issues in $file"
-                has_errors=true
-                
-                # Transform and append errors
-                jq -r '.[0].messages[] | {
-                  file: "'"$file"'",
-                  line: .line,
-                  column: .column,
-                  message: .message,
-                  ruleId: .ruleId
-                }' "temp_output.json" >> temp_errors.json
-              else
-                echo "No issues found in $file"
-              fi
+            # Run textlint and capture the output
+            ./node_modules/.bin/textlint --format json "$file" > lint_output.json || true
+            # Process the output and add to errors.json if there are issues
+            if [ -s lint_output.json ]; then
+              # Extract file path, line numbers, and messages
+              jq -r '.messages[] | {file: .ruleId, line: .line, message: .message, severity: .severity}' lint_output.json > temp.json
+              # Append the current file's errors to our errors array
+              jq -s '.[0] + [.[1] | . + {file: "'$file'"}]' errors.json temp.json > combined.json
+              mv combined.json errors.json
+              echo "::error file=$file::Found grammar/spelling issues"
+              ERRORS_FOUND=true
             fi
           done
           
-          # Combine all errors into a proper JSON array
-          if [ -f temp_errors.json ]; then
-            echo "[" > all_errors.json
-            cat temp_errors.json | tr '\n' ',' | sed 's/,$//' >> all_errors.json
-            echo "]" >> all_errors.json
-            
-            # Print total error count
-            total_errors=$(grep -c "{" temp_errors.json || echo 0)
-            echo "Found $total_errors total issues"
-            
-            if [ "$total_errors" -gt 0 ]; then
-              echo "::set-output name=has_errors::true"
-              exit 1
-            fi
+          # Check if we found any errors
+          if [ "$(jq '. | length' errors.json)" -gt 0 ]; then
+            echo "errors_found=true" >> $GITHUB_OUTPUT
           else
-            echo "[]" > all_errors.json
-            echo "No errors found in any files"
+            echo "errors_found=false" >> $GITHUB_OUTPUT
           fi
-
-      - name: Create detailed issue with all errors
-        if: failure()
+      
+      - name: Create Markdown Report
+        if: steps.lint.outputs.errors_found == 'true'
+        run: |
+          echo "# Markdown Linting Report" > linting_report.md
+          echo "" >> linting_report.md
+          echo "Grammar and spelling issues were found in the following files:" >> linting_report.md
+          echo "" >> linting_report.md
+          
+          # Group errors by file
+          jq -r 'group_by(.file) | .[] | "## \(.[0].file)\n\n" + (.[] | "- Line \(.line): \(.message) (\(.file))\n")' errors.json >> linting_report.md
+      
+      - name: Upload linting report
+        if: steps.lint.outputs.errors_found == 'true'
+        uses: actions/upload-artifact@v3
+        with:
+          name: markdown-linting-report
+          path: linting_report.md
+      
+      - name: Create Issue for Spelling and Grammar Issues
+        if: steps.lint.outputs.errors_found == 'true' && github.event_name != 'pull_request'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
+            const fs = require('fs');
             const { owner, repo } = context.repo;
             const branch = context.ref.replace('refs/heads/', '');
             
-            // Read collected errors
-            const fs = require('fs');
-            let errors = [];
-            
-            try {
-              const fileContent = fs.readFileSync('all_errors.json', 'utf8');
-              errors = JSON.parse(fileContent);
-            } catch (error) {
-              console.error('Error reading error file:', error);
-              errors = [];
-            }
+            // Read the errors.json file
+            const errors = JSON.parse(fs.readFileSync('errors.json', 'utf8'));
             
             // Group errors by file
             const errorsByFile = {};
-            
-            for (const error of errors) {
+            errors.forEach(error => {
               if (!errorsByFile[error.file]) {
                 errorsByFile[error.file] = [];
               }
-              
               errorsByFile[error.file].push({
                 line: error.line,
                 message: error.message,
-                ruleId: error.ruleId
+                rule: error.file
               });
-            }
+            });
             
-            // Create issue body in the exact format requested
-            let issueBody = `Spelling and Writing Style Issues Found in ${branch}\n\n`;
+            // Create the issue body
+            let issueBody = `## Spelling and grammar issues found in markdown files\n\n`;
+            issueBody += `Branch: \`${branch}\`\n\n`;
             
-            for (const [filePath, fileErrors] of Object.entries(errorsByFile)) {
-              issueBody += `### ${filePath}\n`;
-              
+            // Add details for each file
+            for (const [file, fileErrors] of Object.entries(errorsByFile)) {
+              issueBody += `### ${file}\n`;
               fileErrors.forEach(error => {
-                // Create friendly error messages based on rule type
-                let errorMessage = '';
-                
-                if (error.ruleId === 'common-misspellings') {
-                  const match = error.message.match(/"([^"]+)" is a misspelling of "([^"]+)"/);
-                  if (match) {
-                    errorMessage = `"${match[1]}" is a misspelling of "${match[2]}"`;
-                  } else {
-                    errorMessage = error.message;
-                  }
-                } else if (error.ruleId === 'spelling') {
-                  const match = error.message.match(/Unknown word: (.+)/);
-                  if (match) {
-                    errorMessage = `"${match[1]}" might be misspelled. Check the spelling.`;
-                  } else {
-                    errorMessage = error.message;
-                  }
-                } else if (error.ruleId === 'max-comma') {
-                  errorMessage = `Too many commas in this sentence. Consider restructuring.`;
-                } else {
-                  errorMessage = error.message;
-                }
-                
-                issueBody += `- Line ${error.line}: ${errorMessage}\n`;
+                const severity = error.severity === 2 ? '🔴' : '🟡';
+                issueBody += `- ${severity} **Line ${error.line}**: ${error.message} (_${error.rule}_)\n`;
               });
-              
               issueBody += '\n';
             }
             
-            issueBody += `Please fix these issues to maintain document quality.`;
+            issueBody += `\n### How to fix these issues\n\n`;
+            issueBody += `1. Review the reported issues in each file\n`;
+            issueBody += `2. Make the necessary corrections\n`;
+            issueBody += `3. Commit and push your changes\n`;
+            issueBody += `4. The workflow will run again to verify your fixes\n\n`;
+            issueBody += `_This issue was automatically generated by the Markdown Grammar and Spelling Check workflow._`;
             
-            // Create the issue
-            try {
-              const issue = await github.rest.issues.create({
+            // Check if there's an existing open issue for this branch
+            const issues = await github.rest.issues.listForRepo({
+              owner,
+              repo,
+              state: 'open',
+              labels: ['documentation', 'automated']
+            });
+            
+            const existingIssue = issues.data.find(issue => 
+              issue.title.includes(`Markdown Issues in ${branch}`)
+            );
+            
+            if (existingIssue) {
+              // Update existing issue
+              await github.rest.issues.update({
                 owner,
                 repo,
-                title: `Spelling and Writing Style Issues Found in ${branch} Branch`,
-                body: issueBody,
-                labels: ['documentation', 'spelling', 'grammar']
+                issue_number: existingIssue.number,
+                body: issueBody
               });
-              
-              console.log(`Issue created successfully`);
-            } catch (error) {
-              console.error('Error creating issue:', error);
+              console.log(`Updated existing issue #${existingIssue.number}`);
+            } else {
+              // Create new issue
+              const newIssue = await github.rest.issues.create({
+                owner,
+                repo,
+                title: `Markdown Issues in ${branch} Branch`,
+                body: issueBody,
+                labels: ['documentation', 'grammar', 'spelling', 'automated']
+              });
+              console.log(`Created new issue #${newIssue.data.number}`);
             }
+      
+      - name: Add PR Comment
+        if: steps.lint.outputs.errors_found == 'true' && github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            
+            // Read the markdown report
+            const reportContent = fs.readFileSync('linting_report.md', 'utf8');
+            
+            // Add a comment to the PR
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: reportContent + "\n\nPlease fix these issues before merging this PR."
+            });
+      
+      # Fail the workflow if errors were found
+      - name: Check results
+        if: steps.lint.outputs.errors_found == 'true'
+        run: |
+          echo "::error::Grammar and spelling issues found in markdown files. See the linting report for details."
+          exit 1

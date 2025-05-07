@@ -184,7 +184,7 @@ Team members have to **follow the same rules** said before for the comment secti
 ```bash
  2024-2025-project-5-bubble-intermarche-team-3
 ├── Documents   
-|   |
+│   │ 
 │   ├── Functional
 │   │       ├── Images
 │   │       └── FunctionalSpecifications.md
@@ -203,7 +203,7 @@ Team members have to **follow the same rules** said before for the comment secti
 │           ├── Images
 │           ├── TechnicalSpecification.md
 │           └── convention.md
-|
+│
 ├── .gitignore
 └── README.md
 
@@ -232,7 +232,11 @@ The main page allows users to view and interact with highlighted products.
 - **Footer:** Includes navigation buttons for accessing different pages.
 - **Page Content:** Displays the user’s selected products. Clicking a product redirects the user to the Research Page.
 
-![alt text](\Images\MainPage.png)
+<p align="center">
+  <img src="Images/MainPage.png" width="200" alt="Main Page">
+</p>
+
+---
 
 #### B. **Filter Page**
 
@@ -242,7 +246,11 @@ This page lets users filter products based on specific criteria.
 - **Footer:** Same as the main page.
 - **Page Content:** Similar layout to the main page, with added filters in the header. After selecting their filters, users are redirected to the Research Page.
 
-![alt text](\Images\FilterPage.png)
+<p align="center">
+  <img src="Images/FilterPage.png" width="200" alt="Main Page">
+</p>
+
+---
 
 #### C. **Research Page**
 
@@ -252,7 +260,11 @@ The Research Page enables users to browse products based on their search or filt
 - **Footer:** Remains unchanged.
 - **Page Content:** Displays a list of matching products, including images. Clicking on a product takes the user to the Product Page.
 
-![alt text](\Images\ResearchPage.png)
+<p align="center">
+  <img src="Images/ResearchPage.png" width="200" alt="Main Page">
+</p>
+
+---
 
 #### D. **Product Page**
 
@@ -262,7 +274,11 @@ This page shows detailed information about a selected product.
 - **Footer:** Remains unchanged.
 - **Page Content:** Displays several product images, attribute tags, pricing information, recommended pairings (e.g., wine with cheese), and potential recipes using the product.
 
-![alt text](\Images\ProductPage.png)
+<p align="center">
+  <img src="Images/ProductPage.png" width="200" alt="Main Page">
+</p>
+
+---
 
 #### E. **Favorites Page**
 
@@ -272,7 +288,9 @@ The Favorites Page allows users to manage their saved products.
 - **Footer:** Remains unchanged.
 - **Page Content:** Lists all favorited products with their name, tags, and image. Users can remove items from their favorites or click on a product to view its detailed Product Page.
 
-![alt text](\Images\FavoritePage.png)
+<p align="center">
+  <img src="Images/FavoritePage.png" width="200" alt="Main Page">
+</p>
 
 ---
 
@@ -564,6 +582,7 @@ Body: ```Raw JSON```
 
 >[Note]
 > You can insert dynamic values using `dynamic` placeholders.
+
 
 ### 1.4 Bubble breakdown
 

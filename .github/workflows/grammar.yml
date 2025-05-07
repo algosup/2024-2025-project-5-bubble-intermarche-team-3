@@ -27,8 +27,10 @@ jobs:
           npm install -g textlint
           npm install -g textlint-rule-spellcheck-tech-word
           npm install -g textlint-rule-common-misspellings
-          npm install -g textlint-rule-grammar
           npm install -g textlint-rule-no-dead-link
+          npm install -g textlint-rule-preset-ja-technical-writing
+          npm install -g textlint-rule-sentence-length
+          npm install -g textlint-rule-no-mix-dearu-desumasu
 
       - name: Create textlint configuration
         run: |
@@ -36,8 +38,7 @@ jobs:
             "rules": {
               "spellcheck-tech-word": true,
               "common-misspellings": true,
-              "grammar": true,
-              "no-dead-link": true
+              "no-dead-link": true,
             }
           }' > .textlintrc
 
@@ -45,7 +46,7 @@ jobs:
         id: check
         run: |
           # Create a temporary file to store errors
-          echo "{}" > errors.json
+          echo "[]" > errors.json
           
           # Find only markdown files and check them
           find . -type f -name "*.md" -not -path "*/node_modules/*" -not -path "*/\.*" | while read file; do
@@ -86,7 +87,7 @@ jobs:
             });
             
             // Create the issue body
-            let issueBody = `Spelling and grammar issues were found in markdown files in the ${branch} branch.\n\n`;
+            let issueBody = `Spelling and writing style issues were found in markdown files in the ${branch} branch.\n\n`;
             
             // Add details for each file
             for (const [file, fileErrors] of Object.entries(errorsByFile)) {
@@ -102,7 +103,7 @@ jobs:
             await github.rest.issues.create({
               owner,
               repo,
-              title: `Spelling and Grammar Issues Found in ${branch}`,
+              title: `Spelling and Writing Style Issues Found in ${branch}`,
               body: issueBody,
-              labels: ['spelling', 'grammar', 'documentation']
+              labels: ['spelling', 'writing-style', 'documentation']
             });

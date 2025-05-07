@@ -13,7 +13,7 @@ This week we progressed on the conception of the web application's design and al
 
 3. Document
    - Initialization of the Test Plan and Test Cases documents.
-   - The template for the Technical are started.
+   - The template for the Technical is started.
    - The Project Charter is complete.
 
 

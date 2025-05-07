@@ -1,0 +1,108 @@
+name: Spell and Grammar Check
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+    branches-ignore:
+      - main
+
+jobs:
+  spell-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install -g textlint
+          npm install -g textlint-rule-spellcheck-tech-word
+          npm install -g textlint-rule-common-misspellings
+          npm install -g textlint-rule-grammar
+          npm install -g textlint-rule-no-dead-link
+
+      - name: Create textlint configuration
+        run: |
+          echo '{
+            "rules": {
+              "spellcheck-tech-word": true,
+              "common-misspellings": true,
+              "grammar": true,
+              "no-dead-link": true
+            }
+          }' > .textlintrc
+
+      - name: Run spell and grammar check and capture errors
+        id: check
+        run: |
+          # Create a temporary file to store errors
+          echo "{}" > errors.json
+          
+          # Find only markdown files and check them
+          find . -type f -name "*.md" -not -path "*/node_modules/*" -not -path "*/\.*" | while read file; do
+            echo "Checking $file..."
+            # Run textlint and capture the output
+            textlint --format json "$file" > lint_output.json || true
+            
+            # Process the output and add to errors.json if there are issues
+            if [ -s lint_output.json ]; then
+              # Extract file path, line numbers, and messages
+              jq -r '.messages[] | {file: .file, line: .line, message: .message}' lint_output.json >> errors.json
+            fi
+          done
+
+      - name: Create Issue for Spelling and Grammar Issues
+        if: failure()
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const branch = context.ref.replace('refs/heads/', '');
+            
+            // Read the errors.json file
+            const fs = require('fs');
+            const errors = JSON.parse(fs.readFileSync('errors.json', 'utf8'));
+            
+            // Group errors by file
+            const errorsByFile = {};
+            errors.forEach(error => {
+              if (!errorsByFile[error.file]) {
+                errorsByFile[error.file] = [];
+              }
+              errorsByFile[error.file].push({
+                line: error.line,
+                message: error.message
+              });
+            });
+            
+            // Create the issue body
+            let issueBody = `Spelling and grammar issues were found in markdown files in the ${branch} branch.\n\n`;
+            
+            // Add details for each file
+            for (const [file, fileErrors] of Object.entries(errorsByFile)) {
+              issueBody += `### ${file}\n`;
+              fileErrors.forEach(error => {
+                issueBody += `- Line ${error.line}: ${error.message}\n`;
+              });
+              issueBody += '\n';
+            }
+            
+            issueBody += `\nPlease fix these issues to maintain document quality.`;
+            
+            await github.rest.issues.create({
+              owner,
+              repo,
+              title: `Spelling and Grammar Issues Found in ${branch}`,
+              body: issueBody,
+              labels: ['spelling', 'grammar', 'documentation']
+            });

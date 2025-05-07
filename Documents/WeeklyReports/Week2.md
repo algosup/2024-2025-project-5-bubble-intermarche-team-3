@@ -1,4 +1,4 @@
-# Weekly Report - Week 1
+# Weekly Report - Week 2
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Overview
@@ -6,30 +6,28 @@ This week we progressed on the conception of the web application's design and al
 ## Accomplishments
 
 1. Design
-   - The first mock up versions are done, and the finale version is started.
+   - Completed the first version of the mock-up and initiated the final version.
 
 2. Research
-   - All images about wine and cheese are save.
+   - All images of wines and cheeses are saved.
 
 3. Document
    - The template for the Test Plan and Test Case are started.
    - The template for the Technical are started.
    - The Project Charter is complete.
 
-4. Correction document
-   - the Project Charter document has been corrected
 
 ## Challenges
 
 1. Missing Team Member
-   - One member was absent during the first project time of the week.
+   - One member was absent during the first project timeline of the week.
 2. Lack of time
-   - During this week we had public holidays, losing two days.
+   - During this week, we had public holidays, causing us to lose two days.
 
 ## Plan for Next Week
 
 - Design 
-   - Finish the final version of the mock up.
+   - Finish the final version of the mock-up.
 - Documents.
    - Start the Functional.
 - Research

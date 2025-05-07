@@ -11,3 +11,12 @@
 
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+
+## Tasks & Schedule
+
+## RACI Matrix
+## Risks & Assumptions
+## Key Performance Indicators
+## Weekly reports
+## Post Mortem Analysis
+## Addendum

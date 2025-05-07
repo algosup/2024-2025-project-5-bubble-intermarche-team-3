@@ -6,7 +6,7 @@
 This document's main objective is to outline the different testing strategies and ensure that everyone understands the structure of quality assurance before the final version of the app is released to the user.  
 
 ### Scope
-This section clely defines what will and will not be tested. 
+This section clely define what wil and wil not be tested. 
 
 - **In-Scope:**
   - Wine and cheese suggestion algorithm

@@ -222,36 +222,73 @@ Team members have to **follow the same rules** said before for the comment secti
 
 ```bash
  2024-2025-project-5-bubble-intermarche-team-3
-├── Documents   
-│   │ 
-│   ├── Functional
-│   │       ├── Images
-│   │       └── FunctionalSpecifications.md
-│   │  
-│   ├── Management
-│   │       ├── Images   
-│   │       ├── ManagementArtifacts
-│   │       └── WeeklyReports
-│   │                     
-│   ├── QualityAssurance
-│   │       ├── Images    
-│   │       ├── TestCase.md  
-│   │       └── testPlan.md   
-│   │              
-│   ├── Technical                                
-│   │       ├── Images
-│   │       ├── TechnicalSpecifications.md
-│   │       └── convention.md
-│   │            
-│   └── Development                                
-│           ├── 
-│           ├── 
-│           └── 
-│
-├── .gitignore
-└── README.md
+├──   Main
+│       ├── FunctionalSpecifications
+│       │      ├── Images
+│       │      ├── FunctionalSpecifications.md
+│       │      └── README.md
+│       │
+│       ├── TechnicalSpecifications
+│       │      ├── Images
+│       │      ├── TechnicalSpecifications.md
+│       │      └── README.md
+│       │
+│       ├── QualityAssurance
+│       │      ├── Images    
+│       │      ├── TestCase.md  
+│       │      ├── testPlan.md 
+│       │      └── README.md
+│       │
+│       ├── UserManual
+│       │      ├── UserManual.pdf
+│       │      └── README.md
+│       │
+│       ├── Management
+│       │      ├── ManagementArtifacts
+│       │      ├── WeeklyReports
+│       │      └── README.md
+│       │      
+│       ├── .gitignore
+│       └── README.md 
+│       
+├── Functional
+│       ├── .github/workflows
+│       ├── Images
+│       ├── FunctionalSpecifications.md
+│       └── README.md
+│  
+├── Management
+│       ├── .github/workflows
+│       ├── Images   
+│       ├── ManagementArtifacts
+│       ├── WeeklyReports
+│       └── README.md
+│                     
+├── QualityAssurance
+│       ├── .github/workflows
+│       ├── Images    
+│       ├── TestCase.md  
+│       ├── testPlan.md   
+│       └── README.md
+│              
+├── Technical       
+│       ├── .github/workflows                        
+│       ├── Images
+│       ├── TechnicalSpecifications.md
+│       ├── convention.md
+│       └── README.md
+│            
+└── UserManual  
+        ├── .github/workflows                             
+        ├── UserManual.pdf
+        └── README.md
+        
 
 ```
+
+This GitHub architecture is unique in that, instead of using a shared documentation branch, each contributor has their own dedicated branch. This allows everyone to push their commits independently, reducing the risk of conflicts with other documents.
+
+Additionally, we’ve implemented a GitHub workflow to automatically block commits if conflicts are detected.
 
 ---
 
@@ -569,6 +606,10 @@ The subcatergories are connected together to thoses two categories allowing the 
 
 Bubble uses a built-in, no-code database that stores data in "data types", which are like tables in a **traditional** database. Each "data type" has Fields, which are like **columns**, and each Entry is a **row or object**.
 
+<p align="center">
+  <img src="Images/BubbleDB.png" width="700" alt="Main Page">
+</p>
+
 #### A. Data Types
 
 - These are the main entities in your app.
@@ -658,9 +699,6 @@ Headers:
 - Content-Type:  ```application/json```
 
 Body: ```Raw JSON```
-
-> [Note]
-> You can insert dynamic values using dynamic placeholders.
 
 ---
 

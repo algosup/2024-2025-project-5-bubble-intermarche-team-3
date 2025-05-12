@@ -1,5 +1,5 @@
 
-# Technical Specifications - Team 3
+# Technical Specifications - Team 3 <!-- omit in toc -->
 
 ---
 
@@ -12,10 +12,8 @@
 | Quality Assurance | Vivien Bistrel TSANGUE CHOUNGOU | ✅ | //2025 |
 | Technical Writter | Lucas AUBARD | ✅ | //2025 |
 
-## Table of Content
+## Table of Content <!-- omit in toc -->
 
-- [Technical Specifications - Team 3](#technical-specifications---team-3)
-  - [Table of Content](#table-of-content)
 - [I. Project Overview](#i-project-overview)
   - [1. Introduction](#1-introduction)
     - [1.1 Objectives](#11-objectives)
@@ -23,9 +21,7 @@
     - [2.1 In Scope](#21-in-scope)
     - [2.3 Out Of Scope](#23-out-of-scope)
   - [3. Task Management](#3-task-management)
-    - [3.1 Task Distribution](#31-task-distribution)
-    - [3.2 Shedule](#32-shedule)
-  - [4. Developement Environement](#4-developement-environement)
+  - [4. Development Environement](#4-development-environement)
     - [4.1 Technologies Used](#41-technologies-used)
     - [4.2 Naming Conventions](#42-naming-conventions)
     - [4.3 Github Repository Rules](#43-github-repository-rules)
@@ -74,7 +70,7 @@
     - [I. SEO and Hosting](#i-seo-and-hosting)
   - [4. Features usage](#4-features-usage)
 - [III. Development Process](#iii-development-process)
-  - [1. Developement rules](#1-developement-rules)
+  - [1. Development rules](#1-development-rules)
   - [2. Risks and Mitigation Strategies](#2-risks-and-mitigation-strategies)
   - [3. Testing](#3-testing)
     - [3.1 Testing Strategy](#31-testing-strategy)
@@ -89,15 +85,15 @@
 ## 1. Introduction
 
 Welcome to the **fifth** project of this year, the project **bubble intermarché**.
-This project is **a commission** from [Intermarché](https://www.intermarche.com/accueil), a french grocerie store brand, especially the intermarché from *Saint-Remy-de-Provence*.
+This project is **a commission** from [Intermarché](https://www.intermarche.com/accueil), a french grocerie store brand, especially the intermarché from *Saint-Rémy-de-Provence*.
 
-The purpose of this project is to develop a **working web interface** using the no-code engine **bubble** showing the possible combination between wines and cheeses.The target users include:
+The purpose of this project is to develop a **working  interface** using the no-code engine **bubble** showing the possible combination between wines and cheeses.The target users include:
 
 - Tourist and users who want to learn more about the french gastronomic culture.
 
 ### 1.1 Objectives
 
-Saint-Rémy-de-Provence is a highly **touristic** area in France. The local Intermarché supermarket asked us to develop a **functional web interface** that could **showcase possible wine and cheese pairings**, based on both their current stock and traditional French gastronomy. The goal was to make these pairings more accessible to people around the world, with a special focus on the many tourists visiting the region.
+Saint-Rémy-de-Provence is a highly **touristic** area in France. The local Intermarché supermarket asked us to develop a **functional  interface** that could **showcase possible wine and cheese pairings**, based on both their current stock and traditional French gastronomy. The goal was to make these pairings more accessible to people around the world, with a special focus on the many tourists visiting the region.
 The application will be able to **associate**, using a **custom database**, the different **wine and cheese combinations** with aswell, **dishes recommendations** (e.g Boeuf bourguignion for the Red wine).
 The team will focus on creating an **user intuitive interface** so everybody, even tourrist who are not trained in computer science, can understand it fully and use it in its proper way.
 
@@ -109,19 +105,17 @@ Bubble will help us creating an user intuitive application, but we need to keep 
 
 ### 2.1 In Scope
 
-- Wine / Cheese recommandation
-- User Friendly interface
-- Complete filter of wine and cheese for the web app
-- Scanning function to identify the product
+- Wine / cheese recommandation.
+- User fiendly interface.
+- Complete filter of wine and cheese for the application.
+- Scanning function to identify the product.
 
 ### 2.3 Out Of Scope
 
-- Geolocalisation of the products in the store's shelfs
-- shipping or delivery services
-- Creating new Wine / Cheese pairings
-- Advanced settings functions
-
-The project will be developped using the no-code engine Bubble.
+- Geolocalisation of the products in the store's shelfs.
+- shipping or delivery services.
+- Creating new Wine / cheese pairings.
+- Advanced settings functions.
 
 ---
 
@@ -130,39 +124,18 @@ The project will be developped using the no-code engine Bubble.
 The project will be divided into the following tasks:
 
 - User Interface: Creating an intuitive and interactive user interface for the wine and cheese pairing service.
-- Bar code scanning: Creating the Bar Code scanning feature.
+- Bar code scanning: Creating the bar code scanning feature.
 - Testing and Debugging: Testing the system for bugs, performance issues, and usability problems, and fixing them as soon as possible.
-- Data base creation / Implementation: Creating the wine and the cheese databases based on the provided documentation.
+- Data base creation / implementation: Creating the wine and the cheese databases based on the provided documentation.
 - Documentation: Writing technical documentation, user guides, and other relevant documentation for the project.
 
-The team will collaborate across all project tasks, with each member bringing their specific skills and expertise to different parts of the work. Regular meetings will be scheduled to review progress, share updates, and quickly resolve any challenges that may appear during development. Throughout the process, the team will also engage with the customer to gather feedback and confirm that deliverables meet expectations.
+The team will collaborate across all project tasks, with each member bringing their specific skills and expertise to different parts of the work. Regular meetings will be scheduled to review progress, share updates, and quickly resolve any challenges that may applicationear during development. Throughout the process, the team will also engage with the customer to gather feedback and confirm that deliverables meet expectations.
 
 The project aims to be completed within the agreed timeline, with consistent updates provided to the customer to ensure the work stays aligned with their needs and requirements.
 
-### 3.1 Task Distribution
-
-The tasks will be distributed among the team members:
-
-- User Interface: Guillaume (SE)
-- Data base creation / Implementation: Guillaume (SE) / Julian (TL)
-- Bar code scanning: Guillaume (SE)
-- Testing and Debugging: Vivien (QA), Guillaume (SE)
-- Documentation: Vivien (QA), Julian (TL), Camille (PGM), Lucas (TW), Guillaume (SE)
-
-### 3.2 Shedule
-
-The project will be divided in 6 weeks, with the following milestones:
-
-- Week 1: Overview of the project, creation of the roadmap.
-- Week 2: Mockup creation, starting the functional specification.
-- Week 3: Functional specification completion, starting the technical specification. Code should be in progress based on the mockup.
-- Week 4: Technical Specification completion, starting the usermanual.
-- Week 5: Code should be almost done, Quality Assurance testing is starting.
-- Week 6: Oral presentation preparation.
-
 ---
 
-## 4. Developement Environement
+## 4. Development Environement
 
 Our team uses multiple machines to work on this project, such as:
 
@@ -173,13 +146,13 @@ Our team uses multiple machines to work on this project, such as:
 
 During this project, we will use:
 
-- [Bubble](https://bubble.io/home/): Bubble is a website making tool and a PaaS developed by Bubble Group. It can be used by people with limited or no programming experience to make web pages.
+- [Bubble](https://bubble.io/home/): Bubble is a site making tool and a PaaS developed by Bubble Group. It can be used by people with limited or no programming experience to make  pages.
 
 - Bubble pluggins:
-  - Barcode Scanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or alternatively choose 'Front' or 'Back' and allow the plugin to find the correct camera.
+  - Barcode ccanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or alternatively choose 'Front' or 'Back' and allow the plugin to find the correct camera.
   - CSS loading animations: Loading.io's CSS spinner uses CSS Animation to create Loading and Preloading animations. There are supported by all modern browsers such as Google Chrome and Mozilla Firefox.
-  - Local Storage & Cookies: Create cookies on the Device Local Storage to store information in a persistent way.
-  - API connector: The API connector lets you define your own API calls directly in the Bubble Editor and use them in your app.
+  - Local storage & Cookies: Create cookies on the Device Local Storage to store information in a persistent way.
+  - API connector: The API connector lets you define your own API calls directly in the Bubble Editor and use them in your application.
 
 ### 4.2 Naming Conventions
 
@@ -188,19 +161,17 @@ The team will use **PascalCase** for both documentation and **code structure.**
 PascalCase offers **clarity and precision**, making it easy for users to quickly identify and distinguish the individual words in a document or file name. Words are joined without spaces, with each new word starting with a capital letter.
 **Example of PascalCase:**
 
-``` TechnicalSpecification.md ```
+``` TechnicalSpecifications.md ```
 
 ### 4.3 Github Repository Rules
 
 To maintain the **quality** of documents in both the main branch and release versions, we have **established** a set of rules.
 
-The main branch is protected and only allows changes through pull requests. This ensures the branch remains free from unintended modifications. Each pull request must be approved by at least two team members.
-
-The only exception to these rules is the "Documents" branch, as it does not contain source code.
+The main branch is protected and only allows changes through pull requests. This ensures the branch remains free from unintended modifications. Each pull request must be applicationroved by at least two team members.
 
 #### 4.3.1 Github Commits
 
-Commits must adhere to specific guidelines, most of which are outlined in this document [here](https://github.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md).
+Commits must adhere to specific guidelines, most of which are outlined in this document [here](https://Github.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md).
 
 ##### A. Commit Titles
 
@@ -208,7 +179,7 @@ The title is a crucial part of any commit. It provides a concise summary of the 
 
 - **Clarity:** The title should accurately reflect the content of the commit.
 - **Naming Convention:** It must follow the project's naming standard—PascalCase, in our case.
-- **Professionalism:** Even if the commit is made in the "Documents" branch, the title should be free of grammar mistakes and written in clear, understandable language.
+- **Professionalism:** Even if the commit is made in a document branch, the title should be free of grammar mistakes and written in clear, understandable language.
 
 > [!NOTE]
 > Additionally, titles should not exceed 50 characters. They must describe the action taken (using a verb) and include the name of the feature or file affected.
@@ -219,12 +190,12 @@ The body of a commit provides a more detailed explanation of the changes and, li
 
 - **Provide context:** Clearly explain why the change was necessary.
 - **Summarize the changes:** Briefly describe how the changes were implemented, especially in cases of new features, fixes, refactoring, or optimizations.
-- **Reference related issues:** Link to relevant issue numbers when applicable.
+- **Reference related issues:** Link to relevant issue numbers when applicationlicable.
 - **Keep it concise:** Avoid long paragraphs; use bullet points or short lines to list what was done.
 - **Use clear language:** Avoid technical jargon unless it's explained—other contributors should be able to understand your commit easily.
 
 > [!NOTE]
-> The body can also contain specific keywords that can interact with the repository, such as adding co-authors, closing issues, etc. They can be found [there](https://github.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md/#5-Footer) in the footer section.
+> The body can also contain specific keywords that can interact with the repository, such as adding co-authors, closing issues, etc. They can be found [there](https://Github.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md/#5-Footer) in the footer section.
 
 ##### C. Examples
 
@@ -232,7 +203,7 @@ This is an template for a correct commit:
 
 ```plaintext
 
-[Type of change] (Quick Summary) --> Title
+[Type of change] (Quick summary) --> Title
 
 [What you implemented] --> Body
 - [Implementations].
@@ -242,7 +213,7 @@ This is an template for a correct commit:
 
 #### 4.3.2 Github Comments
 
-We follow github standards to enhance readability, but without comments, understanding the commits can take longer than necessary.
+We follow Github standards to enhance readability, but without comments, understanding the commits can take longer than necessary.
 
 To ensure that other team members can **collaborate effectively** and to support long-term maintenance, comments are essential.
 Team members have to **follow the same rules** said before for the comment section to ensure the workflow stays understandable.
@@ -269,10 +240,10 @@ Team members have to **follow the same rules** said before for the comment secti
 │   │              
 │   ├── Technical                                
 │   │       ├── Images
-│   │       ├── TechnicalSpecification.md
+│   │       ├── TechnicalSpecifications.md
 │   │       └── convention.md
 │   │            
-│   └── dev                                
+│   └── Development                                
 │           ├── 
 │           ├── 
 │           └── 
@@ -289,7 +260,7 @@ Team members have to **follow the same rules** said before for the comment secti
 This is the **section where the technical aspect of the project** will be explained in detail. We will dive into all of the features of the project, how they work and more specifications on them.
 
 > [!Note]
-> As we are using Bubble, there is not real Back-End developement. Bubble's functions for developing will be explained, but i will not be able to provide to you futher informations on how every modules works.
+> As we are using Bubble, there is not real back-end development. Bubble's functions for developing will be explained, but i will not be able to provide to you futher informations on how every modules works.
 
 ---
 
@@ -333,7 +304,7 @@ The Research Page enables users to browse products based on their search or filt
 
 - **Header:** Remains unchanged.
 - **Footer:** Remains unchanged.
-- **Page Content:** Displays a list of matching products, including images. Clicking on a product takes the user to the Product Page.
+- **Page Content:** Displays a list of matching products, including images. Clicking on a product takes the user to the product page.
 
 <p align="center">
   <img src="Images/ResearchPage.png" width="200" alt="Main Page">
@@ -357,11 +328,11 @@ This page shows detailed information about a selected product.
 
 #### E. **Favorites Page**
 
-The Favorites Page allows users to manage their saved products.
+The favorites page allows users to manage their saved products.
 
 - **Header:** Remains unchanged.
 - **Footer:** Remains unchanged.
-- **Page Content:** Lists all favorited products with their name, tags, and image. Users can remove items from their favorites or click on a product to view its detailed Product Page.
+- **Page Content:** Lists all favorited products with their name, tags, and image. Users can remove items from their favorites or click on a product to view its detailed product page.
 
 <p align="center">
   <img src="Images/FavoritePage.png" width="200" alt="Main Page">
@@ -375,26 +346,26 @@ Bubble's workflow is the brain behind the intuitive user interface. You can see 
 
 The trigger event is a block that starts the workflow, such as:
 
-- A button click
-- A page load
-- A user logging in
-- A custom event
-- An API workflow
+- A button click.
+- A page load.
+- A user logging in.
+- A custom event.
+- An API workflow.
 
 #### B. Series of Actions
 
 These are executed sequentially, for example:
 
-- Create a new thing (add to Bubble’s DB)
-- Make an API call (to Firebase, for example)
-- Show an element or “Navigate to another page”
+- Create a new thing (add to Bubble’s DB).
+- Make an API call (to Firebase, for example).
+- Show an element or “Navigate to another page”.
 
 #### C. Conditions
 
 Each action can run only when certain conditions are met, e.g.:
 
-- Only if Input's value is not empty
-- Only if Current User's role is admin
+- Only if Input's value is not empty.
+- Only if Current User's role is admin.
   
 ---
 
@@ -529,7 +500,7 @@ Cheese --> "1" Origin : from
 
 ### 2.1 Database breakdown
 
-In this database structure, each product is described with detailed specifications. For instance, when a wine is selected, all of its associated attributes will be displayed on the app's "Product Page."
+In this database structure, each product is described with detailed specifications. For instance, when a wine is selected, all of its associated attributes will be displayed on the app's "product page."
 
 The database is **read-only for users**—only the client will have permission to modify its content. All data will be entered **manually** by the client.
 
@@ -596,7 +567,7 @@ The subcatergories are connected together to thoses two categories allowing the 
 
 ### 2.3 Bubble Database breakdown
 
-Bubble uses a built-in, no-code database that stores data in "Data Types", which are like tables in a **traditional** database. Each "Data Type" has Fields, which are like **columns**, and each Entry is a **row or object**.
+Bubble uses a built-in, no-code database that stores data in "data types", which are like tables in a **traditional** database. Each "data type" has Fields, which are like **columns**, and each Entry is a **row or object**.
 
 #### A. Data Types
 
@@ -608,7 +579,7 @@ Bubble uses a built-in, no-code database that stores data in "Data Types", which
 
 Each Data Type has fields — think of them as properties or attributes.
 
-Types: text, number, date, yes/no, file, image, geographic address, another Data Type (for relationships), list of things
+Types: text, number, date, yes/no, file, image, geographic address, another Data Type (for relationships), list of things.
 
 ```Example: Wine might have a field Type = red (text), Acidity Level = 4 (number)```
 
@@ -622,7 +593,7 @@ Types: text, number, date, yes/no, file, image, geographic address, another Data
 
 ```Example: A Pairing can have a field Wine (type = Wine) and Cheese (type = Cheese)```
 
-You can also have lists: e.g., User → SavedPairings (list of Pairings)
+You can also have lists: e.g., User → SavedPairings (list of Pairings).
 
 ---
 
@@ -648,7 +619,7 @@ The API Connector lets you define requests to external APIs (like the Firebase�
 
 ##### Data Usage
 
-Works in One-Way Unless You Store It. Bubble can display theses external data directly, but:
+Works in one-way unless you store it. Bubble can display theses external data directly, but:
 
 - You **can’t use** native filtering/searching on external data like you can using bubble's database.
 
@@ -736,7 +707,7 @@ Body: ```Raw JSON```
 
 - Built-in version control, including autosave and deployment from dev to live.
 - Ability to create “development versions” for testing.
-- Security & Privacy Rules
+- Security & Privacy Rules.
 - Fine-grained privacy controls for data access.
 - Set rules per data type for who can view/edit/delete entries.
 
@@ -749,19 +720,19 @@ Body: ```Raw JSON```
 
 ## 4. Features usage
 
-During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the web app based on this. But for the app to work correctly it needs a "backend" logic named the workflow.
+During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the application based on this. But for the applicationto work correctly it needs a "backend" logic named the workflow.
 
 ---
 
 # III. Development Process
 
-## 1. Developement rules
+## 1. Development rules
 
 To maintain quality and consistency, the following rules will be followed:
 
 - **Test Before Implementing:** Features are first tested in isolated Bubble environments. Only once verified will they be merged into the main project.
 - **No-Code Review:** All changes are peer-reviewed within Bubble to ensure adherence to best practices and project standards.
-- **Cross-Platform Testing:** The app will be tested across various devices and browsers to ensure accessibility and responsiveness.
+- **Cross-Platform Testing:** The applicationwill be tested across various devices and browsers to ensure accessibility and responsiveness.
 - **Performance Optimization:** The team will ensure fast load times and a smooth user experience across all platforms.
   
 ---
@@ -827,7 +798,7 @@ Below is a list of potential enhancements that could be considered for future de
 
 | Term | Explanation |
 |------|-------------|
-| **Bubble** | A no-code web development platform used to create web applications without traditional programming. |
+| **Bubble** | A no-code  development platform used to create applications without traditional programming. |
 | **API Connector** | A plugin in Bubble used to define and manage external API calls from within the no-code editor. |
 | **API (Application Programming Interface)** | A way for applications to communicate and exchange data; used here to connect Bubble with Firebase. |
 | **Firebase** | A backend-as-a-service platform by Google, used in this project to host the external database. |
@@ -840,7 +811,7 @@ Below is a list of potential enhancements that could be considered for future de
 | **Condition** | A rule that determines whether a workflow action should be executed (e.g., only if user is logged in). |
 | **Custom State** | Temporary front-end memory in Bubble used to store UI information without saving to the database. |
 | **EAN / ITM** | EAN (European Article Number) and ITM (internal identifier) are used to uniquely identify products. |
-| **Responsive Engine** | Bubble’s tool to ensure the app layout adapts to different screen sizes (mobile/tablet/desktop). |
+| **Responsive Engine** | Bubble’s tool to ensure the application layout adapts to different screen sizes (mobile/tablet/desktop). |
 | **Version Control** | System for managing and tracking changes in development; Bubble supports this natively. |
 | **Privacy Rules** | Permissions in Bubble that control who can view or modify data. |
 | **Lazy Loading** | Technique to delay loading of content until it's needed, improving performance. |

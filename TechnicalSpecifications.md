@@ -852,8 +852,7 @@ Below is a list of potential enhancements that could be considered for future de
 | **Responsive Engine** | Bubble’s tool to ensure the application layout adapts to different screen sizes (mobile/tablet/desktop). |
 | **Version Control** | System for managing and tracking changes in development; Bubble supports this natively. |
 | **Privacy Rules** | Permissions in Bubble that control who can view or modify data. |
-| **Lazy Loading** | Technique to delay loading of content until it's needed, improving performance. |
 | **Data Caching** | Temporarily storing data for faster access and better performance. |
-| **Repeating Group** | A UI element in Bubble used to display a list of things dynamically (e.g., a list of wines). |
+| **Repeating Group** | An UI element in Bubble used to display a list of things dynamically. |
 
 ---

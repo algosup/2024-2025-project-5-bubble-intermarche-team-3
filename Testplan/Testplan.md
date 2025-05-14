@@ -3,28 +3,29 @@
 ## 1. Introduction
 
 ### Purpose
-This document's main objective is to outline the different testing strategies and ensure that everyone understands the structure of quality assurance before the final version of the app is released to the user.  
+The primary objective of this document is to outline the various testing strategies and ensure that everyone understands the structure of quality assurance before the final version of the app is released to users.  
 
 ### Scope
-This section clely define what wil and wil not be tested. 
+This section clearly defines what will and will not be tested. 
 
-- **In-Scope:**
-  - Wine and cheese suggestion algorithm
-  - Meal selection interface
-  - Search and filter functionality
-  - Navigation and user flow
-  - Mobile responsiveness
-  - User Interface
-  - Wine and cheese selection interface
-  - Languge responsiveness
+1. **In-Scope:**
+   - Wine and cheese suggestion algorithm
+   - Meal selection interface
+   - Search and filter functionality
+   - Navigation and user flow
+   - Mobile responsiveness
+   - User Interface
+   - Wine and cheese selection interface
+   - Language responsiveness
 
-- **Out-of-Scope:**
-  - Third-party integrations
-  - Backend database operation
-  - Server-side performance
-  - External API integrations
-  - Desktop application
-  - Specific browser version
+
+2.  **Out-of-Scope:**
+      - Third-party integrations
+      - Backend database operation
+      - Server-side performance
+      - External API integrations
+      - Desktop application
+      - Specific browser version
 
 ### Objectives
 
@@ -67,7 +68,7 @@ only relevant and important functionalities are applied.
 
 ## 2. Test Items
 
-### Features to be Tested:
+### Features to be Tested
 
 1. **Wine and Cheese Suggestion Algorithm**
    - Wine pairing logic with different meal types
@@ -99,7 +100,7 @@ only relevant and important functionalities are applied.
    - Search by cheese type
    - Filter by price range
    - Filter wine by alcoholic or not alcoholic
-   - Sort options
+   - Sort options(Ascending or descending order)
 
 4. **Navigation and User Flow**
    - Home screen navigation
@@ -109,6 +110,7 @@ only relevant and important functionalities are applied.
    - Error handling
    - Loading states
    - Favorite button functionality
+   - QR code functionality
 
 5. **Mobile Responsiveness**
    - Screen size adaptation
@@ -127,7 +129,7 @@ only relevant and important functionalities are applied.
    - Font readability
 
 
-### Features Not to be Tested:
+### Features Not to be Tested
 
 1. **Backend Operations**
    - Database operations
@@ -136,7 +138,6 @@ only relevant and important functionalities are applied.
    - Data storage mechanisms
 
 2. **External Systems**
-   - Payment processing
    - Third-party services
    - External APIs
    - Authentication services
@@ -147,58 +148,280 @@ only relevant and important functionalities are applied.
    - Network latency
    - Load balancing
 
-4. **Security**
-   - Penetration testing
-   - Vulnerability assessment
-   - Security protocols
-   - Encryption methods
-
 ## 3. Testing Strategy
 
-- **Types of Testing:**
-  - Functional Testing
-  - Usability Testing
-  - Performance Testing
-  - Security Testing
-  - Compatibility Testing
-  - Regression Testing
+### Types of Testing
+  
+  1. **Functional Testing**
+      - Testing if the app works as intended
+         * Wine and cheese suggestion algorithm
+         * Meal selection interface
+         * Search and filter functionality
+         * Navigation system
+         * QR code scanning
 
-- **Test Levels:**
-  - Unit Testing
-  - Integration Testing
-  - System Testing
-  - User Acceptance Testing (UAT)
+   2. **Usability Testing**
+      - Testing how user-friendly the app is
+         * Ease of finding wine/cheese suggestions
+         * Clarity of the meal selection process
+         * Intuitiveness of navigation
+         * Readability of information
+         * Easy user experience
+
+   3. **Performance Testing**
+      - Testing app speed and responsiveness
+         * App loading time
+         * Search response time
+         * Image loading speed
+         * Smooth scrolling
+         * Transition animations
+
+   4. **Compatibility Testing**
+      - Testing across different devices
+         * Different mobile devices
+         * Different screen sizes
+         * Different operating systems
+
+   5. **Regression Testing**
+      - Testing if new changes break existing features
+         * Re-testing after updates
+         * Verifying existing features
+         * Checking for new bugs
+
+### Test Levels
+
+  1. **Unit Testing**
+      - Testing individual components
+         * Wine suggestion algorithm
+         * Cheese pairing logic
+         * Search functionality
+         * Filter mechanisms
+
+   2. **Integration Testing**
+      - Testing how components work together
+         * Wine and meal pairing
+         * Cheese and meal pairing
+         * Search and filter integration
+         * Navigation flow
+
+   3. **System Testing**
+      - Testing the entire app
+         * End-to-end user flows
+         * Complete feature testing
+         * System performance
+         * Overall functionality
+
+   4. **User Acceptance Testing (UAT)**
+      - Testing with actual users
+         * Real-world scenarios
+         * User feedback collection
+         * Usability assessment
 
 ## 4. Test Environment
 
-- **Hardware Requirements:** Specify the devices and configurations needed for testing.
-- **Software Requirements:** List the operating systems, browsers, and other software needed.
-- **Test Data:** Describe the data that will be used for testing.
+### Hardware & Software Requirements
+
+   | Device Type | OS Version | Screen Size | Priority |
+   |-------------|------------|-------------|----------|
+   | iPhone      | iOS 15+    | Various     | High     |
+   | Android     | 11+        | Various     | High     |
+   | iPad        | iPadOS 14+ | Various     | Medium   |
+   | Tablets     | Android 15+| Various     | Medium   |
+
+
+### Network Conditions
+  - 4G/5G mobile networks
+  - Wi-Fi connections
+  - Low bandwidth conditions (2G/3G)
+  - Network switching scenarios
 
 ## 5. Test Schedule
 
-- **Milestones:** Outline key milestones and deadlines for the testing process.
-- **Testing Phases:** Provide a timeline for each phase of testing.
+### Milestones
+
+|       Milestone        |                  Description               | Target Date |         Deliverables        |
+|------------------------|--------------------------------------------|-------------|-----------------------------|
+| Test Environment Setup | Complete setup of all testing environments | Week 2 & 3  | Functional test environment |
+| Unit Testing           | Testing of individual components           | Week 4      | Unit test results report    |
+| Integration Testing    | Testing of component interactions          | Week 4 & 5  | Integration test results    |
+| System Testing         | End-to-end testing of the application      | Week 5 & 6  | System test report          |
+| User Testing           | Testing with actual users                  | Week 6 & 7  | UAT feedback report         |
+| Test Plan Document     | Final review and approval                  | Week 7      | Deliver test plan document  |
+| Bug Fixing             | Resolution of identified issues            | Week 7      | Bug fix report              |
+| Final Testing          | Regression testing after fixes             | Week 8      | Final test report           |
+| Production Release     | Deployment to production                   | Week 9      | Production release report   |  
+
+### Testing Phases
+
+|     Phase     | Duration  |                                  Activities                            |               Team Members               |       Deliverables   |
+| ------------- |-----------|------------------------------------------------------------------------|------------------------------------------|-----------------------|
+| Planning      | Week 2    | - Test plan creation<br>- Resource allocation<br>- Tool setup          | QA Team<br>Project Manager               | Resource allocation document(templates) |
+| Preparation   | Week 2-3  | - Environment setup<br>- Test data preparation<br>- Test case creation | QA Team<br>                       | Test environment<br>Test cases<br>Test data |
+| Execution     | Weeks 3-6 | - Unit testing<br>- Integration testing<br>- System testing<br>- UAT   | QA Team<br>Development Team<br>End Users | Test results<br>Bug reports<br>UAT feedback |
+| Bug Fixing    | Week 7    | - Test plan<br>- Bug analysis<br>- Fix implementation<br>- Fix verification | Development Team<br>QA Team         | Test plan<br>Bug fix report<br>Verification results |
+| Final Testing | Week 8    | - Regression testing<br>- Performance testing<br>   | QA Team<br>Development Team                | Final test report<br>Performance metrics |
+| Release       | Week 9    | - Production deployment<br>- Post-deployment verification              | Development Team<br>QA Team                        | Deployment report<br>Production verification |
 
 ## 6. Test Deliverables
 
-- **Documents:** List the documents that will be produced, such as test cases, defect reports, and test summary reports.
+### Documentation Deliverables
+
+| Document Type | Description | Purpose | Owner |
+|---------------|-------------|---------|--------|
+| Test Plan | Complete test strategy and approach | Guide the testing process | QA Lead |
+| Test Cases | Detailed test scenarios and steps | Execute testing activities | QA Team |
+| Requirement Traceability Matrix | Maps requirements to test casesnd tracks coverage | Ensure all requirements are tested and validated | QA Team |
+| Test Results | Results of test execution | Track testing progress | QA Team |
+| Bug Reports | Detailed defect documentation | Track and resolve issues | QA Team |
+
+
+### Quality Metrics
+
+| Metric | Description | Target | Frequency |
+|--------|-------------|---------|-----------|
+| Test Coverage | Percentage of requirements covered by tests | 100% | Weekly |
+| Defect Density | Number of defects per feature | < 5 | Weekly |
+| Test Pass Rate | Percentage of passed test cases | > 95% | Daily |
+
+
 
 ## 7. Roles and Responsibilities
 
-- **Team Members:** Identify the team members involved in testing and their roles.
-- **Responsibilities:** Define the responsibilities of each team member.
+### Team Members and Responsibilities
+
+| Role              | Name                   | Responsibilities |
+|-------------------|------------------------|-----------------|
+| Quality Assurance | Tsangue Vivien Bistrel | - Create and maintain test plan<br>- Design test cases<br>- Execute test cases<br>- Report defects<br>- Track test progress<br>- Verify bug fixes<br>- Generate test reports<br>- Maintain RTM |
+| Program Manager   | Camille GAYAT          | - Provide resources for testing<br>- Communicate with stakeholders<br>- Review test results<br>- Final approval for production release |
+| Project Manager   | Léna DE GERMAIN        | - Schedule activities<br>- Coordinate team members<br>- Risk management<br>- Issue resolution<br>- Status reporting<br>- Ensure deadlines are met<br> |
+| Technical Lead    | Julian REINE           | - Provide technical guidance<br>- Review test cases for technical accuracy<br>- Assist with complex test scenarios<br>- Help diagnose complex issues<br>- Perform technical reviews<br>- Support test environment setup<br> |
+| Software Engineer | Guillaume DESPAUX      | - Fix reported defects<br>- Assist in test environment setup<br>- Provide application knowledge<br>- Support in test data creation<br>- Clarify technical questions<br>- Perform code reviews<br>- Implement feature changes |
+| Technical Writer  | Lucas Aubard           | - Review test documentation<br>- Create user guides<br>- Review bug reports for clarity<br>|
+
+### Responsibility Matrix
+
+|           Activity       | QA   | Program Manager | Project Manager | Technical Lead | Software Engineer | Technical Writer |
+|--------------------------|------|-----------------|-----------------|----------------|-------------------|------------------|
+| Test Planning            | R/A  |         A       |        C        |        C       |          I        |         I        |
+| Test Case Development    | R/A  |         I       |        I        |        C       |         I/S       |         I        |
+| Test Execution           | R/A  |         I       |        I        |        S       |          S        |         I        |
+| Defect Reporting         | R/A  |         I       |        I        |        C       |          S        |         I        |
+| Test Environment Setup   | C/R  |         I       |        M        |        S       |         S/C       |         I        |
+| Test Report Generation   | R    |         C       |        C        |        I       |          I        |         S        |
+| Product Release Approval | C    |         R       |        C        |        C       |          C        |         I        |
+
+**Legend:** R = Responsible, A = Approver, C = Consulted, S = Supports, I = Informed, M = Monitors,
 
 ## 8. Defect Management
 
-- **Defect Tracking Tool:** Specify the tool that will be used to track defects.
-- **Defect Reporting:** Describe the process for reporting and managing defects.
+
+### Defect Lifecycle
+
+| Status       | Description |
+|--------------|-------------|
+| New          | Defect has been identified but not yet validated |
+| Validated    | Defect has been confirmed and verified |
+| Assigned     | Defect has been assigned to a developer for resolution |
+| In Progress  | Developer is actively working on the defect |
+| Fixed        | Developer has completed the fix |
+| Verification | QA is verifying the fix |
+| Closed       | Defect has been resolved and verified |
+| Rejected     | Defect was determined not to be valid |
+| Deferred     | Defect is valid but will be fixed in a future release |
+| Reopened     | Defect was marked as fixed but failed verification |
+
+### Severity Levels
+
+| Severity      | Description                                  | Resolution Time |
+|---------------|----------------------------------------------|-----------------|
+| Critical (S1) | Prevents app usage or causes data loss       | 24 hours        |
+| High (S2)     | Major functionality broken or unusable       | 48 hours        |
+| Medium (S3)   | Feature partially working, workaround exists | 72 hours        |
+| Low (S4)      | Minor issues, cosmetic problems              | Next release    |
+
+### Priority Levels
+
+| Priority | Description |
+|----------|-------------|
+| P1       | Must fix immediately |
+| P2       | Fix as soon as possible |
+| P3       | Fix when time permits |
+| P4       | Fix if time allows |
+
+### Defect Reporting Process
+
+1. **Discovery**
+   - Defect is discovered during testing
+   - Screenshot/screencast captured if applicable
+
+2. **Documentation**
+   - Create new GitHub Issue
+   - Assign appropriate severity and priority
+   - Include detailed reproduction steps
+   - Add relevant screenshots/evidence
+   - Tag relevant team members
+
+3. **Triage**
+   - QA review reported defects
+   - Validate defect and reproduction steps
+   - Adjust severity/priority if needed
+   - Assign to developer
+
+4. **Resolution**
+   - Developer investigates and fixes the defect
+   - Documents the fix and its implications
+   - Updates the issue with resolution details
+   - Changes status to "Fixed"
+
+5. **Verification**
+   - QA verifies the fix using original test case
+   - Performs regression testing around affected area
+   - Updates status to "Closed" or "Reopened"
+   - Documents verification results
 
 ## 9. Risks and Mitigation
 
-- **Potential Risks:** Identify potential risks that could impact testing.
-- **Mitigation Strategies:** Outline strategies to mitigate these risks.
+### Risk Assessment Table
+
+| Risk ID | Risk Description                | Probability| Impact | Risk Level | Mitigation Strategy |
+|---------|---------------------------------|------------|--------|------------|---------------------|
+| R1      | Inadequate testing time         | Medium     | High   | High       | - Prioritize critical features<br>- Focus on high-risk areas<br> |
+| R2      | Unstable test environment       | Medium     | High   | High       | - Document environment setup<br>- Regular environment checks |
+| R3      | Incomplete requirements         | High       | Medium | High       | - Regular requirement reviews<br>- Clarify ambiguous requirements<br>- Update RTM continuously |
+| R4      | Device compatibility issues     | High       | Medium | High       | - Test on priority devices first<br>- Use device emulators/simulators<br>- Focus on most common devices |
+| R5      | Changes in requirements         | Medium     | Medium | Medium     | - Impact analysis<br>- Update test cases promptly |
+| R6      | Team member unavailability      | Low        | Medium | Low        | - Cross-training team members<br>- Document testing procedures<br>- Maintain up-to-date documentation |
+| R7      | Bubble platform limitations     | Medium     | High   | High       | - Research limitations early<br>- Plan workarounds<br>- Adjust test cases accordingly |
+| R8      | Performance issues              | Medium     | High   | High       | - Early performance testing<br>- Optimize app design<br>- Set realistic performance expectations |
+
+### Risk Monitoring
+
+1. Review identified risks
+2. Assess effectiveness of mitigation strategies
+3. Identify new risks
+4. Update risk assessment
+5. Highlight high-risk items
+6. Track risk mitigation progress
+7. Escalate unresolved risks
+8. Document emergency procedures
+9. Identify alternative solutions
 
 ## 10. Approval
 
-- **Sign-off:** Include a section for stakeholders to sign off on the test plan.
+### Test Plan Approval
+
+By signing below, stakeholders acknowledge they have reviewed and approved this test plan for implementation.
+
+| Role              | Name                   | Signature          | Date |
+|-------------------|------------------------|--------------------|------|
+| Quality Assurance | Tsangue Vivien Bistrel | _______TCVB_______ | __05__/__14__/__2025__ |
+| Program Manager   | Camille GAYAT          | __________________ | ____/____/__2025__ |
+| Project Manager   | Léna DE GERMAIN        | __________________ | ____/____/__2025__ |
+| Technical Lead    | Julian REINE           | __________________ | ____/____/__2025__ |
+
+### Revision History
+
+| Version | Date       | Author                 | Description of Changes |
+|---------|------------|------------------------|------------------------|
+| 1.0     | 05/14/2025 | Tsangue Vivien Bistrel | Baseline version       |
+| 1.1     | MM/DD/YYYY | Tsangue Vivien Bistrel | Ameliorated version    |

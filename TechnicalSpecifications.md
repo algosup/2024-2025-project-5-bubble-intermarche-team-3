@@ -5,12 +5,12 @@
 
 | Role | Name | Signature | Date |
 |---|---|---|---|
-| Project Manager | Léna DE GERMAIN | ✅ | //2025 |
-| Program Manager | Camille GAYAT | ✅ | //2025 |
-| Tech Lead | Julian REINE | ✅ | //2025 |
-| Software Developer | Guillaume DESPAUX | ✅ | //2025 |
-| Quality Assurance | Vivien Bistrel TSANGUE CHOUNGOU | ✅ | //2025 |
-| Technical Writter | Lucas AUBARD | ✅ | //2025 |
+| Project Manager | Léna DE GERMAIN | ✅ | 28/05/2025 |
+| Program Manager | Camille GAYAT | ✅ | 28/05/2025 |
+| Tech Lead | Julian REINE | ✅ | 28/05/2025 |
+| Software Developer | Guillaume DESPAUX | ✅ | 28/05/2025 |
+| Quality Assurance | Vivien Bistrel TSANGUE CHOUNGOU | ✅ | 28/05/2025 |
+| Technical Writter | Lucas AUBARD | ✅ | 28/05/2025 |
 
 ## Table of Content <!-- omit in toc -->
 
@@ -105,7 +105,7 @@ Bubble will help us creating an user intuitive application, but we need to keep 
 
 ### 2.1 In Scope
 
-- Wine / cheese recommandation.
+- Wine / cheese recommendation.
 - User fiendly interface.
 - Complete filter of wine and cheese for the application.
 - Scanning function to identify the product.
@@ -148,7 +148,7 @@ During this project, we will use:
 
 - [Bubble](https://bubble.io/home/): Bubble is a site making tool and a PaaS developed by Bubble Group. It can be used by people with limited or no programming experience to make  pages.
 
-- Bubble pluggins:
+- Bubble plugings:
   - Barcode ccanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or alternatively choose 'Front' or 'Back' and allow the plugin to find the correct camera.
   - CSS loading animations: Loading.io's CSS spinner uses CSS Animation to create Loading and Preloading animations. There are supported by all modern browsers such as Google Chrome and Mozilla Firefox.
   - Local storage & Cookies: Create cookies on the Device Local Storage to store information in a persistent way.
@@ -686,7 +686,7 @@ This is done by making a **POST or PATCH HTTP** request to Firebase’s REST end
   
 ##### How This Maps in Bubble
 
-You can set, using the **API Connector pluggin**, the api connexion between **bubble and firebase**. The API is integrated following theses paterns:
+You can set, using the **API Connector pluging**, the api connexion between **bubble and firebase**. The API is integrated following theses paterns:
 
 Method: ```GET```
 

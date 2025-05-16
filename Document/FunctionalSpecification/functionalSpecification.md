@@ -279,7 +279,7 @@ By tapping the filter button, the user can refine their search using various cri
 
 <img src="../FunctionalSpecification/Img/Mockup/favoritePage.png" width="350px" style="margin-bottom: 20px;">
 
-By tapping the favorite button at the bottom of the page, the user will be directed to the Favorites page, where they can save recipes and ingredients they like or wish to keep for later.
+By tapping the favorite button at the bottom of the page, the user will be directed to the favorites page, where they can save recipes and ingredients they like or wish to keep for later.
 
 </details>
 
@@ -480,7 +480,7 @@ graph TD;
 ### 9.1 Core Features
 
 1. **Multi-language Support**:
-   - The application will be translated in 2 languages:
+   - The application will be translated into 2 languages:
      - English
      - French
    - Other languages could be added in the future but are not mandatory.
@@ -492,7 +492,7 @@ graph TD;
    - Clean, flat design with minimal depth.
 
 3. **Product Search**:
-   - Prominently displayed search bar at top of interface.
+   - Prominently displayed search bar at the top of interface.
    - Filtering via dedicated filter icon with comprehensive filtering page.
    - Category-based browsing.
 
@@ -502,7 +502,7 @@ graph TD;
    - Quick access to product details post-scan.
 
 5. **Recommendation Engine**:
-   - Category-based recommendations on home screen.
+   - Category-based recommendations on the home screen.
    - Wine and cheese pairings based on selected recipes.
    - Recipe suggestions based on selected wines/cheeses.
    - Display of prices to aid purchase decisions.
@@ -541,20 +541,20 @@ Filter Criteria Available in the Application:
 ### 9.2 Product Catalogs
 
 1. **Recipe Catalog**:
-   - Featured prominently on main page and dedicated tabs.
+   - Featured prominently on the main page and dedicated tabs.
    - Categorized by cuisine.
    - High-quality images for each recipe.
    - Origin indication.
 
 2. **Wine Catalog**:
    - Price display.
-   - Categories visible in filter.
+   - Categories are visible in filter.
    - Origin indication.
    - Recommendation context (which recipes they pair with).
 
 3. **Cheese Catalog**:
    - Categorized by type.
-   - Displayed alongside wine and recipes recommendations.
+   - Displayed alongside wine and recipe recommendations.
    - Filter options for cheese type.
    - Visual display on dedicated cheese tab.
 
@@ -566,7 +566,7 @@ Filter Criteria Available in the Application:
 
 #### 9.2.1 Wine and Cheese Combinations
 
-The following images illustrate ideal pairings between wines and cheeses, highlighting which types of wine pair best with specific foods and which cheeses complement different varieties of wine.
+The following images illustrates ideal pairings between wines and cheeses, highlighting which types of wine pair best with specific foods and which cheeses complement different varieties of wine.
 
 <img src="../FunctionalSpecification/Img/Pairings/wineWithFood.png" width="550px">
 <img src="../FunctionalSpecification/Img/Pairings/whiteRedWineAndCheese.png" width="800px">
@@ -774,7 +774,7 @@ The following images illustrate ideal pairings between wines and cheeses, highli
 - Morbier AOP (Semi-soft, line of ash in middle)
 
 *Hard Cheeses (Pressed, Aged)*:
-- Comté (various affinages) (Hard cooked cheese, long aged)
+- Comté (various affinages) (Hard-cooked cheese, long-aged)
 - Beaufort AOP (Firm alpine cheese, hard)
 - Gruyère France IGP (Firm, nutty cheese)
 - Raclette (Semi-firm, melts well)
@@ -828,7 +828,7 @@ The following images illustrate ideal pairings between wines and cheeses, highli
 
 1. **Performance**:
    - Initial load time under 5 seconds on average mobile connection.
-   - Response time for recommendations under 2 seconds.
+   - Response time for recommendations is under 2 seconds.
    - Smooth scrolling and transitions.
 
 2. **Reliability**:
@@ -864,7 +864,7 @@ The following images illustrate ideal pairings between wines and cheeses, highli
 
 5. **Security Requirements**:
    - No collection of personal user data.
-   - Secure access to product database.
+   - Secure access to the product database.
    - GDPR compliance for any collected data.
 
 6. **Analytics**:

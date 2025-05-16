@@ -8,15 +8,65 @@ Created by: Camille GAYAT <br> Creation Date: 05/08/2025 <br> Last update: 05/16
 
 ---
 
+**<Details><Summary>Table of Contents</Summary>**
+
+- [ Functional Specification ](#-functional-specification-)
+  - [1. Introduction](#1-introduction)
+    - [1.1 Glossary](#11-glossary)
+    - [2. Project Overview](#2-project-overview)
+  - [3. Project Definition](#3-project-definition)
+    - [3.1 Our Vision for the Project](#31-our-vision-for-the-project)
+    - [3.2 Objectives to Reach](#32-objectives-to-reach)
+    - [3.3 Target Audience](#33-target-audience)
+      - [3.3.1 Personas](#331-personas)
+    - [3.4 Prioritization](#34-prioritization)
+      - [3.4.1 MoSCoW Table](#341-moscow-table)
+  - [4. Deliverables](#4-deliverables)
+  - [5. Project Members](#5-project-members)
+    - [5.1 Team Members](#51-team-members)
+    - [5.2 Client and School Representatives](#52-client-and-school-representatives)
+  - [6. Development Planning](#6-development-planning)
+    - [6.1 Task Dependencies](#61-task-dependencies)
+    - [6.2 Assumptions and Constraints](#62-assumptions-and-constraints)
+    - [6.3 Risks and Mitigation](#63-risks-and-mitigation)
+  - [7. UI/UX Design](#7-uiux-design)
+    - [7.1 Mockup](#71-mockup)
+      - [7.1.1 Loading Page](#711-loading-page)
+      - [7.1.2 Main Page](#712-main-page)
+      - [7.1.3 Research Page](#713-research-page)
+      - [7.1.4 Product Page](#714-product-page)
+      - [7.1.5 Filter Page](#715-filter-page)
+      - [7.1.6 Favorite Page](#716-favorite-page)
+      - [7.1.7 Barcode Scanner Page](#717-barcode-scanner-page)
+    - [7.2 Color Palette](#72-color-palette)
+    - [7.3 Font](#73-font)
+    - [7.4 Image Assets](#74-image-assets)
+    - [7.5 User Flow](#75-user-flow)
+  - [9. Functional Requirements](#9-functional-requirements)
+    - [9.1 Core Features](#91-core-features)
+    - [9.2 Product Catalogs](#92-product-catalogs)
+      - [9.2.1 Wine and Cheese Combinations](#921-wine-and-cheese-combinations)
+      - [9.2.2 Organized Catalog of Intermarché Best Sellers](#922-organized-catalog-of-intermarché-best-sellers)
+  - [10. Non-Functional Requirements](#10-non-functional-requirements)
+  - [11. Technical Requirements](#11-technical-requirements)
+
+</details>
+
 ## 1. Introduction
 
-This document outlines the functional specifications for the development of a mobile-friendly web application for Intermarché Saint-Rémy-de-Provence. The application will provide wine and cheese recommendations to customers based on their culinary preferences or occasions. The project aims to enhance customer experience while increasing store revenue, particularly targeting tourists with high purchasing power in this touristic region.
+This document outlines the functional specifications for the development of a mobile-friendly web application for Intermarché Saint-Rémy-de-Provence. The application will provide wine and cheese recommendations to customers based on their culinary preferences or occasions. The project aims to enhance customers’ experience while increasing store revenue, particularly targeting tourists with high purchasing power in this tourist region.
 
 ### 1.1 Glossary
 
-| Term | Definition | Link |
-| ---- | ---------- | ---- |
-|      |            |      |
+| Term | Definition                                                                     |
+| ---- | ------------------------------------------------------------------------------ | 
+| Demo | A short demonstration or sample showing how a product, service, or idea works. |      |                                                                                        |
+| AOP     | "Appellation d'Origine Protégée" is the European Union’s standardized system, introduced to harmonize and protect regional food and wine names across all member countries. |
+| AOC     | "Appellation d'Origine Contrôlée" is the traditional French system used to certify wines, cheeses, and other agricultural products.                                         |
+| Halal   | Food or drinks prepared according to Islamic law.                                                                                                                           |
+| Kosher  | Food or drinks prepared following Jewish dietary laws.                                                                                                                      |
+| Tannins | Natural compounds in wine that create a dry, slightly bitter feeling in your mouth.                                                                                         |
+| GDPR    | A European Union law that protects people’s personal data and privacy.                                                                                                      |
 
 ### 2. Project Overview
 
@@ -53,9 +103,9 @@ The primary target audiences for this application are:
 #### 3.3.1 Personas
 
 <div style="display: flex; justify-content: space-around; gap: 10px;">
-  <img src="../FunctionalSpecification/Img/Personas/mariePersona.png" width="350px">
-  <img src="../FunctionalSpecification/Img/Personas/jamesPersona.png" width="350px">
-  <img src="../FunctionalSpecification/Img/Personas/sophiePersona.png" width="350px">
+  <img src="../FunctionalSpecification/Img/Personas/mariePersona.png" width="300px">
+  <img src="../FunctionalSpecification/Img/Personas/jamesPersona.png" width="300px">
+  <img src="../FunctionalSpecification/Img/Personas/sophiePersona.png" width="300px">
 </div>
 
 ### 3.4 Prioritization
@@ -291,13 +341,13 @@ Based on Intermarché's official brand typography guidelines:
 <p>- Opacity: 20% > 100%</p>
 </details>
 <Details><Summary><b>Favorite button</b></Summary>
-<p>Favorite button located in the application’s footer, is used to access the Favorites page and to indicate whether a product has been marked as a favorite.</p>
+<p>The favorite button, located in the application’s footer, is used to access the Favorites page and to indicate whether a product has been marked as a favorite.</p>
 <img src="../FunctionalSpecification/Img/Icons/favoriteButton.png" width="50px" style="margin-bottom: 20px;">
 <p>- Color: <span style="display: inline-block; width: 15px; height: 15px; background: #ED1D24; border-radius: 3px; vertical-align: middle; margin-right: 5px;"></span> #ED1D24</p>
 <p>- Opacity: 100% > 60%</p>
 </details>
 <Details><Summary><b>Empty favorite button</b></Summary>
-<p>Empty favorite button displayed when a product has not been marked as a favorite.</p>
+<p>An empty favorite button is displayed when a product has not been marked as a favorite.</p>
 <img src="../FunctionalSpecification/Img/Icons/emptyFavoriteButton.png" width="50px" style="margin-bottom: 20px;">
 <p>- Color: <span style="display: inline-block; width: 15px; height: 15px; background: #000000; border-radius: 3px; vertical-align: middle; margin-right: 5px;"></span> #000000</p>
 <p>- Opacity: 100%</p>
@@ -317,7 +367,7 @@ Based on Intermarché's official brand typography guidelines:
 </ul>
 </details>
 <Details><Summary><b>Home button</b></Summary>
-<p>Home button located in the application's footer.</p>
+<p>The Home button located in the application's footer.</p>
 <img src="../FunctionalSpecification/Img/Icons/homeButton.png" width="50px" style="margin-bottom: 20px;">
 <p>- Color: <span style="display: inline-block; width: 15px; height: 15px; background: #ED1D24; border-radius: 3px; vertical-align: middle; margin-right: 5px;"></span> #ED1D24</p>
 <p>- Opacity: 100% > 60%</p>
@@ -361,7 +411,7 @@ Based on Intermarché's official brand typography guidelines:
 <img src="../FunctionalSpecification/Img/Icons/languageButton.png" width="50px" style="margin-bottom: 20px;">
 </details>
 <Details><Summary><b>Search icon</b></Summary>
-<p>Icon located in the application's header inside of the search bar.</p>
+<p>Icon located in the application's header inside the search bar.</p>
 <img src="../FunctionalSpecification/Img/Icons/searchIcon.png" width="50px" style="margin-bottom: 20px;">
 </details>
 <Details><Summary><b>Barcode scanner button</b></Summary>
@@ -516,9 +566,10 @@ Filter Criteria Available in the Application:
 
 #### 9.2.1 Wine and Cheese Combinations
 
-The following image illustrate ideal pairings between wines and cheeses, highlighting which types of wine pair best with specific foods and which cheeses complement different varieties of wine.
+The following images illustrate ideal pairings between wines and cheeses, highlighting which types of wine pair best with specific foods and which cheeses complement different varieties of wine.
 
 <img src="../FunctionalSpecification/Img/Pairings/wineWithFood.png" width="550px">
+<img src="../FunctionalSpecification/Img/Pairings/whiteRedWineAndCheese.png" width="800px">
 
 #### 9.2.2 Organized Catalog of Intermarché Best Sellers
 

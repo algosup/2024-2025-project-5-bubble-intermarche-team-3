@@ -631,7 +631,7 @@ Bubble uses a built-in, no-code database that stores data in "data types", which
 
 #### A. Data Types
 
-- These are the main entities in your app.
+- These are the main entities in our app.
 
 ```Example: User, Wine, Cheese, Pairing```
 
@@ -725,8 +725,8 @@ Body: ```Raw JSON```
 
 ### 3.1 Bubble introduction
 
-Bubble.io is a no-code platform that empowers users to create web applications without traditional coding. With its intuitive visual interface, Bubble.io makes app development accessible to non-technical users while still offering advanced capabilities for experienced developers.
-Bubble.io is built on an architecture designed to ensure high performance, security, and reliability. It uses these technologies:
+Bubble.io is a no-code platform that empowers users to create web applications without traditional coding. With its intuitive visual interface, it makes app development accessible to non-technical users while still offering advanced capabilities for experienced developers.
+Bubble is built on an architecture designed to ensure high performance, security, and reliability. It uses these technologies:
 
 - HTML/CSS: Provides the foundational structure and styling for the web interface.
 - JavaScript: Powers client-side interactions and dynamic content.

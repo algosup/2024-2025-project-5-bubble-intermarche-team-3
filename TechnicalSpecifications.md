@@ -39,36 +39,47 @@
       - [C. **Research Page**](#c-research-page)
       - [D. **Product Page**](#d-product-page)
       - [E. **Favorites Page**](#e-favorites-page)
-    - [1.2 Backend Overview (Workflow)](#12-backend-overview-workflow)
+    - [1.2 Application Architecture](#12-application-architecture)
+    - [1.3 Backend Overview (Workflow)](#13-backend-overview-workflow)
       - [A. Trigger/Event](#a-triggerevent)
       - [B. Series of Actions](#b-series-of-actions)
       - [C. Conditions](#c-conditions)
   - [2. Database structure](#2-database-structure)
     - [2.1 Database breakdown](#21-database-breakdown)
-    - [2.3 Bubble Database breakdown](#23-bubble-database-breakdown)
+    - [2.2 Bubble Database breakdown](#22-bubble-database-breakdown)
       - [A. Data Types](#a-data-types)
       - [B. Fields](#b-fields)
       - [C. Things](#c-things)
       - [D. Relationships](#d-relationships)
-    - [2.4 API database](#24-api-database)
+    - [2.3 API database](#23-api-database)
       - [A. Data Pull](#a-data-pull)
-        - [Data Isn’t Stored in Bubble](#data-isnt-stored-in-bubble)
-        - [API Connector](#api-connector)
-        - [Data Usage](#data-usage)
-        - [Data Connexion to Bubble](#data-connexion-to-bubble)
+        - [A.1. Data Isn’t Stored in Bubble](#a1-data-isnt-stored-in-bubble)
+        - [A.2 API Connector](#a2-api-connector)
+        - [A.3 Data Usage](#a3-data-usage)
+        - [A.4 Data Connexion to Bubble](#a4-data-connexion-to-bubble)
       - [B. Data Push](#b-data-push)
-        - [How This Maps in Bubble](#how-this-maps-in-bubble)
+        - [B.1. How This Maps in Bubble](#b1-how-this-maps-in-bubble)
   - [3. Bubble building features breakdown](#3-bubble-building-features-breakdown)
-    - [A. Visual Editor (Design Tab)](#a-visual-editor-design-tab)
-    - [B. Workflow Editor](#b-workflow-editor)
-    - [C. Database (Data Tab)](#c-database-data-tab)
-    - [D. Plugins](#d-plugins)
-    - [E. API Connector](#e-api-connector)
-    - [F. Responsive Engine](#f-responsive-engine)
-    - [G. Custom States](#g-custom-states)
-    - [H. Version Control \& Deployment](#h-version-control--deployment)
-    - [I. SEO and Hosting](#i-seo-and-hosting)
+    - [3.1 Bubble introduction](#31-bubble-introduction)
+      - [A. Visual Editor (Design Tab)](#a-visual-editor-design-tab)
+      - [B. Workflow Editor](#b-workflow-editor)
+      - [C. Database (Data Tab)](#c-database-data-tab)
+      - [D. Plugins](#d-plugins)
+      - [E. API Connector](#e-api-connector)
+      - [F. Responsive Engine](#f-responsive-engine)
+      - [G. Custom States](#g-custom-states)
+      - [H. Version Control \& Deployment](#h-version-control--deployment)
+      - [I. SEO and Hosting](#i-seo-and-hosting)
   - [4. Features usage](#4-features-usage)
+  - [5. Bubble Limitations](#5-bubble-limitations)
+    - [A. Performance and Scalability](#a-performance-and-scalability)
+    - [B. Platform Dependency](#b-platform-dependency)
+    - [C. Design \& UI Constraints](#c-design--ui-constraints)
+    - [D. Logic Limitations](#d-logic-limitations)
+    - [E. Cost Considerations](#e-cost-considerations)
+    - [F. Security](#f-security)
+    - [G. API and Integration Limitations](#g-api-and-integration-limitations)
+    - [H. Not Ideal for Certain Use Cases](#h-not-ideal-for-certain-use-cases)
 - [III. Development Process](#iii-development-process)
   - [1. Development rules](#1-development-rules)
   - [2. Risks and Mitigation Strategies](#2-risks-and-mitigation-strategies)
@@ -375,7 +386,15 @@ The favorites page allows users to manage their saved products.
   <img src="Images/FavoritePage.png" width="200" alt="Main Page">
 </p>
 
-### 1.2 Backend Overview (Workflow)
+### 1.2 Application Architecture
+
+The application will have all the pages interconnected so you can acces them any time. Here is a simple breakdown of how the application is structured:
+
+<p align="center">
+  <img src="Images/PageArchitecture.png" width="900" alt="Main Page">
+</p>
+
+### 1.3 Backend Overview (Workflow)
 
 Bubble's workflow is the brain behind the intuitive user interface. You can see it as the backend of the project. Bubble workflow is mainely composed of:
 
@@ -602,7 +621,7 @@ The subcatergories are connected together to thoses two categories allowing the 
 
 ---
 
-### 2.3 Bubble Database breakdown
+### 2.2 Bubble Database breakdown
 
 Bubble uses a built-in, no-code database that stores data in "data types", which are like tables in a **traditional** database. Each "data type" has Fields, which are like **columns**, and each Entry is a **row or object**.
 
@@ -638,19 +657,19 @@ You can also have lists: e.g., User → SavedPairings (list of Pairings).
 
 ---
 
-### 2.4 API database
+### 2.3 API database
 
 Because Bubble database's **is limited**, we decided to use an API to upload our database and **bypass this limit**. We decided to use [FireBase](https://firebase.google.com/) to create our own API dataset.
 
 #### A. Data Pull
 
-##### Data Isn’t Stored in Bubble
+##### A.1. Data Isn’t Stored in Bubble
 
 **You're not creating Bubble database entries** (like internal records). Instead, you’re pulling data from Firebase, showing it in the app, or sending data back to Firebase.
 
 It’s a live connection so every time you show or update something, it makes an API call (unless you manually store it in Bubble’s database).
 
-##### API Connector
+##### A.2 API Connector
 
 The API Connector lets you define requests to external APIs (like the Firebase’s API we created):
 
@@ -658,7 +677,7 @@ The API Connector lets you define requests to external APIs (like the Firebase�
 
 - **POST/PATCH/DELETE** requests write or modify data in Firebase.
 
-##### Data Usage
+##### A.3 Data Usage
 
 Works in one-way unless you store it. Bubble can display theses external data directly, but:
 
@@ -668,7 +687,7 @@ Works in one-way unless you store it. Bubble can display theses external data di
 
 You’ll often want to **transform or cache** this data locally for performance or UI needs.
 
-##### Data Connexion to Bubble
+##### A.4 Data Connexion to Bubble
 
 With Firebase, data is protected via Firebase **security rules**. This is separate from Bubble’s privacy system.
 You must handle:
@@ -684,7 +703,7 @@ In Firebase (specifically Cloud Firestore), you can **modify / add** elements to
 - Creating a new document in a collection or updating an existing document.
 This is done by making a **POST or PATCH HTTP** request to Firebase’s REST endpoint, depending on whether you're creating or updating.
   
-##### How This Maps in Bubble
+##### B.1. How This Maps in Bubble
 
 You can set, using the **API Connector pluging**, the api connexion between **bubble and firebase**. The API is integrated following theses paterns:
 
@@ -704,44 +723,54 @@ Body: ```Raw JSON```
 
 ## 3. Bubble building features breakdown
 
-### A. Visual Editor (Design Tab)
+### 3.1 Bubble introduction
+
+Bubble.io is a no-code platform that empowers users to create web applications without traditional coding. With its intuitive visual interface, Bubble.io makes app development accessible to non-technical users while still offering advanced capabilities for experienced developers.
+Bubble.io is built on an architecture designed to ensure high performance, security, and reliability. It uses these technologies:
+
+- HTML/CSS: Provides the foundational structure and styling for the web interface.
+- JavaScript: Powers client-side interactions and dynamic content.
+- RESTful APIs: Facilitates communication between different services within the application.
+- Node.js: Runs server-side JavaScript code to handle backend logic.
+
+#### A. Visual Editor (Design Tab)
 
 - Drag-and-drop UI builder for creating responsive layouts.
 - Pre-built elements: text, buttons, inputs, repeating groups, icons, images, etc.
 - Custom styling via Bubble's style manager.
 
-### B. Workflow Editor
+#### B. Workflow Editor
 
 - Logic engine to handle actions and events (e.g., when a button is clicked, sign up a user, navigate, show a message).
 - Conditions and triggers (e.g., "Only when...").
 
-### C. Database (Data Tab)
+#### C. Database (Data Tab)
 
 - Built-in database for creating and managing custom data types (like tables) and fields.
 - Includes a dev and live database, and supports privacy rules.
 
-### D. Plugins
+#### D. Plugins
 
 - Extend functionality with third-party or Bubble-made plugins (e.g., API connector, Style animations etc...).
 
 > [!Note]
 > You can also create your own plugins if needed.
 
-### E. API Connector
+#### E. API Connector
 
 - Lets you connect to external APIs (RESTful APIs) without code.
 - Define API calls and use them in workflows or data sources.
 
-### F. Responsive Engine
+#### F. Responsive Engine
 
 - Helps design layouts that adapt to different screen sizes.
 - Use conditionals and breakpoints to tweak mobile/tablet/desktop experiences.
 
-### G. Custom States
+#### G. Custom States
 
 - Store temporary data on the front end (like UI state) without writing to the database.
 
-### H. Version Control & Deployment
+#### H. Version Control & Deployment
 
 - Built-in version control, including autosave and deployment from dev to live.
 - Ability to create “development versions” for testing.
@@ -749,7 +778,7 @@ Body: ```Raw JSON```
 - Fine-grained privacy controls for data access.
 - Set rules per data type for who can view/edit/delete entries.
 
-### I. SEO and Hosting
+#### I. SEO and Hosting
 
 - Built-in hosting, with options to add meta tags, custom domains, and SSL.
 - Support for SEO-friendly URLs and content.
@@ -760,6 +789,47 @@ Body: ```Raw JSON```
 
 During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the application based on this. But for the applicationto work correctly it needs a "backend" logic named the workflow.
 
+## 5. Bubble Limitations
+
+### A. Performance and Scalability
+
+- Slower than code: Apps built on Bubble can be slower than those built with traditional coding, especially under heavy user load or with complex workflows.
+- Limited backend control: You don’t have full access to server infrastructure which can restrict optimization.
+
+### B. Platform Dependency
+
+- Proprietary system: Your app is tied to Bubble. Migrating away from Bubble (e.g., to a custom codebase) can be difficult and time-consuming.
+- No access to source code: You can’t export your app as traditional code, which limits flexibility and control.
+
+### C. Design & UI Constraints
+
+- Less pixel-perfect control: While Bubble offers a visual editor, it can be hard to match customized or complex UI designs with precision.
+- Responsiveness issues: Making apps responsive across devices (especially mobile) can be tricky and time-consuming.
+
+### D. Logic Limitations
+
+- Workflow complexity: Workflows can get messy and hard to manage or debug.
+- Limited debugging tools: Bubble’s built-in debugger is basic compared to traditional development environments, which can make troubleshooting more difficult.
+
+### E. Cost Considerations
+
+- Pricing scales: As your app grows in terms of users, data, or features, Bubble’s pricing can become expensive compared to hosting a custom-coded app.
+- Third-party plugin dependence: Many advanced features rely on paid or community-built plugins, which may not be always free.
+
+### F. Security
+
+- Limited control over security implementation: Bubble handles much of the security for you, but this means you can't fully customize security protocols.
+- No custom server logic: Implementing sensitive or custom backend logic may not be possible without using external services.
+
+### G. API and Integration Limitations
+
+- Limited flexibility with APIs: While Bubble supports REST and some others, integrating with complex or non-standard APIs may require more work.
+
+### H. Not Ideal for Certain Use Cases
+
+- Real-time apps with heavy data sync may hit performance bottlenecks.
+- Highly specialized features or unique algorithms may not be easily implemented without external code or services.
+
 ---
 
 # III. Development Process
@@ -768,11 +838,10 @@ During this project, the team will be using bubble's elements to create the appl
 
 To maintain quality and consistency, the following rules will be followed:
 
-- **Test Before Implementing:** Features are first tested in isolated Bubble environments. Only once verified will they be merged into the main project.
+- **Test Before Implementing:** Features are first tested in an isolated Bubble environment (Like a blank page). Only once verified will they be merged into the main project.
 - **No-Code Review:** All changes are peer-reviewed within Bubble to ensure adherence to best practices and project standards.
-- **Cross-Platform Testing:** The applicationwill be tested across various devices and browsers to ensure accessibility and responsiveness.
-- **Performance Optimization:** The team will ensure fast load times and a smooth user experience across all platforms.
-  
+- **Cross-Platform Testing:** The application will be tested across various devices and browsers to ensure accessibility and responsiveness.
+
 ---
 
 ## 2. Risks and Mitigation Strategies
@@ -780,8 +849,8 @@ To maintain quality and consistency, the following rules will be followed:
 During development, the project may encounter a range of risks, including technical limitations, resource constraints, and scheduling issues. To address these proactively, the team has outlined the following mitigation strategies:
 
 1. **Technical Limitations**: Challenges related to Bubble’s no-code capabilities or integration restrictions may arise. To mitigate this, the team will perform in-depth research, utilize online documentation and forums, and consult experts when necessary to find workarounds and solutions.
-2. **Resource Availability**: Limited access to certain Bubble features or external dependencies could hinder development. The team will manage this risk by collaborating closely with stakeholders, prioritizing essential features, and seeking external support or workarounds when needed.
-3. **Timeline Delays**: Unexpected setbacks such as technical hurdles, evolving requirements, or limited team availability may delay progress. To reduce this risk, the team will maintain clear communication, monitor project milestones, and revise schedules as necessary to stay aligned with delivery goals.
+2. **Resource Availability**: Limited access to certain Bubble features or external dependencies could hinder development. The team will manage this risk by collaborating closely with intermarché's stakeholders, prioritizing essential features, and seeking external support or workarounds when needed.
+3. **Timeline Delays**: Unexpected setbacks such as technical hurdles, evolving requirements, or limited team availability may delay progress. To reduce this risk, the team will maintain clear communication, monitor project milestones, and revise schedules as necessary to stay aligned with delivery goals. To learn more about the project management, check the "management" folder on our github page.
 
 By identifying these potential risks early and planning responsive mitigation strategies, the team aims to reduce disruptions and ensure the project stays on track for a successful and timely completion.
 
@@ -789,16 +858,13 @@ By identifying these potential risks early and planning responsive mitigation st
 
 ## 3. Testing
 
-The testing part of the project will be done using the following tools:
-
-- **Manual Testing**: For exploratory testing, usability testing, and edge case scenarios that may not be covered by automated tests.
+The testing part of the project will be done by **Manual Testing**, usefull for exploratory testing, usability testing, and edge case scenarios that may not be covered by automated tests.
 
 ### 3.1 Testing Strategy
 
 The testing strategy is built around key development principles to ensure the application's quality and stability throughout its lifecycle:
 
 - **Test Early, Test Frequently**: Testing is integrated from the beginning of the development process. Unit tests will be written as components and functions are implemented.
-- **Leverage Automation**: Automated testing will be employed to validate critical features, minimize manual testing efforts, and maintain consistent coverage.
 - **Maximize Coverage**: The goal is to achieve high test coverage by focusing on core functionalities, edge cases, and potential error scenarios to ensure system resilience.
 - **Regression Prevention**: Regular regression testing will be conducted to ensure new updates do not break or degrade existing features.
 - **User-Focused Validation**: Usability, accessibility, and direct user feedback will be part of the testing workflow, ensuring a smooth and inclusive experience.

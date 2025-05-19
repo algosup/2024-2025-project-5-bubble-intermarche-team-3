@@ -739,12 +739,12 @@ Headers:
 
 Body: ```Raw JSON```
 
----
-
 #### C. Unique ID
 
 In firebase, every elements will have an ID automatically generated which will be the core for data retrieve.
 The Unique ID will be linked to a product, and we will be able to call them and filter them using Bubble's functions.
+
+---
 
 ## 3. Bubble building features breakdown
 
@@ -964,7 +964,7 @@ The testing strategy is built around key development principles to ensure the ap
 - **Regression Prevention**: Regular regression testing will be conducted to ensure new updates do not break or degrade existing features.
 - **User-Focused Validation**: Usability, accessibility, and direct user feedback will be part of the testing workflow, ensuring a smooth and inclusive experience.
 
-The Q.A will use his personnal device to conduct tests on the application and rendering simulations for efficient test.
+The Q.A will use his personnal device to conduct tests on the application and rendering simulations for efficient test. He will not be able to use external test tool because of bubble's security.
 
 ---
 

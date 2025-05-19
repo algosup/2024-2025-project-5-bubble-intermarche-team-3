@@ -59,6 +59,7 @@
         - [A.4 Data Connexion to Bubble](#a4-data-connexion-to-bubble)
       - [B. Data Push](#b-data-push)
         - [B.1. How This Maps in Bubble](#b1-how-this-maps-in-bubble)
+      - [C. Unique ID](#c-unique-id)
   - [3. Bubble building features breakdown](#3-bubble-building-features-breakdown)
     - [3.1 Bubble introduction](#31-bubble-introduction)
       - [A. Visual Editor (Design Tab)](#a-visual-editor-design-tab)
@@ -70,8 +71,16 @@
       - [G. Custom States](#g-custom-states)
       - [H. Version Control \& Deployment](#h-version-control--deployment)
       - [I. SEO and Hosting](#i-seo-and-hosting)
-  - [4. Features usage](#4-features-usage)
-  - [5. Bubble Limitations](#5-bubble-limitations)
+    - [3.2 Bubble Offline usage](#32-bubble-offline-usage)
+      - [3.2.1 Initial Content Load](#321-initial-content-load)
+      - [3.2.2 Data \& Workflows](#322-data--workflows)
+  - [4. Wine and Cheese Alorithm](#4-wine-and-cheese-alorithm)
+    - [4.1 Firebase database structure](#41-firebase-database-structure)
+    - [4.2 Compatibility Level](#42-compatibility-level)
+  - [5. Features usage](#5-features-usage)
+    - [5.1 Language changer](#51-language-changer)
+    - [5.2 Barcode scanner](#52-barcode-scanner)
+  - [6. Bubble Limitations](#6-bubble-limitations)
     - [A. Performance and Scalability](#a-performance-and-scalability)
     - [B. Platform Dependency](#b-platform-dependency)
     - [C. Design \& UI Constraints](#c-design--ui-constraints)
@@ -167,12 +176,16 @@ During this project, we will use:
 
 ### 4.2 Naming Conventions
 
-The team will use **PascalCase** for both documentation and **code structure.**
+The team will use **PascalCase** for folder structure and **camelCase** for file structure.
 
 PascalCase offers **clarity and precision**, making it easy for users to quickly identify and distinguish the individual words in a document or file name. Words are joined without spaces, with each new word starting with a capital letter.
+**Example of camelCase:**
+
+``` technicalSpecifications.md ```
+
 **Example of PascalCase:**
 
-``` TechnicalSpecifications.md ```
+``` TechnicalSpecifications ```
 
 ### 4.3 Github Repository Rules
 
@@ -344,6 +357,10 @@ This page lets users filter products based on specific criteria.
   <img src="Images/FilterPage.png" width="200" alt="Main Page">
 </p>
 
+The Filter page works typically by using the unique ID each product has, and filtering them by criteria conditions. Each Unique ID will be associated to a product and a specification of the product, using the database template. 
+
+For example, if the user is looking for redwine, every unique ID with the Redwine criteria will be displayed, and the other will be omited.
+
 ---
 
 #### C. **Research Page**
@@ -385,6 +402,9 @@ The favorites page allows users to manage their saved products.
 <p align="center">
   <img src="Images/FavoritePage.png" width="200" alt="Main Page">
 </p>
+
+>![Note]
+> All of the pages will be translated from english to french using the language changer button due to core requirements for this project.
 
 ### 1.2 Application Architecture
 
@@ -721,6 +741,11 @@ Body: ```Raw JSON```
 
 ---
 
+#### C. Unique ID
+
+In firebase, every elements will have an ID automatically generated which will be the core for data retrieve.
+The Unique ID will be linked to a product, and we will be able to call them and filter them using Bubble's functions.
+
 ## 3. Bubble building features breakdown
 
 ### 3.1 Bubble introduction
@@ -783,13 +808,83 @@ Bubble is built on an architecture designed to ensure high performance, security
 - Built-in hosting, with options to add meta tags, custom domains, and SSL.
 - Support for SEO-friendly URLs and content.
 
+### 3.2 Bubble Offline usage
+
+In order for the application to work offline, bubble must work offline after loading a first time, the main elements. Here is a list of what will and will not work offline.
+
+#### 3.2.1 Initial Content Load
+
+When a user first visits your app:
+
+- The Bubble building elements get cached by the browser.
+
+This means static content (like images or previously loaded pages) might still be visible if the user loses connection after the app has loaded.
+
+#### 3.2.2 Data & Workflows
+
+However:
+
+- Dynamic content (database queries, workflows, updates) will not function offline.
+
+If the app tries to pull new data or run server-side workflows, it will fail without a connection.
+
 ---
 
-## 4. Features usage
+## 4. Wine and Cheese Alorithm
 
-During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the application based on this. But for the application to work correctly it needs a "backend" logic named the workflow.
+The core purpose of the app is to match wines with cheeses, so we need a fast and reliable algorithm to handle these pairings efficiently.
 
-## 5. Bubble Limitations
+To support this, the main algorithm will use a Firebase database instead of Bubble’s built-in database, which is limited to 200 entries per project.
+
+### 4.1 Firebase database structure
+
+Here is how the database on firebase will use the the data:
+
+<p align="center">
+  <img src="Images/Firebase Database.png.png" width="700" alt="Main Page">
+</p>
+
+- Each food sub-category has a unique ID, which is used to reference it within the application.
+- In Bubble, you simply need to set up an API call to Firebase, which will fetch the relevant data using these unique IDs.
+- All necessary data is stored in Firebase, including the wine and cheese pairing scale and other related information.
+
+### 4.2 Compatibility Level
+
+Products in the database are rated on a compatibility scale from 0 to 2 — with 0 meaning not compatible, and 2 indicating items that should always be paired together. We followed this guide to accurately link each product to its ideal wine pairings:
+
+<p align="center">
+  <img src="Images/Pairing scale.png" width="500" alt="Main Page">
+</p>
+
+We linked each product’s unique ID to its compatibility level, allowing us to easily retrieve a product and determine which wines it pairs well with.
+
+For cheese compatibility, we used the same approach, based on the following chart:
+
+<p align="center">
+  <img src="Images/whiteRedWineAndCheese.png" width="500" alt="Main Page">
+</p>
+
+## 5. Features usage
+
+### 5.1 Language changer
+
+Bubble is featuring a usefull features to automatically change the language of the whole application from one to another using only one feature:
+
+- Go to Settings > Languages in your Bubble editor.
+
+- Add the languages you want your app to support. It should now create a bubble database named " App Text ", you can now modify your entries with the needed languages like this:
+
+ ``` welcome_message = "Welcome" (EN), "Bienvenue" (FR), etc. ```
+
+- In the design editor, when inserting text, use "Insert dynamic data > App text" and select the entrie you created. ( for example, the welcome_message).
+
+### 5.2 Barcode scanner
+
+We used a plugin in bubble to correctly scan a product and redirect it to its page on the application. Its done using the barcode scanner plugin.
+
+The scanner is using the ITM8 naming system of Intermarché. It means that this ITM8 number is refered to a barcode in the application. In other terms its automatically linked to Intermarché's stock.
+
+## 6. Bubble Limitations
 
 ### A. Performance and Scalability
 
@@ -868,6 +963,8 @@ The testing strategy is built around key development principles to ensure the ap
 - **Maximize Coverage**: The goal is to achieve high test coverage by focusing on core functionalities, edge cases, and potential error scenarios to ensure system resilience.
 - **Regression Prevention**: Regular regression testing will be conducted to ensure new updates do not break or degrade existing features.
 - **User-Focused Validation**: Usability, accessibility, and direct user feedback will be part of the testing workflow, ensuring a smooth and inclusive experience.
+
+The Q.A will use his personnal device to conduct tests on the application and rendering simulations for efficient test.
 
 ---
 

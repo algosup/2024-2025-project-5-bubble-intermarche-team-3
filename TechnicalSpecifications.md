@@ -96,7 +96,7 @@
 ## 1. Introduction
 
 Welcome to the **fifth** project of this year, the project **bubble intermarché**.
-This project is **a commission** from [Intermarché](https://www.intermarche.com/accueil), a french grocerie store brand, especially the intermarché from *Saint-Rémy-de-Provence*.
+This project is **a commission** from [Intermarché](https://www.intermarche.com/accueil), a french grocery store brand, especially the intermarché from *Saint-Rémy-de-Provence*.
 
 The purpose of this project is to develop a **working  interface** using the no-code engine **bubble** showing the possible combination between wines and cheeses.The target users include:
 
@@ -106,7 +106,7 @@ The purpose of this project is to develop a **working  interface** using the no-
 
 Saint-Rémy-de-Provence is a highly **touristic** area in France. The local Intermarché supermarket asked us to develop a **functional  interface** that could **showcase possible wine and cheese pairings**, based on both their current stock and traditional French gastronomy. The goal was to make these pairings more accessible to people around the world, with a special focus on the many tourists visiting the region.
 The application will be able to **associate**, using a **custom database**, the different **wine and cheese combinations** with aswell, **dishes recommendations** (e.g Boeuf bourguignion for the Red wine).
-The team will focus on creating an **user intuitive interface** so everybody, even tourrist who are not trained in computer science, can understand it fully and use it in its proper way.
+The team will focus on creating an **user-intuitive interface** so everybody, even tourist who are not trained in computer science, can understand it fully and use it in its proper way.
 
 ---
 
@@ -117,7 +117,7 @@ Bubble will help us creating an user intuitive application, but we need to keep 
 ### 2.1 In Scope
 
 - Wine / cheese recommendation.
-- User fiendly interface.
+- User-fiendly interface.
 - Complete filter of wine and cheese for the application.
 - Scanning function to identify the product.
 
@@ -140,7 +140,7 @@ The project will be divided into the following tasks:
 - Data base creation / implementation: Creating the wine and the cheese databases based on the provided documentation.
 - Documentation: Writing technical documentation, user guides, and other relevant documentation for the project.
 
-The team will collaborate across all project tasks, with each member bringing their specific skills and expertise to different parts of the work. Regular meetings will be scheduled to review progress, share updates, and quickly resolve any challenges that may applicationear during development. Throughout the process, the team will also engage with the customer to gather feedback and confirm that deliverables meet expectations.
+The team will collaborate across all project tasks, with each member bringing their specific skills and expertise to different parts of the work. Regular meetings will be scheduled to review progress, share updates, and quickly resolve any challenges that that may appear during development. Throughout the process, the team will also engage with the customer to gather feedback and confirm that deliverables meet expectations.
 
 The project aims to be completed within the agreed timeline, with consistent updates provided to the customer to ensure the work stays aligned with their needs and requirements.
 
@@ -150,8 +150,8 @@ The project aims to be completed within the agreed timeline, with consistent upd
 
 Our team uses multiple machines to work on this project, such as:
 
-- 2 Windows operating on Windows 11.
-- 4 MacBooks operating on MacOS 15 Sequoia
+- 2 Windows running Windows 11.
+- 4 MacBooks running MacOS 15 Sequoia
 
 ### 4.1 Technologies Used
 
@@ -159,9 +159,9 @@ During this project, we will use:
 
 - [Bubble](https://bubble.io/home/): Bubble is a site making tool and a PaaS developed by Bubble Group. It can be used by people with limited or no programming experience to make  pages.
 
-- Bubble plugings:
-  - Barcode ccanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or alternatively choose 'Front' or 'Back' and allow the plugin to find the correct camera.
-  - CSS loading animations: Loading.io's CSS spinner uses CSS Animation to create Loading and Preloading animations. There are supported by all modern browsers such as Google Chrome and Mozilla Firefox.
+- Bubble plugins:
+  - Barcode scanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or alternatively choose 'Front' or 'Back' and allow the plugin to find the correct camera.
+  - CSS loading animations: Loading.io's CSS spinner uses CSS Animation to create Loading and Preloading animations. These are supported by by all modern browsers such as Google Chrome and Mozilla Firefox.
   - Local storage & Cookies: Create cookies on the Device Local Storage to store information in a persistent way.
   - API connector: The API connector lets you define your own API calls directly in the Bubble Editor and use them in your application.
 
@@ -178,7 +178,7 @@ PascalCase offers **clarity and precision**, making it easy for users to quickly
 
 To maintain the **quality** of documents in both the main branch and release versions, we have **established** a set of rules.
 
-The main branch is protected and only allows changes through pull requests. This ensures the branch remains free from unintended modifications. Each pull request must be applicationroved by at least two team members.
+The main branch is protected and only allows changes through pull requests. This ensures the branch remains free from unintended modifications. Each pull request must be approved by at least two team members.
 
 #### 4.3.1 Github Commits
 
@@ -201,7 +201,7 @@ The body of a commit provides a more detailed explanation of the changes and, li
 
 - **Provide context:** Clearly explain why the change was necessary.
 - **Summarize the changes:** Briefly describe how the changes were implemented, especially in cases of new features, fixes, refactoring, or optimizations.
-- **Reference related issues:** Link to relevant issue numbers when applicationlicable.
+- **Reference related issues:** Link to relevant issue numbers when applicable.
 - **Keep it concise:** Avoid long paragraphs; use bullet points or short lines to list what was done.
 - **Use clear language:** Avoid technical jargon unless it's explained—other contributors should be able to understand your commit easily.
 
@@ -308,7 +308,7 @@ Additionally, we’ve implemented a GitHub workflow to automatically block commi
 This is the **section where the technical aspect of the project** will be explained in detail. We will dive into all of the features of the project, how they work and more specifications on them.
 
 > [!Note]
-> As we are using Bubble, there is not real back-end development. Bubble's functions for developing will be explained, but i will not be able to provide to you futher informations on how every modules works.
+> As we are using Bubble, there is not real back-end development. Bubble's functions for developing will be explained, but the document will not be able to provide to you futher informations on how every modules works.
 
 ---
 
@@ -338,7 +338,7 @@ This page lets users filter products based on specific criteria.
 
 - **Header:** Expanded to include filter options. Users can search by product type (cheese or wine) or look for specific combinations.
 - **Footer:** Same as the main page.
-- **Page Content:** Similar layout to the main page, with added filters in the header. After selecting their filters, users are redirected to the Research Page.
+- **Page Content:** Similar layout to the main page, with filters added to the header. After selecting their filters, users are redirected to the Research Page.
 
 <p align="center">
   <img src="Images/FilterPage.png" width="200" alt="Main Page">
@@ -388,7 +388,7 @@ The favorites page allows users to manage their saved products.
 
 ### 1.2 Application Architecture
 
-The application will have all the pages interconnected so you can acces them any time. Here is a simple breakdown of how the application is structured:
+The application will have all the pages interconnected so you can access them any time.. Here is a simple breakdown of how the application is structured:
 
 <p align="center">
   <img src="Images/PageArchitecture.png" width="900" alt="Main Page">
@@ -396,7 +396,7 @@ The application will have all the pages interconnected so you can acces them any
 
 ### 1.3 Backend Overview (Workflow)
 
-Bubble's workflow is the brain behind the intuitive user interface. You can see it as the backend of the project. Bubble workflow is mainely composed of:
+Bubble's workflow is the brain behind the intuitive user interface. You can see it as the backend of the project. Bubble workflows are mainly composed of:
 
 #### A. Trigger/Event
 
@@ -679,7 +679,7 @@ The API Connector lets you define requests to external APIs (like the Firebase�
 
 ##### A.3 Data Usage
 
-Works in one-way unless you store it. Bubble can display theses external data directly, but:
+Works in one-way unless you store it. Bubble can display these external data directly, but:
 
 - You **can’t use** native filtering/searching on external data like you can using bubble's database.
 
@@ -689,7 +689,7 @@ You’ll often want to **transform or cache** this data locally for performance 
 
 ##### A.4 Data Connexion to Bubble
 
-With Firebase, data is protected via Firebase **security rules**. This is separate from Bubble’s privacy system.
+With Firebase, data is protected via Firebase **security rules**. which are separate from Bubble’s privacy system:
 You must handle:
 
 - **Auth tokens** (e.g., OAuth2 or Firebase custom tokens).
@@ -705,7 +705,7 @@ This is done by making a **POST or PATCH HTTP** request to Firebase’s REST end
   
 ##### B.1. How This Maps in Bubble
 
-You can set, using the **API Connector pluging**, the api connexion between **bubble and firebase**. The API is integrated following theses paterns:
+You can set, using the **API Connector plugin**, the api connexion between **bubble and firebase**. The API is integrated following these paterns:
 
 Method: ```GET```
 
@@ -758,7 +758,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 
 #### E. API Connector
 
-- Lets you connect to external APIs (RESTful APIs) without code.
+- Allows you to connect to external APIs (RESTful APIs) without writing code.
 - Define API calls and use them in workflows or data sources.
 
 #### F. Responsive Engine
@@ -787,7 +787,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 
 ## 4. Features usage
 
-During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the application based on this. But for the applicationto work correctly it needs a "backend" logic named the workflow.
+During this project, the team will be using bubble's elements to create the application. Bubble features building blocks that are intuitive to use. Our software engineer will use these building groups and will create the application based on this. But for the application to work correctly it needs a "backend" logic named the workflow.
 
 ## 5. Bubble Limitations
 
@@ -890,10 +890,10 @@ By following these practices, the application will be built to scale, perform ef
 
 Below is a list of potential enhancements that could be considered for future development:
 
-- **Upgrading to a better plan in bubble:** We are currently running on the free version of bubble to present to you our application but bubble offers various paids plan including usefull features that remove the limitations we had during this project.
-- **Generalisation of the project:** Making it possible to link more Intermarché stores to enhance the french culture in other touristic region of france.
-- **Real time stock count:** We could implement, using a realtime database of the product availiability, create a tracker system to warn the user if the product they want is unavailiable in the store he want to go.
-- **Personalized Recommendations:** Learn from user behavior: saved pairings, ratings, dislikes. Offering tailored suggestions based on past activity or taste profiles
+- **Upgrading to a better plan in bubble:** We are currently running on the free version of bubble to present to you our application but Bubble offers various paid plans including usefull features that remove the limitations we had during this project.
+- **Generalisation of the project:** Making it possible to link more Intermarché stores to enhance the french culture in other touristic regions of France.
+- **Real time stock count:** We could implement, using a realtime database of the product availability, create a tracking system to warn the user if the product they want is unavailable in the store he wants to go.
+- **Personalized Recommendations:** Learn from user behavior: saved pairings, ratings, dislikes. Offering tailored suggestions based on past activity or taste preferences.
 - **Online shopping systeme:** being able to buy the desired product directly from the application.
 
 ---

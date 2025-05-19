@@ -1,9 +1,9 @@
-# Test Plan for team 3 bubble app project
+# Test Plan for team 3 bubble web app project
 
 ## 1. Introduction
 
 ### Purpose
-The primary objective of this document is to outline the various testing strategies and ensure that everyone understands the structure of quality assurance before the final version of the app is released to users.  
+The primary objective of this document is to outline the various testing strategies and ensure that everyone understands the structure of quality assurance before the final version of the web app is released to users.  
 
 ### Scope
 This section clearly defines what will and will not be tested. 
@@ -13,11 +13,11 @@ This section clearly defines what will and will not be tested.
    - Meal selection interface
    - Search and filter functionality
    - Navigation and user flow
-   - Mobile responsiveness
+   - Mobile web responsiveness
    - User Interface
    - Wine and cheese selection interface
    - Language responsiveness
-
+   - Cross-browser compatibility
 
 2.  **Out-of-Scope:**
       - Third-party integrations
@@ -25,20 +25,17 @@ This section clearly defines what will and will not be tested.
       - Server-side performance
       - External API integrations
       - Desktop application
-      - Specific browser version
-
+      
 ### Objectives
 
-The testing process i to make sure the app is outlined clearly according to 
-the client's requirements. Making sure unnecessary information is removed, 
-only relevant and important functionalities are applied.
+The testing process ensures that the web app is outlined clearly by the client's requirements. Ensuring that unnecessary information is removed, only relevant and important functionalities are implemented.
 
 1. **Quality Assurance:**
    - Ensure 100% of critical functionalities work as per client requirements
    - Achieve zero critical defects in the production environment
 
 2. **User Experience:**
-   - Verify that the app is intuitive for tourist users with a minimal learning curve
+   - Verify that the web app is intuitive for tourist users with a minimal learning curve
    - Ensure all user interactions have response times under 2 seconds
    - Validate that the wine and cheese suggestions are accurate and relevant
 
@@ -49,17 +46,19 @@ only relevant and important functionalities are applied.
      * Search and filter functionality
      * Navigation system
      * Functional QR code scanning
-   - Ensure all features work seamlessly across different mobile devices
+   - Ensure all features work seamlessly across different mobile browsers
 
 4. **Performance:**
-   - Verify app loads within 3-5 seconds on standard mobile networks
+   - Verify web app loads within 3-5 seconds on standard mobile networks
    - Ensure smooth operation with minimal lag during user interactions
-   - Validate app performance across different screen sizes and orientations
+   - Validate web app performance across different screen sizes and orientations
+   - Test performance across different mobile browsers
 
 5. **Compliance:**
-   - Ensure the app meets all specified language requirements
-   - Verify compliance with mobile app best practices
+   - Ensure the web app meets all specified language requirements
+   - Verify compliance with web app best practices
    - Validate that all content is appropriate for the target audience
+   - Ensure cross-browser compatibility
 
 6. **Documentation:**
    - Maintain comprehensive test documentation
@@ -95,14 +94,14 @@ only relevant and important functionalities are applied.
    - Wine or cheese selected
    - Wine and cheese selected
 
-3. **Search and Filter Functionality**
+5. **Search and Filter Functionality**
    - Search by wine type
    - Search by cheese type
    - Filter by price range
-   - Filter wine by alcoholic or not alcoholic
+   - Filter wine by alcoholic or
    - Sort options(Ascending or descending order)
 
-4. **Navigation and User Flow**
+6. **Navigation and User Flow**
    - Home screen navigation
    - Menu navigation
    - Back button functionality
@@ -112,14 +111,22 @@ only relevant and important functionalities are applied.
    - Favorite button functionality
    - QR code functionality
 
-5. **Mobile Responsiveness**
+7. **Browser Compatibility and Features**
+   - Cross-browser compatibility testing
+     * Safari on iOS
+     * Chrome on Android
+     * Firefox on Android
+     * Chrome on iOS
+     * Brave for Android
+
+8. **Mobile Web Responsiveness**
    - Screen size adaptation
    - Touch interface
    - Gesture controls
    - Orientation changes
    - Responsive design elements
 
-6. **User Interface**
+9. **User Interface**
    - Button functionality
    - Form validation
    - Error messages
@@ -127,6 +134,7 @@ only relevant and important functionalities are applied.
    - Loading indicators
    - Color contrast
    - Font readability
+
 
 
 ### Features Not to be Tested
@@ -181,6 +189,7 @@ only relevant and important functionalities are applied.
          * Different mobile devices
          * Different screen sizes
          * Different operating systems
+         * Different browsers' compatibility.
 
    5. **Regression Testing**
       - Testing if new changes break existing features
@@ -221,13 +230,15 @@ only relevant and important functionalities are applied.
 
 ### Hardware & Software Requirements
 
-   | Device Type | OS Version | Screen Size | Priority |
-   |-------------|------------|-------------|----------|
-   | iPhone      | iOS 15+    | Various     | High     |
-   | Android     | 11+        | Various     | High     |
-   | iPad        | iPadOS 14+ | Various     | Medium   |
-   | Tablets     | Android 15+| Various     | Medium   |
-
+   | Device Type | Browser | OS Version | Screen Size | Priority |
+   |-------------|---------|------------|-------------|----------|
+   | iPhone      | Safari  | iOS 15+    | Various     | High     |
+   | Android     | Chrome  | 11+        | Various     | High     |
+   | iPhone      | Chrome  | iOS 15+    | Various     | High     |
+   | Android     | Firefox | 11+        | Various     | Medium   |
+   | iPad        | Safari  | iPadOS 14+ | Various     | Medium   |
+   | Tablets     | Chrome  | Android 13+| Various     | Medium   |
+   | Android     | Brave   | 11+        | Various     | Medium   |
 
 ### Network Conditions
   - 4G/5G mobile networks
@@ -268,11 +279,11 @@ only relevant and important functionalities are applied.
 
 | Document Type | Description | Purpose | Owner |
 |---------------|-------------|---------|--------|
-| Test Plan | Complete test strategy and approach | Guide the testing process | QA Lead |
-| Test Cases | Detailed test scenarios and steps | Execute testing activities | QA Team |
-| Requirement Traceability Matrix | Maps requirements to test casesnd tracks coverage | Ensure all requirements are tested and validated | QA Team |
-| Test Results | Results of test execution | Track testing progress | QA Team |
-| Bug Reports | Detailed defect documentation | Track and resolve issues | QA Team |
+| [Test Plan](Testplan.md) | Complete test strategy and approach | Guide the testing process | QA Lead |
+| [Test Cases](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=517605026#gid=517605026) | Detailed test scenarios and steps | Execute testing activities | QA Team |
+| [Requirement Traceability Matrix](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=0#gid=0) | Maps requirements to test casesnd tracks coverage | Ensure all requirements are tested and validated | QA Team |
+| [Test Results](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=559831432#gid=559831432) | Results of test execution | Track testing progress | QA Team |
+| [Bug Reports](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=1758071504#gid=1758071504) | Detailed defect documentation | Track and resolve issues | QA Team |
 
 
 ### Quality Metrics
@@ -389,10 +400,11 @@ only relevant and important functionalities are applied.
 | R2      | Unstable test environment       | Medium     | High   | High       | - Document environment setup<br>- Regular environment checks |
 | R3      | Incomplete requirements         | High       | Medium | High       | - Regular requirement reviews<br>- Clarify ambiguous requirements<br>- Update RTM continuously |
 | R4      | Device compatibility issues     | High       | Medium | High       | - Test on priority devices first<br>- Use device emulators/simulators<br>- Focus on most common devices |
-| R5      | Changes in requirements         | Medium     | Medium | Medium     | - Impact analysis<br>- Update test cases promptly |
-| R6      | Team member unavailability      | Low        | Medium | Low        | - Cross-training team members<br>- Document testing procedures<br>- Maintain up-to-date documentation |
-| R7      | Bubble platform limitations     | Medium     | High   | High       | - Research limitations early<br>- Plan workarounds<br>- Adjust test cases accordingly |
-| R8      | Performance issues              | Medium     | High   | High       | - Early performance testing<br>- Optimize app design<br>- Set realistic performance expectations |
+| R5      | Browser compatibility issues    | High       | Medium | High       | - Test on priority browsers first<br>- Use browser developer tools<br>- Focus on most common browsers |
+| R6      | Changes in requirements         | Medium     | Medium | Medium     | - Impact analysis<br>- Update test cases promptly |
+| R7      | Team member unavailability      | Low        | Medium | Low        | - Cross-training team members<br>- Document testing procedures<br>- Maintain up-to-date documentation |
+| R8      | Bubble platform limitations     | Medium     | High   | High       | - Research limitations early<br>- Plan workarounds<br>- Adjust test cases accordingly |
+| R9      | Performance issues              | Medium     | High   | High       | - Early performance testing<br>- Optimize web app design<br>- Set realistic performance expectations |
 
 ### Risk Monitoring
 
@@ -424,4 +436,4 @@ By signing below, stakeholders acknowledge they have reviewed and approved this 
 | Version | Date       | Author                 | Description of Changes |
 |---------|------------|------------------------|------------------------|
 | 1.0     | 05/14/2025 | Tsangue Vivien Bistrel | Baseline version       |
-| 1.1     | MM/DD/YYYY | Tsangue Vivien Bistrel | Ameliorated version    |
+| 1.1     | 05/19/2025 | Tsangue Vivien Bistrel | Ameliorated version    |

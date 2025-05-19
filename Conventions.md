@@ -4,7 +4,7 @@ This document describes the naming conventions used in the whole repository.
 
 ## Writing Conventions
 
-- `PascalCase` is used for file name.
+- `CamelCase` is used for file name.
 
 |❌|✅|
 |-|-|

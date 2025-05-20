@@ -3,7 +3,7 @@
 ## 1. Introduction
 
 ### Purpose
-The primary objective of this document is to outline the various testing strategies and ensure that everyone understands the structure of quality assurance before the final version of the web app is released to users.  
+The primary objective of this document is to outline the various testing strategies and ensure that everyone understands the structure of quality assurance before the final version of the web app is released to users.
 
 ### Scope
 This section clearly defines what will and will not be tested. 

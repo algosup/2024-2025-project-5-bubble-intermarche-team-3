@@ -29,6 +29,12 @@ Everything is designed to deliver a seamless, engaging, and fast experience that
 
 ---
 
+## 📍 Instructions
+
+To launch the Application, just open it on your smartphone. To see the futher requirements for this project, you can check the [User Manual](./UserManual/Document/userManual.pdf).
+
+---
+
 ## 📁 Repository Structure
 
 ```bash
@@ -60,10 +66,11 @@ Each directory corresponds to a project role with related documentation and asse
 
 ## 📄 Documentation
 
-- 📋 [Functional Specs](./Functional/FunctionalSpecifications.md)
-- 🔧 [Technical Specs](./Technical/TechnicalSpecifications.md)
-- 🧪 [Test Plan & QA](./QualityAssurance/)
-- 📘 [User Manual](./UserManual/UserManual.pdf)
+- 📋 [Functional Specs](./Functional/Document/functionalSpecification.md)
+- 🔧 [Technical Specs](./Technical/Document/technicalSpecifications.md)
+- 🧪 [Test Plan & QA](./QualityAssurance/Document/)
+- 📘 [User Manual](./UserManual/Document/userManual.pdf)
+- 📚 [Management](./Management/Document/
 
 ---
 

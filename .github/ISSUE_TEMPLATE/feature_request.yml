@@ -46,9 +46,9 @@ body:
       label: Acceptance Criteria
       description: List the acceptance criteria for this feature
       placeholder: |
-        - [ ] Criteria 1
-        - [ ] Criteria 2
-        - [ ] Criteria 3
+        - Criteria 1
+        - Criteria 2
+        - Criteria 3
     validations:
       required: true
   - type: dropdown

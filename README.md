@@ -1,12 +1,7 @@
 # 🧀🍷 Intermarché Wine & Cheese Pairing Web App
 
 Welcome to the official repository for the **Intermarché Wine & Cheese Pairing Web Application** – a mobile-friendly digital sommelier built with Bubble for Intermarché Saint-Rémy-de-Provence.
-
----
-
-## 📌 Project Description
-
-This web application provides personalized wine and cheese recommendations based on selected recipes, ingredients, or scanned barcodes. Designed for quick in-store use, it requires no installation and works offline after initial load. Targeted primarily at tourists and local customers, the app supports both French and English.
+This application provides personalized wine and cheese recommendations based on selected recipes, ingredients, or scanned barcodes. Designed for quick in-store use, it requires no installation and works offline after initial load. Targeted primarily at tourists and local customers, the app supports both French and English.
 
 ---
 
@@ -52,21 +47,21 @@ Each directory corresponds to a project role with related documentation and asse
 
 ## 👥 Team Members
 
-| Name                          | Role                |
-|------------------------------|---------------------|
-| Léna DE GERMAIN              | Project Manager     |
-| Camille GAYAT                | Program Manager     |
-| Julian REINE                 | Technical Lead      |
-| Guillaume DESPAUX            | Developer           |
-| Vivien Bistrel TSANGUE CHOUNGOU | Quality Assurance |
-| Lucas AUBARD                 | Technical Writer    |
+|              Name               |        Role        |                                       Role Description                                       |                                           LinkedIn & GitHub Links                                           |
+| :-----------------------------: | :----------------: | :------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------------------: |
+|         Lena DE GERMAIN         |  Project Manager   | Oversees overall project planning, scheduling, resource allocation, and client communication |       [LinkedIn](https://www.linkedin.com/in/léna-de-germain/) / [GitHub](https://github.com/lenadg18)        |
+|          Camille GAYAT          |  Program Manager   | Responsible for functional specifications, requirement gathering, and feature prioritization |   [LinkedIn](https://www.linkedin.com/in/camille-g-a89114293/) / [GitHub](https://github.com/CamilleGayat)    |
+|          Julian REINE           |  Technical Leader  |   Provides technical guidance, architecture decisions, and oversees implementation quality   |  [LinkedIn](https://www.linkedin.com/in/julian-reine-b2952632a/) / [GitHub](https://github.com/JulianREINE)   |
+|        Guillaume DESPAUX        | Software Developer |                Implements application features using Bubble no-code platform                 |  [LinkedIn](https://www.linkedin.com/in/guillaume-despaux/) / [GitHub](https://github.com/GuillaumeDespaux)   |
+| Vivien Bistrel TSANGUE CHOUNGOU | Quality Assurance  |     Designs and executes test cases, ensuring application quality and proper functioning     | [LinkedIn](https://www.linkedin.com/in/bistrel-tsangue-603635261/) / [GitHub](https://github.com/Bistrel2002) |
+|          Lucas AUBARD           |  Technical Writer  |          Creates documentation, user guides, and ensures clarity of specifications           |         [LinkedIn](https://www.linkedin.com/in/lucasaubard/) / [GitHub](https://github.com/LucasAub)          |
 
 ---
 
 ## 📄 Documentation
 
-- 🔧 [Technical Specs](./Technical/TechnicalSpecifications.md)
 - 📋 [Functional Specs](./Functional/FunctionalSpecifications.md)
+- 🔧 [Technical Specs](./Technical/TechnicalSpecifications.md)
 - 🧪 [Test Plan & QA](./QualityAssurance/)
 - 📘 [User Manual](./UserManual/UserManual.pdf)
 

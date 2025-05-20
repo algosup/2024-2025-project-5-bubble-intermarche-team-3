@@ -1,33 +1,62 @@
 ---
 name: Documentation
-about: Suggest improvements or report issues with documentation
+description: Suggest improvements or report issues with documentation
 title: '[DOCS] '
-labels: documentation
-assignees: ''
----
-
-**Documentation Type**
-- [ ] User Guide
-- [ ] API Documentation
-- [ ] Code Comments
-- [ ] README
-- [ ] Other (please specify)
-- [ ] Specifications
-
-**Current Documentation**
-Please provide a link to or describe the current documentation that needs improvement.
-
-**Suggested Changes**
-Describe the changes you'd like to see in the documentation.
-
-**Reason for Change**
-Explain why this documentation change is necessary.
-
-**Additional Context**
-Add any other context about the documentation request here.
-
-**Priority Level**
-- [ ] P1 - Must update immediately
-- [ ] P2 - Update as soon as possible
-- [ ] P3 - Update when time permits
-- [ ] P4 - Update if time allows 
+labels: [documentation]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to help improve our documentation!
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: Select the type of documentation that needs improvement
+      options:
+        - User Guide
+        - API Documentation
+        - Code Comments
+        - README
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: current-docs
+    attributes:
+      label: Current Documentation
+      description: Please provide a link to or describe the current documentation that needs improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: suggested-changes
+    attributes:
+      label: Suggested Changes
+      description: Describe the changes you'd like to see in the documentation.
+    validations:
+      required: true
+  - type: textarea
+    id: reason-for-change
+    attributes:
+      label: Reason for Change
+      description: Explain why this documentation change is necessary.
+    validations:
+      required: true
+  - type: dropdown
+    id: priority-level
+    attributes:
+      label: Priority Level
+      description: Select the priority level for updating the documentation
+      options:
+        - P1 - Must update immediately
+        - P2 - Update as soon as possible
+        - P3 - Update when time permits
+        - P4 - Update if time allows
+    validations:
+      required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the documentation request here. 

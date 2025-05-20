@@ -247,65 +247,58 @@ Team members have to **follow the same rules** said before for the comment secti
 ```bash
  2024-2025-project-5-bubble-intermarche-team-3
 ├──   Main
-│       ├── FunctionalSpecifications
-│       │      ├── Images
-│       │      ├── FunctionalSpecifications.md
-│       │      └── README.md
-│       │
-│       ├── TechnicalSpecifications
-│       │      ├── Images
-│       │      ├── TechnicalSpecifications.md
-│       │      └── README.md
-│       │
-│       ├── QualityAssurance
-│       │      ├── Images    
-│       │      ├── TestCase.md  
-│       │      ├── testPlan.md 
-│       │      └── README.md
-│       │
-│       ├── UserManual
-│       │      ├── UserManual.pdf
-│       │      └── README.md
-│       │
-│       ├── Management
-│       │      ├── ManagementArtifacts
-│       │      ├── WeeklyReports
-│       │      └── README.md
-│       │      
-│       ├── .gitignore
-│       └── README.md 
-│       
+│        ├── Documents
+│        │       │
+│        │       ├──FunctionalSpecifications
+│        │       │      ├── images
+│        │       │      └── functionalSpecifications.md
+│        │       │
+│        │       ├── TechnicalSpecifications
+│        │       │      ├── images
+│        │       │      ├── conventions.md
+│        │       │      └── technicalSpecifications.md
+│        │       │
+│        │       ├── QualityAssurance
+│        │       │      ├── images    
+│        │       │      ├── testCase.md 
+│        │       │      └── testPlan.md 
+│        │       │
+│        │       ├── UserManual
+│        │       │      └── userManual.pdf
+│        │       │
+│        │       └── Management
+│        │              ├── managementArtifacts
+│        │              └── weeklyReports
+│        │            
+│        ├── .gitignore
+│        └── README.md 
+│              
 ├── Functional
-│       ├── .github/workflows
-│       ├── Images
-│       ├── FunctionalSpecifications.md
-│       └── README.md
+│       ├── .github/workflows // Automatically fetching every branch according to the main
+│       ├── images
+│       └── functionalSpecifications.md
 │  
 ├── Management
-│       ├── .github/workflows
-│       ├── Images   
-│       ├── ManagementArtifacts
-│       ├── WeeklyReports
-│       └── README.md
+│       ├── .github/workflows // Automatically fetching every branch according to the main
+│       ├── images   
+│       ├── managementArtifacts
+│       └── weeklyReports
 │                     
 ├── QualityAssurance
-│       ├── .github/workflows
-│       ├── Images    
-│       ├── TestCase.md  
-│       ├── testPlan.md   
-│       └── README.md
+│       ├── .github/workflows // Automatically fetching every branch according to the main
+│       ├── images    
+│       ├── testCase.md    
+│       └── testPlan.md 
 │              
 ├── Technical       
-│       ├── .github/workflows                        
-│       ├── Images
-│       ├── TechnicalSpecifications.md
-│       ├── convention.md
-│       └── README.md
+│       ├── .github/workflows // Automatically fetching every branch according to the main                        
+│       ├── images
+│       ├── technicalSpecifications.md
+│       └── convention.md
 │            
 └── UserManual  
-        ├── .github/workflows                             
-        ├── UserManual.pdf
-        └── README.md
+        ├── .github/workflows // Automatically fetching every branch according to the main                        
+        └── userManual.pdf
         
 
 ```

@@ -72,4 +72,4 @@ Each directory corresponds to a project role with related documentation and asse
 
 ---
 
-> Built with ❤️ by Team 3 @ Intermarché Project 2025
+> Made by Team 3 @ Intermarché Project 2025

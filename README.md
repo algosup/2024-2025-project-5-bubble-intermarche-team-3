@@ -7,14 +7,14 @@ This application provides personalized wine and cheese recommendations based on 
 
 ## 🚀 How It Works
 
-1. **Access**: Shoppers access the app via QR code or direct URL using their smartphones.
-2. **Home Interface**: Users land on a main page featuring popular wines, cheeses, and recipes.
-3. **Search or Filter**: They can search for items or filter by type, origin, dietary tags, or price.
-4. **Product Pages**: Each product page offers details (price, origin, images) and pairing suggestions.
-5. **Pairing Suggestions**: Selecting a product reveals ideal pairings (e.g., wine for a cheese or recipe).
-6. **Favorites**: Users can bookmark items for quick reference during shopping.
-7. **Barcode Scanner**: Scan an Intermarché product to view details and pairings instantly.
-8. **Languages**: Interface available in both English and French.
+ **Access**: Shoppers access the app via QR code or direct URL using their smartphones.
+ **Home Interface**: Users land on a main page featuring popular wines, cheeses, and recipes.
+ **Search or Filter**: They can search for items or filter by type, origin, dietary tags, or price.
+ **Product Pages**: Each product page offers details (price, origin, images) and pairing suggestions.
+ **Pairing Suggestions**: Selecting a product reveals ideal pairings (e.g., wine for a cheese or recipe).
+ **Favorites**: Users can bookmark items for quick reference during shopping.
+ **Barcode Scanner**: Scan an Intermarché product to view details and pairings instantly.
+ **Languages**: Interface available in both English and French.
 
 Everything is designed to deliver a seamless, engaging, and fast experience that helps customers make better gastronomic decisions in just a few taps.
 
@@ -31,7 +31,8 @@ Everything is designed to deliver a seamless, engaging, and fast experience that
 
 ## 📍 Instructions
 
-To launch the Application, just open it on your smartphone. To see the futher requirements for this project, you can check the [User Manual](./UserManual/Document/userManual.pdf).
+To launch the Application, just open it on your smartphone or scan the following QR-CODE.
+To see the futher requirements for this project, you can check the [User Manual](./UserManual/Document/userManual.pdf).
 
 ---
 

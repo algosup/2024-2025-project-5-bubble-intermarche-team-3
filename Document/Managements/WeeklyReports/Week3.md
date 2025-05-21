@@ -3,16 +3,16 @@
 
 ## Overview
 
-After finishing the design, we worked more on the different research that we need for the project.
+After finishing the design, we worked more on the different research that we needed for the project.
 
 ## Accomplishments
 
 1. Design
-   - The final mock-up version is finished.
+   - The final version of the mock-up is complete.
 
 2. Research
    - We made a list of dishes that will be in the Web app.
-   - The combination of dish and Wine is found.
+   -  We found combinations of dishes and wines.
 
 2. Document
    - The Functional Specification was started.
@@ -28,18 +28,18 @@ After finishing the design, we worked more on the different research that we nee
 ## Challenges
 
 1. Missing Team Member
-   - One member was absent during time.
+   - One member was absent throughout the project time.
 2. Lack of time
    - During this week, we had public holidays, causing us to lose two days.
 3. Bubble
-   - Bubble for the free version of the database are limited.
+   - The free version of Bubble has limitations regarding its database.
 
 ## Plan for Next Week
 
 - Research
     - The combination of Wine and Cheese.
 - Document
-    - Functional Specification will be finish.
+    - Submitting the final version of the functional specification documents.
 - Database
     - Start implementing the database.
 

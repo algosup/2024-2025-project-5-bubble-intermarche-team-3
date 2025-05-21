@@ -24,6 +24,8 @@ The application will be fast and accessible, it must be easy to use to avoid a w
 
 ### MOSCOW
 
+We created a MoSCoW for the project to better understand what we will and won’t include.
+
 This is the MosCoW made for the project :
 
 ![moscow](Images/MoSCoW.png)
@@ -45,7 +47,7 @@ This is the MosCoW made for the project :
 |Julian REINE|Technical Lead|Define coding conventions <br> Choose technical tools used <br> Technical specification delivery <br> Manages developer tasks |Comprehensive technical specifications|
 |Guillaume DESPAUX|Software Engineer|Design User Interface <br> Define workflows<br>Manage database <br> Fix bugs|Full implementation of required features <br> Minimal bug count|
 |Vivien Bistrel TSANGUE CHOUNGOU|Quality Assurance|Review <br> documentation <br> Test the software <br>Ensure alignment with client expectations <br> Deliver a detailed test plan|Test Strategy <br>Bug identification <br> Detailed and thorough documentation|
-|Lucas AUBARD|Technical Writer|User Manual|Clear, user-friendly documentation|
+|Lucas AUBARD|Technical Writer|Transcribing the product to end users so that they will understand it easily|Clear, user-friendly documentation|
 
 ## Project Plan
 

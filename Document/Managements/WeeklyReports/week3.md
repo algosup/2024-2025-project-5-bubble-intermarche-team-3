@@ -12,7 +12,7 @@ After finishing the design, we worked more on the different research that we nee
 
 2. Research
    - We made a list of dishes that will be in the Web app.
-   -  We found combinations of dishes and wines.
+   - We found combinations of dishes and wines.
 
 2. Document
    - The Functional Specification was started.

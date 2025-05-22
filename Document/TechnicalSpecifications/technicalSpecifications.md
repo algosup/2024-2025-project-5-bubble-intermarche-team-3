@@ -534,12 +534,14 @@ class Cheese {
 }
 
 class CheeseType {
-    +brushed : bool
-    +pressed : bool
-    +goat : bool
-    +cow : bool
-    +sheep : bool
-    +buffalo : bool
+    +Fresh : bool
+    +Softwashed : bool
+    +Softbloomy : bool
+    +Cookedpressed : bool
+    +Uncookedpressed : bool
+    +Processed : bool
+    +Goat : bool
+    +Blueveined : bool
 }
 
 class CheeseWinePairing {

@@ -24,12 +24,12 @@
   - [4. Development Environment](#4-development-environment)
     - [4.1 Technologies Used](#41-technologies-used)
     - [4.2 Naming Conventions](#42-naming-conventions)
-    - [4.3 Github Repository Rules](#43-github-repository-rules)
-      - [4.3.1 Github Commits](#431-github-commits)
+    - [4.3 GitHub Repository Rules](#43-github-repository-rules)
+      - [4.3.1 GitHub Commits](#431-github-commits)
         - [A. Commit Titles](#a-commit-titles)
         - [B. Commit Body](#b-commit-body)
         - [C. Examples](#c-examples)
-      - [4.3.2 Github Comments](#432-github-comments)
+      - [4.3.2 GitHub Comments](#432-github-comments)
     - [4.5 File and folder architecture](#45-file-and-folder-architecture)
 - [II. Technical Aspect](#ii-technical-aspect)
   - [1. Application Overview](#1-application-overview)
@@ -132,7 +132,7 @@ Bubble will help us create a user-intuitive application, but we need to keep in 
 
 ### 2.3 Out Of Scope
 
-- Geolocalisation of the products in the store's shelves.
+- Geolocalisation of the products on the store's shelves.
 - shipping or delivery services.
 - Creating new Wine/cheese pairings.
 - Advanced settings functions.
@@ -187,15 +187,15 @@ PascalCase offers **clarity and precision**, making it easy for users to quickly
 
 ``` TechnicalSpecifications ```
 
-### 4.3 Github Repository Rules
+### 4.3 GitHub Repository Rules
 
 To maintain the **quality** of documents in both the main branch and release versions, we have **established** a set of rules.
 
 The main branch is protected and only allows changes through pull requests. This ensures the branch remains free from unintended modifications. Each pull request must be approved by at least two team members.
 
-#### 4.3.1 Github Commits
+#### 4.3.1 GitHub Commits
 
-Commits must adhere to specific guidelines, most of which are outlined in this document [here](https://Github.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md).
+Commits must adhere to specific guidelines, most of which are outlined in this document [here](https://GitHub.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md).
 
 ##### A. Commit Titles
 
@@ -219,7 +219,7 @@ The body of a commit provides a more detailed explanation of the changes and, li
 - **Use clear language:** Avoid technical jargon unless it's explained—other contributors should be able to understand your commit easily.
 
 > [!NOTE]
-> The body can also contain specific keywords that can interact with the repository, such as adding co-authors, closing issues, etc. They can be found [there](https://Github.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md/#5-Footer) in the footer section.
+> The body can also contain specific keywords that can interact with the repository, such as adding co-authors, closing issues, etc. They can be found [there](https://GitHub.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md/#5-Footer) in the footer section.
 
 ##### C. Examples
 
@@ -235,9 +235,9 @@ This is a template for a correct commit:
 
 ```
 
-#### 4.3.2 Github Comments
+#### 4.3.2 GitHub Comments
 
-We follow Github standards to enhance readability, but without comments, understanding the commits can take longer than necessary.
+We follow GitHub standards to enhance readability, but without comments, understanding the commits can take longer than necessary.
 
 To ensure that other team members can **collaborate effectively** and to support long-term maintenance, comments are essential.
 Team members have to **follow the same rules** said before for the comment section to ensure the workflow stays understandable.
@@ -274,30 +274,30 @@ Team members have to **follow the same rules** said before for the comment secti
 │        └── README.md 
 │              
 ├── Functional
-│       ├── .github/workflows // Automatically fetching every branch according to the main
+│       ├── .GitHub/workflows // Automatically fetching every branch according to the main
 │       ├── images
 │       └── functionalSpecifications.md
 │  
 ├── Management
-│       ├── .github/workflows // Automatically fetching every branch according to the main
+│       ├── .GitHub/workflows // Automatically fetching every branch according to the main
 │       ├── images   
 │       ├── managementArtifacts
 │       └── weeklyReports
 │                     
 ├── QualityAssurance
-│       ├── .github/workflows // Automatically fetching every branch according to the main
+│       ├── .GitHub/workflows // Automatically fetching every branch according to the main
 │       ├── images    
 │       ├── testCase.md    
 │       └── testPlan.md 
 │              
 ├── Technical       
-│       ├── .github/workflows // Automatically fetching every branch according to the main                        
+│       ├── .GitHub/workflows // Automatically fetching every branch according to the main                        
 │       ├── images
 │       ├── technicalSpecifications.md
 │       └── convention.md
 │            
 └── UserManual  
-        ├── .github/workflows // Automatically fetching every branch according to the main                        
+        ├── .GitHub/workflows // Automatically fetching every branch according to the main                        
         └── userManual.pdf
         
 
@@ -311,10 +311,10 @@ Additionally, we’ve implemented a GitHub workflow to automatically block commi
 
 # II. Technical Aspect
 
-This is the **section where the technical aspect of the project** will be explained in detail. We will dive into all of the features of the project, how they work and more specifications on them.
+This is the **section where the technical aspect of the project** will be explained in detail. We will dive into all of the features of the project, how they work, and more specifications on them.
 
 > [!Note]
-> As we are using Bubble, there is no real back-end development. Bubble's functions for developing will be explained, but the document will not be able to provide you further information on how every module works.
+> As we are using Bubble, there is no real back-end development. Bubble's functions for developing will be explained, but the document will not be able to provide you with further information on how every module works.
 
 ---
 
@@ -350,7 +350,7 @@ This page lets users filter products based on specific criteria.
   <img src="Images/FilterPage.png" width="200" alt="Main Page">
 </p>
 
-The Filter page works typically by using the unique ID each product has, and filtering them by criteria conditions. Each Unique ID will be associated to a product and a specification of the product, using the database template. 
+The Filter page works typically by using the unique ID each product has, and filtering them by criteria conditions. Each Unique ID will be associated with a product and a specification of the product, using the database template.
 
 For example, if the user is looking for red wine, every unique ID with the Redwine criteria will be displayed, and the other will be omitted.
 
@@ -632,7 +632,7 @@ This is the core class for all wine-related items.
 
 **Origin**: Describes the wine’s geographic origin and image, used in both Wine and Cheese classes. This adds reusability and consistency.
 
-The subcategories are connected together to thoses two categories allowing the user to find the best wine / cheese combination when checking one of the criterias givens.
+The subcategories are connected together to those two categories, allowing the user to find the best wine/cheese combination when checking one of the criteria given.
 
 ---
 
@@ -674,7 +674,7 @@ You can also have lists: e.g., User → SavedPairings (list of Pairings).
 
 ### 2.3 API database
 
-Because Bubble database's **is limited**, we decided to use an API to upload our database and **bypass this limit**. We decided to use [FireBase](https://firebase.google.com/) to create our own API dataset.
+Because Bubble database's **is limited**, we decided to use an API to upload our database and **bypass this limit**. We decided to use [Firebase](https://firebase.google.com/) to create our own API dataset.
 
 #### A. Data Pull
 
@@ -694,17 +694,17 @@ The API Connector lets you define requests to external APIs (like the Firebase A
 
 ##### A.3 Data Usage
 
-Works in one way unless you store it. Bubble can display these external data directly, but:
+Works in one way unless you store it. Bubble can display this external data directly, but:
 
 - You **can’t use** native filtering/searching on external data like you can using Bubble's database.
 
-- You **can’t use** built-in privacy rules like the one used by bubble. (**Firebase handles its own security**).
+- You **can’t use** built-in privacy rules like the one used by Bubble. (**Firebase handles its own security**).
 
 You’ll often want to **transform or cache** this data locally for performance or UI needs.
 
 ##### A.4 Data Connection to Bubble
 
-With Firebase, data is protected via Firebase **security rules**. which are separate from Bubble’s privacy system:
+With Firebase, data is protected via Firebase **security rules**. Which are separate from Bubble’s privacy system:
 You must handle:
 
 - **Auth tokens** (e.g., OAuth2 or Firebase custom tokens).
@@ -737,7 +737,7 @@ Body: ```Raw JSON```
 #### C. Unique ID
 
 In Firebase, every element will have an ID automatically generated, which will be the core for data retrieval.
-The Unique ID will be linked to a product, and we will be able to call them and filter them using Bubble's functions.
+The Unique ID will be linked to a product, and we will be able to call it and filter it using Bubble's functions.
 
 ---
 
@@ -771,7 +771,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 
 #### D. Plugins
 
-- Extend functionality with third-party or Bubble-made plugins (e.g., API connector, Style animations etc...).
+- Extend functionality with third-party or Bubble-made plugins (e.g., API connector, Style animations, etc...).
 
 > [!Note]
 > You can also create your own plugins if needed.
@@ -805,7 +805,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 
 ### 3.2 Bubble Offline usage
 
-In order for the application to work offline, Bubble must work offline after loading a first time, the main elements. Here is a list of what will and will not work offline.
+In order for the application to work offline, Bubble must work offline after loading for the first time, the main elements. Here is a list of what will and will not work offline.
 
 #### 3.2.1 Initial Content Load
 
@@ -871,11 +871,11 @@ Bubble provides a useful feature to automatically change the language of the who
 
  ``` welcome_message = "Welcome" (EN), "Bienvenue" (FR), etc. ```
 
-- In the design editor, when inserting text, use "Insert dynamic data > App text" and select the entrie you created. ( for example, the welcome_message).
+- In the design editor, when inserting text, use "Insert dynamic data > App text" and select the entry you created. ( for example, the welcome_message).
 
 ### 5.2 Barcode scanner
 
-We used a plugin in bubble to correctly scan a product and redirect it to its page on the application. Its done using the barcode scanner plugin.
+We used a plugin in Bubble to correctly scan a product and redirect it to its page on the application. It's done using the barcode scanner plugin.
 
 The scanner is using the ITM8 naming system of Intermarché. It means that this ITM8 number refers to a barcode in the application. In other words, it's automatically linked to Intermarché's stock.
 
@@ -904,7 +904,7 @@ The scanner is using the ITM8 naming system of Intermarché. It means that this 
 ### E. Cost Considerations
 
 - Pricing scales: As your app grows in terms of users, data, or features, Bubble’s pricing can become expensive compared to hosting a custom-coded app.
-- Third-party plugin dependence: Many advanced features rely on paid or community-built plugins, which may not be always free.
+- Third-party plugin dependence: Many advanced features rely on paid or community-built plugins, which may not always be free.
 
 ### F. Security
 
@@ -940,7 +940,7 @@ During development, the project may encounter a range of risks, including techni
 
 1. **Technical Limitations**: Challenges related to Bubble’s no-code capabilities or integration restrictions may arise. To mitigate this, the team will perform in-depth research, utilize online documentation and forums, and consult experts when necessary to find workarounds and solutions.
 2. **Resource Availability**: Limited access to certain Bubble features or external dependencies could hinder development. The team will manage this risk by collaborating closely with intermarché's stakeholders, prioritizing essential features, and seeking external support or workarounds when needed.
-3. **Timeline Delays**: Unexpected setbacks such as technical hurdles, evolving requirements, or limited team availability may delay progress. To reduce this risk, the team will maintain clear communication, monitor project milestones, and revise schedules as necessary to stay aligned with delivery goals. To learn more about the project management, check the "management" folder on our github page.
+3. **Timeline Delays**: Unexpected setbacks such as technical hurdles, evolving requirements, or limited team availability may delay progress. To reduce this risk, the team will maintain clear communication, monitor project milestones, and revise schedules as necessary to stay aligned with delivery goals. To learn more about project management, check the "management" folder on our GitHub page.
 
 By identifying these potential risks early and planning responsive mitigation strategies, the team aims to reduce disruptions and ensure the project stays on track for a successful and timely completion.
 
@@ -948,7 +948,7 @@ By identifying these potential risks early and planning responsive mitigation st
 
 ## 3. Testing
 
-The testing part of the project will be done by **Manual Testing**, usefull for exploratory testing, usability testing, and edge case scenarios that may not be covered by automated tests.
+The testing part of the project will be done by **Manual Testing**, useful for exploratory testing, usability testing, and edge case scenarios that may not be covered by automated tests.
 
 ### 3.1 Testing Strategy
 
@@ -983,10 +983,10 @@ By following these practices, the application will be built to scale, perform ef
 Below is a list of potential enhancements that could be considered for future development:
 
 - **Upgrading to a better plan in Bubble:** We are currently running on the free version of Bubble to present to you our application, but Bubble offers various paid plans, including useful features that remove the limitations we had during this project.
-- **Generalisation of the project:** Making it possible to link more Intermarché stores to enhance the french culture in other touristic regions of France.
-- **Real time stock count:** We could implement, using a realtime database of the product availability, create a tracking system to warn the user if the product they want is unavailable in the store he wants to go.
+- **Generalisation of the project:** Making it possible to link more Intermarché stores to enhance the French culture in other touristic regions of France.
+- **Real-time stock count:** We could implement, using a real-time database of the product availability, create a tracking system to warn the user if the product they want is unavailable in the store they want to go to.
 - **Personalized Recommendations:** Learn from user behavior: saved pairings, ratings, dislikes. Offering tailored suggestions based on past activity or taste preferences.
-- **Online shopping systeme:** being able to buy the desired product directly from the application.
+- **Online shopping system:** being able to buy the desired product directly from the application.
 
 ---
 

@@ -21,7 +21,7 @@
     - [2.1 In Scope](#21-in-scope)
     - [2.3 Out Of Scope](#23-out-of-scope)
   - [3. Task Management](#3-task-management)
-  - [4. Development Environement](#4-development-environement)
+  - [4. Development Environment](#4-development-environment)
     - [4.1 Technologies Used](#41-technologies-used)
     - [4.2 Naming Conventions](#42-naming-conventions)
     - [4.3 Github Repository Rules](#43-github-repository-rules)
@@ -56,7 +56,7 @@
         - [A.1. Data Isn’t Stored in Bubble](#a1-data-isnt-stored-in-bubble)
         - [A.2 API Connector](#a2-api-connector)
         - [A.3 Data Usage](#a3-data-usage)
-        - [A.4 Data Connexion to Bubble](#a4-data-connexion-to-bubble)
+        - [A.4 Data Connection to Bubble](#a4-data-connection-to-bubble)
       - [B. Data Push](#b-data-push)
         - [B.1. How This Maps in Bubble](#b1-how-this-maps-in-bubble)
       - [C. Unique ID](#c-unique-id)
@@ -74,7 +74,7 @@
     - [3.2 Bubble Offline usage](#32-bubble-offline-usage)
       - [3.2.1 Initial Content Load](#321-initial-content-load)
       - [3.2.2 Data \& Workflows](#322-data--workflows)
-  - [4. Wine and Cheese Alorithm](#4-wine-and-cheese-alorithm)
+  - [4. Wine and Cheese Algorithm](#4-wine-and-cheese-algorithm)
     - [4.1 Firebase database structure](#41-firebase-database-structure)
     - [4.2 Compatibility Level](#42-compatibility-level)
   - [5. Features usage](#5-features-usage)
@@ -104,37 +104,37 @@
 
 ## 1. Introduction
 
-Welcome to the **fifth** project of this year, the project **bubble intermarché**.
-This project is **a commission** from [Intermarché](https://www.intermarche.com/accueil), a french grocery store brand, especially the intermarché from *Saint-Rémy-de-Provence*.
+Welcome to this year's **fifth** project, the project **bubble intermarché**.
+This project is **a commission** from [Intermarché](https://www.intermarche.com/accueil), a French grocery store brand, especially the intermarché from *Saint-Rémy-de-Provence*.
 
-The purpose of this project is to develop a **working  interface** using the no-code engine **bubble** showing the possible combination between wines and cheeses.The target users include:
+This project aims to develop a **working interface** using the no-code engine **bubble**, showing the possible combination between wines and cheeses. The target users include:
 
-- Tourist and users who want to learn more about the french gastronomic culture.
+- Tourists and users who want to learn more about the French gastronomic culture.
 
 ### 1.1 Objectives
 
-Saint-Rémy-de-Provence is a highly **touristic** area in France. The local Intermarché supermarket asked us to develop a **functional  interface** that could **showcase possible wine and cheese pairings**, based on both their current stock and traditional French gastronomy. The goal was to make these pairings more accessible to people around the world, with a special focus on the many tourists visiting the region.
-The application will be able to **associate**, using a **custom database**, the different **wine and cheese combinations** with aswell, **dishes recommendations** (e.g Boeuf bourguignion for the Red wine).
-The team will focus on creating an **user-intuitive interface** so everybody, even tourist who are not trained in computer science, can understand it fully and use it in its proper way.
+Saint-Rémy-de-Provence is a highly **touristic** area in France. The local Intermarché supermarket asked us to develop a **functional interface** that could **showcase possible wine and cheese pairings**, based on both their current stock and traditional French gastronomy. The goal was to make these pairings more accessible to people around the world, with a special focus on the many tourists visiting the region.
+The application will be able to **associate**, using a **custom database**, the different **wine and cheese combinations** with as well, **dish recommendations** (e.g: Boeuf bourguignon for the red wine).
+The team will focus on creating a **user-intuitive interface** so everybody, even tourists who are not trained in computer science, can understand it fully and use it in its proper way.
 
 ---
 
 ## 2. Project Scope
 
-Bubble will help us creating an user intuitive application, but we need to keep in mind the scope of the project to assure a good workflow:
+Bubble will help us create a user-intuitive application, but we need to keep in mind the scope of the project to ensure a good workflow:
 
 ### 2.1 In Scope
 
-- Wine / cheese recommendation.
-- User-fiendly interface.
+- Wine/cheese recommendation.
+- User-friendly interface.
 - Complete filter of wine and cheese for the application.
 - Scanning function to identify the product.
 
 ### 2.3 Out Of Scope
 
-- Geolocalisation of the products in the store's shelfs.
+- Geolocalisation of the products in the store's shelves.
 - shipping or delivery services.
-- Creating new Wine / cheese pairings.
+- Creating new Wine/cheese pairings.
 - Advanced settings functions.
 
 ---
@@ -146,16 +146,16 @@ The project will be divided into the following tasks:
 - User Interface: Creating an intuitive and interactive user interface for the wine and cheese pairing service.
 - Bar code scanning: Creating the bar code scanning feature.
 - Testing and Debugging: Testing the system for bugs, performance issues, and usability problems, and fixing them as soon as possible.
-- Data base creation / implementation: Creating the wine and the cheese databases based on the provided documentation.
+- Database creation/implementation: Creating the wine and the cheese databases based on the provided documentation.
 - Documentation: Writing technical documentation, user guides, and other relevant documentation for the project.
 
-The team will collaborate across all project tasks, with each member bringing their specific skills and expertise to different parts of the work. Regular meetings will be scheduled to review progress, share updates, and quickly resolve any challenges that that may appear during development. Throughout the process, the team will also engage with the customer to gather feedback and confirm that deliverables meet expectations.
+The team will collaborate across all project tasks, with each member bringing their specific skills and expertise to different parts of the work. Regular meetings will be scheduled to review progress, share updates, and quickly resolve any challenges that may appear during development. Throughout the process, the team will also engage with the customer to gather feedback and confirm that deliverables meet expectations.
 
 The project aims to be completed within the agreed timeline, with consistent updates provided to the customer to ensure the work stays aligned with their needs and requirements.
 
 ---
 
-## 4. Development Environement
+## 4. Development Environment
 
 Our team uses multiple machines to work on this project, such as:
 
@@ -166,12 +166,12 @@ Our team uses multiple machines to work on this project, such as:
 
 During this project, we will use:
 
-- [Bubble](https://bubble.io/home/): Bubble is a site making tool and a PaaS developed by Bubble Group. It can be used by people with limited or no programming experience to make  pages.
+- [Bubble](https://bubble.io/home/): Bubble is a site making tool and a PaaS developed by Bubble Group. It can be used by people with limited or no programming experience to make pages.
 
 - Bubble plugins:
-  - Barcode scanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or alternatively choose 'Front' or 'Back' and allow the plugin to find the correct camera.
-  - CSS loading animations: Loading.io's CSS spinner uses CSS Animation to create Loading and Preloading animations. These are supported by by all modern browsers such as Google Chrome and Mozilla Firefox.
-  - Local storage & Cookies: Create cookies on the Device Local Storage to store information in a persistent way.
+  - Barcode scanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or choose 'Front' or 'Back' and allow the plugin to find the correct camera.
+  - CSS loading animations: Loading.io's CSS spinner uses CSS Animation to create Loading and Preloading animations. These are supported by all modern browsers, such as Google Chrome and Mozilla Firefox.
+  - Local storage & Cookies: Create cookies on the device's Local Storage to store information persistently.
   - API connector: The API connector lets you define your own API calls directly in the Bubble Editor and use them in your application.
 
 ### 4.2 Naming Conventions
@@ -223,7 +223,7 @@ The body of a commit provides a more detailed explanation of the changes and, li
 
 ##### C. Examples
 
-This is an template for a correct commit:
+This is a template for a correct commit:
 
 ```plaintext
 
@@ -314,7 +314,7 @@ Additionally, we’ve implemented a GitHub workflow to automatically block commi
 This is the **section where the technical aspect of the project** will be explained in detail. We will dive into all of the features of the project, how they work and more specifications on them.
 
 > [!Note]
-> As we are using Bubble, there is not real back-end development. Bubble's functions for developing will be explained, but the document will not be able to provide to you futher informations on how every modules works.
+> As we are using Bubble, there is no real back-end development. Bubble's functions for developing will be explained, but the document will not be able to provide you further information on how every module works.
 
 ---
 
@@ -352,7 +352,7 @@ This page lets users filter products based on specific criteria.
 
 The Filter page works typically by using the unique ID each product has, and filtering them by criteria conditions. Each Unique ID will be associated to a product and a specification of the product, using the database template. 
 
-For example, if the user is looking for redwine, every unique ID with the Redwine criteria will be displayed, and the other will be omited.
+For example, if the user is looking for red wine, every unique ID with the Redwine criteria will be displayed, and the other will be omitted.
 
 ---
 
@@ -397,11 +397,11 @@ The favorites page allows users to manage their saved products.
 </p>
 
 >![Note]
-> All of the pages will be translated from english to french using the language changer button due to core requirements for this project.
+> All of the pages will be translated from English to French using the language changer button due to core requirements for this project.
 
 ### 1.2 Application Architecture
 
-The application will have all the pages interconnected so you can access them any time.. Here is a simple breakdown of how the application is structured:
+The application will have all the pages interconnected so you can access them anytime.. Here is a simple breakdown of how the application is structured:
 
 <p align="center">
   <img src="Images/PageArchitecture.png" width="900" alt="Main Page">
@@ -433,8 +433,8 @@ These are executed sequentially, for example:
 
 Each action can run only when certain conditions are met, e.g.:
 
-- Only if Input's value is not empty.
-- Only if Current User's role is admin.
+- Only if the Input's value is not empty.
+- Only if the Current User's role is admin.
   
 ---
 
@@ -632,7 +632,7 @@ This is the core class for all wine-related items.
 
 **Origin**: Describes the wine’s geographic origin and image, used in both Wine and Cheese classes. This adds reusability and consistency.
 
-The subcatergories are connected together to thoses two categories allowing the user to find the best wine / cheese combination when checking one of the criterias givens.
+The subcategories are connected together to thoses two categories allowing the user to find the best wine / cheese combination when checking one of the criterias givens.
 
 ---
 
@@ -660,7 +660,7 @@ Types: text, number, date, yes/no, file, image, geographic address, another Data
 
 #### C. Things
 
-- A "Thing" is a single entry in a Data Type — like a single wine.
+- A "Thing" is a single entry in a Data Type, like a single wine.
 
 #### D. Relationships
 
@@ -682,11 +682,11 @@ Because Bubble database's **is limited**, we decided to use an API to upload our
 
 **You're not creating Bubble database entries** (like internal records). Instead, you’re pulling data from Firebase, showing it in the app, or sending data back to Firebase.
 
-It’s a live connection so every time you show or update something, it makes an API call (unless you manually store it in Bubble’s database).
+It’s a live connection, so every time you show or update something, it makes an API call (unless you manually store it in Bubble’s database).
 
 ##### A.2 API Connector
 
-The API Connector lets you define requests to external APIs (like the Firebase’s API we created):
+The API Connector lets you define requests to external APIs (like the Firebase API we created):
 
 - **GET** requests fetch data from Firebase.
 
@@ -694,15 +694,15 @@ The API Connector lets you define requests to external APIs (like the Firebase�
 
 ##### A.3 Data Usage
 
-Works in one-way unless you store it. Bubble can display these external data directly, but:
+Works in one way unless you store it. Bubble can display these external data directly, but:
 
-- You **can’t use** native filtering/searching on external data like you can using bubble's database.
+- You **can’t use** native filtering/searching on external data like you can using Bubble's database.
 
 - You **can’t use** built-in privacy rules like the one used by bubble. (**Firebase handles its own security**).
 
 You’ll often want to **transform or cache** this data locally for performance or UI needs.
 
-##### A.4 Data Connexion to Bubble
+##### A.4 Data Connection to Bubble
 
 With Firebase, data is protected via Firebase **security rules**. which are separate from Bubble’s privacy system:
 You must handle:
@@ -713,14 +713,14 @@ You must handle:
 
 #### B. Data Push
 
-In Firebase (specifically Cloud Firestore), you can **modify / add** elements to the database by:
+In Firebase (specifically Cloud Firestore), you can **modify/add** elements to the database by:
 
 - Creating a new document in a collection or updating an existing document.
 This is done by making a **POST or PATCH HTTP** request to Firebase’s REST endpoint, depending on whether you're creating or updating.
   
 ##### B.1. How This Maps in Bubble
 
-You can set, using the **API Connector plugin**, the api connexion between **bubble and firebase**. The API is integrated following these paterns:
+You can set, using the **API Connector plugin**, the api connection between **Bubble and Firebase**. The API is integrated following these patterns:
 
 Method: ```GET```
 
@@ -736,7 +736,7 @@ Body: ```Raw JSON```
 
 #### C. Unique ID
 
-In firebase, every elements will have an ID automatically generated which will be the core for data retrieve.
+In Firebase, every element will have an ID automatically generated, which will be the core for data retrieval.
 The Unique ID will be linked to a product, and we will be able to call them and filter them using Bubble's functions.
 
 ---
@@ -750,7 +750,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 
 - HTML/CSS: Provides the foundational structure and styling for the web interface.
 - JavaScript: Powers client-side interactions and dynamic content.
-- RESTful APIs: Facilitates communication between different services within the application.
+- RESTful APIs: Facilitate communication between different services within the application.
 - Node.js: Runs server-side JavaScript code to handle backend logic.
 
 #### A. Visual Editor (Design Tab)
@@ -805,7 +805,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 
 ### 3.2 Bubble Offline usage
 
-In order for the application to work offline, bubble must work offline after loading a first time, the main elements. Here is a list of what will and will not work offline.
+In order for the application to work offline, Bubble must work offline after loading a first time, the main elements. Here is a list of what will and will not work offline.
 
 #### 3.2.1 Initial Content Load
 
@@ -825,7 +825,7 @@ If the app tries to pull new data or run server-side workflows, it will fail wit
 
 ---
 
-## 4. Wine and Cheese Alorithm
+## 4. Wine and Cheese Algorithm
 
 The core purpose of the app is to match wines with cheeses, so we need a fast and reliable algorithm to handle these pairings efficiently.
 
@@ -833,7 +833,7 @@ To support this, the main algorithm will use a Firebase database instead of Bubb
 
 ### 4.1 Firebase database structure
 
-Here is how the database on firebase will use the the data:
+Here is how the database on Firebase will use the data:
 
 <p align="center">
   <img src="Images/Firebase Database.png.png" width="700" alt="Main Page">
@@ -845,7 +845,7 @@ Here is how the database on firebase will use the the data:
 
 ### 4.2 Compatibility Level
 
-Products in the database are rated on a compatibility scale from 0 to 2 — with 0 meaning not compatible, and 2 indicating items that should always be paired together. We followed this guide to accurately link each product to its ideal wine pairings:
+Products in the database are rated on a compatibility scale from 0 to 2, with 0 meaning not compatible, and 2 indicating items that should always be paired together. We followed this guide to accurately link each product to its ideal wine pairings:
 
 <p align="center">
   <img src="Images/Pairing scale.png" width="500" alt="Main Page">
@@ -863,11 +863,11 @@ For cheese compatibility, we used the same approach, based on the following char
 
 ### 5.1 Language changer
 
-Bubble is featuring a usefull features to automatically change the language of the whole application from one to another using only one feature:
+Bubble provides a useful feature to automatically change the language of the whole application from one to another using only one feature:
 
 - Go to Settings > Languages in your Bubble editor.
 
-- Add the languages you want your app to support. It should now create a bubble database named " App Text ", you can now modify your entries with the needed languages like this:
+- Add the languages you want your app to support. It should now create a bubble database named " App Text ". You can now modify your entries with the needed languages like this:
 
  ``` welcome_message = "Welcome" (EN), "Bienvenue" (FR), etc. ```
 
@@ -877,14 +877,14 @@ Bubble is featuring a usefull features to automatically change the language of t
 
 We used a plugin in bubble to correctly scan a product and redirect it to its page on the application. Its done using the barcode scanner plugin.
 
-The scanner is using the ITM8 naming system of Intermarché. It means that this ITM8 number is refered to a barcode in the application. In other terms its automatically linked to Intermarché's stock.
+The scanner is using the ITM8 naming system of Intermarché. It means that this ITM8 number refers to a barcode in the application. In other words, it's automatically linked to Intermarché's stock.
 
 ## 6. Bubble Limitations
 
 ### A. Performance and Scalability
 
 - Slower than code: Apps built on Bubble can be slower than those built with traditional coding, especially under heavy user load or with complex workflows.
-- Limited backend control: You don’t have full access to server infrastructure which can restrict optimization.
+- Limited backend control: You don’t have full access to the server infrastructure, which can restrict optimization.
 
 ### B. Platform Dependency
 
@@ -959,7 +959,7 @@ The testing strategy is built around key development principles to ensure the ap
 - **Regression Prevention**: Regular regression testing will be conducted to ensure new updates do not break or degrade existing features.
 - **User-Focused Validation**: Usability, accessibility, and direct user feedback will be part of the testing workflow, ensuring a smooth and inclusive experience.
 
-The Q.A will use his personnal device to conduct tests on the application and rendering simulations for efficient test. He will not be able to use external test tool because of bubble's security.
+The QA will use their device to conduct tests on the application and render simulations for efficient testing. He will not be able to use the external test tool because of Bubble's security.
 
 ---
 
@@ -982,7 +982,7 @@ By following these practices, the application will be built to scale, perform ef
 
 Below is a list of potential enhancements that could be considered for future development:
 
-- **Upgrading to a better plan in bubble:** We are currently running on the free version of bubble to present to you our application but Bubble offers various paid plans including usefull features that remove the limitations we had during this project.
+- **Upgrading to a better plan in Bubble:** We are currently running on the free version of Bubble to present to you our application, but Bubble offers various paid plans, including useful features that remove the limitations we had during this project.
 - **Generalisation of the project:** Making it possible to link more Intermarché stores to enhance the french culture in other touristic regions of France.
 - **Real time stock count:** We could implement, using a realtime database of the product availability, create a tracking system to warn the user if the product they want is unavailable in the store he wants to go.
 - **Personalized Recommendations:** Learn from user behavior: saved pairings, ratings, dislikes. Offering tailored suggestions based on past activity or taste preferences.
@@ -1004,13 +1004,13 @@ Below is a list of potential enhancements that could be considered for future de
 | **Thing** | A single entry or record in a Bubble data type (e.g., one specific wine). |
 | **Workflow** | A series of actions in Bubble triggered by an event (like clicking a button), similar to backend logic. |
 | **Trigger/Event** | The action that starts a workflow (e.g., page load, button click). |
-| **Condition** | A rule that determines whether a workflow action should be executed (e.g., only if user is logged in). |
+| **Condition** | A rule that determines whether a workflow action should be executed (e.g., only if a user is logged in). |
 | **Custom State** | Temporary front-end memory in Bubble used to store UI information without saving to the database. |
 | **EAN / ITM** | EAN (European Article Number) and ITM (internal identifier) are used to uniquely identify products. |
 | **Responsive Engine** | Bubble’s tool to ensure the application layout adapts to different screen sizes (mobile/tablet/desktop). |
 | **Version Control** | System for managing and tracking changes in development; Bubble supports this natively. |
 | **Privacy Rules** | Permissions in Bubble that control who can view or modify data. |
 | **Data Caching** | Temporarily storing data for faster access and better performance. |
-| **Repeating Group** | An UI element in Bubble used to display a list of things dynamically. |
+| **Repeating Group** | A UI element in Bubble used to display a list of things dynamically. |
 
 ---

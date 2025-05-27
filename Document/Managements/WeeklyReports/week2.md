@@ -16,6 +16,9 @@ This week we progressed on the conception of the web application's design and al
    - The template for the Technical has started.
    - The Project Charter is complete.
 
+4. Database 
+   - The Structure Database was created.
+
 
 ## Challenges
 

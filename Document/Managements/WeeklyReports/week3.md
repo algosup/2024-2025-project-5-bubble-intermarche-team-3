@@ -19,8 +19,7 @@ After finishing the design, we worked more on the different research that we nee
    - Naming conventions have been defined in the technical specification.
    - The Test Plan has been continued.
 
-3. Database
-   - The Structure Database was created. 
+3. Database 
    - Create a junction with Firebase for the database.
 
 

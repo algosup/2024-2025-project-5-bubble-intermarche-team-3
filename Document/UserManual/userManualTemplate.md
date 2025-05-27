@@ -119,6 +119,6 @@ ideal **wine & cheese pairings** based on French gastronomy.
 ---
 
 ## 📅 Last Updated
-**June 16, 2025** – Version **1.0** (Demo)
+**May 27, 2025** – Version **1.0** (Demo)
 
 ---

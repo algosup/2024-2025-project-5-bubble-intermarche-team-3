@@ -76,4 +76,4 @@ Each directory corresponds to a project role with related documentation and asse
 ---
 
 > Made by Team 3 @ Intermarché Project 2025
-> This project is registered under the MIT license that you can find [here](Document/TechnicalSpecifications/license.md)
+> This project is registered under the MIT license that you can find [here](Document/TechnicalSpecifications/LICENSE.md)

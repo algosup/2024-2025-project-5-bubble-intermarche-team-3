@@ -67,12 +67,13 @@ Each directory corresponds to a project role with related documentation and asse
 
 ## 📄 Documentation
 
-- 📋 [Functional Specs](./Functional/Document/functionalSpecification.md)
-- 🔧 [Technical Specs](./Technical/Document/technicalSpecifications.md)
-- 🧪 [Test Plan & QA](./QualityAssurance/Document/)
-- 📘 [User Manual](./UserManual/Document/userManual.pdf)
-- 📚 [Management](./Management/Document/)
+- 📋 [Functional Specs](./Document/FunctionalSpecification/functionalSpecification.md)
+- 🔧 [Technical Specs](./Document\TechnicalSpecifications\technicalSpecifications.md)
+- 🧪 [Test Plan & QA](./Document\QualityAssurance)
+- 📘 [User Manual](./Document/UserManual)
+- 📚 [Management](./Document/Management/Document)
 
 ---
 
 > Made by Team 3 @ Intermarché Project 2025
+> This project is registered under the MIT license that you can find [here](Document\TechnicalSpecifications\license.md)

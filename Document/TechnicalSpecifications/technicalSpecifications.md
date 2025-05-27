@@ -5,12 +5,14 @@
 
 | Role | Name | Signature | Date |
 |---|---|---|---|
-| Project Manager | Léna DE GERMAIN | ✅ | 28/05/2025 |
-| Program Manager | Camille GAYAT | ✅ | 28/05/2025 |
-| Tech Lead | Julian REINE | ✅ | 28/05/2025 |
-| Software Developer | Guillaume DESPAUX | ✅ | 28/05/2025 |
-| Quality Assurance | Vivien Bistrel TSANGUE CHOUNGOU | ✅ | 28/05/2025 |
-| Technical Writter | Lucas AUBARD | ✅ | 28/05/2025 |
+| Project Manager | Léna DE GERMAIN | ✅ | 27/05/2025 |
+| Program Manager | Camille GAYAT | ✅ | 27/05/2025 |
+| Tech Lead | Julian REINE | ✅ | 27/05/2025 |
+| Software Developer | Guillaume DESPAUX | ✅ | 27/05/2025 |
+| Quality Assurance | Vivien Bistrel TSANGUE CHOUNGOU | ✅ | 27/05/2025 |
+| Technical Writter | Lucas AUBARD | ✅ | 27/05/2025 |
+
+This project's documents are registered under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) that you can find [here](Document\TechnicalSpecifications\license.md)
 
 ## Table of Content <!-- omit in toc -->
 
@@ -256,6 +258,7 @@ Team members have to **follow the same rules** said before for the comment secti
 │        │       ├── TechnicalSpecifications
 │        │       │      ├── images
 │        │       │      ├── conventions.md
+│        │       │      ├── license.md
 │        │       │      └── technicalSpecifications.md
 │        │       │
 │        │       ├── QualityAssurance
@@ -1012,5 +1015,7 @@ Below is a list of potential enhancements that could be considered for future de
 | **Privacy Rules** | Permissions in Bubble that control who can view or modify data. |
 | **Data Caching** | Temporarily storing data for faster access and better performance. |
 | **Repeating Group** | A UI element in Bubble used to display a list of things dynamically. |
+
+###### Copyright (c) 2025 ALGOSUP <!-- omit in toc -->
 
 ---

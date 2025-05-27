@@ -68,7 +68,7 @@ Each directory corresponds to a project role with related documentation and asse
 ## 📄 Documentation
 
 - 📋 [Functional Specifications](./Document/FunctionalSpecification/functionalSpecification.md)
-- 🔧 [Technical Specifications](./Document\TechnicalSpecifications/technicalSpecifications.md)
+- 🔧 [Technical Specifications](./Document/TechnicalSpecifications/technicalSpecifications.md)
 - 🧪 [Test Plan & QA](./Document/QualityAssurance)
 - 📘 [User Manual](./Document/UserManual)
 - 📚 [Management](./Document/Management/Document)

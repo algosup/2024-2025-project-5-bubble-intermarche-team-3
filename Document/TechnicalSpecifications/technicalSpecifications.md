@@ -12,7 +12,7 @@
 | Quality Assurance | Vivien Bistrel TSANGUE CHOUNGOU | ✅ | 27/05/2025 |
 | Technical Writer | Lucas AUBARD | ✅ | 27/05/2025 |
 
-This project's documents are registered under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) that you can find in the [MIT License](./LICENSE.md) file.
+This project's documents are registered under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) that you can find in the [License](../../LICENSE.md) file.
 
 You can find the changelog of the document [here](./changeLog.md)
 

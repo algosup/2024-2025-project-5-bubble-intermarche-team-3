@@ -10,9 +10,11 @@
 | Tech Lead | Julian REINE | ✅ | 27/05/2025 |
 | Software Developer | Guillaume DESPAUX | ✅ | 27/05/2025 |
 | Quality Assurance | Vivien Bistrel TSANGUE CHOUNGOU | ✅ | 27/05/2025 |
-| Technical Writter | Lucas AUBARD | ✅ | 27/05/2025 |
+| Technical Writer | Lucas AUBARD | ✅ | 27/05/2025 |
 
-This project's documents are registered under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) that you can find [here](./LICENSE.md)
+This project's documents are registered under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) that you can find in the [MIT License](./LICENSE.md) file.
+
+You can find the changelog of the document [here](./Document/TechnicalSpecifications/changeLog.md)
 
 ## Table of Content <!-- omit in toc -->
 
@@ -21,61 +23,25 @@ This project's documents are registered under the [MIT License](https://en.wikip
     - [1.1 Objectives](#11-objectives)
   - [2. Project Scope](#2-project-scope)
     - [2.1 In Scope](#21-in-scope)
-    - [2.3 Out Of Scope](#23-out-of-scope)
+    - [2.2 Out Of Scope](#22-out-of-scope)
   - [3. Task Management](#3-task-management)
   - [4. Development Environment](#4-development-environment)
     - [4.1 Technologies Used](#41-technologies-used)
     - [4.2 Naming Conventions](#42-naming-conventions)
     - [4.3 GitHub Repository Rules](#43-github-repository-rules)
-      - [4.3.1 GitHub Commits](#431-github-commits)
-        - [A. Commit Titles](#a-commit-titles)
-        - [B. Commit Body](#b-commit-body)
-        - [C. Examples](#c-examples)
-      - [4.3.2 GitHub Comments](#432-github-comments)
-    - [4.5 File and folder architecture](#45-file-and-folder-architecture)
+    - [4.4 File and folder architecture](#44-file-and-folder-architecture)
 - [II. Technical Aspect](#ii-technical-aspect)
   - [1. Application Overview](#1-application-overview)
     - [1.1 Front-End Specifications](#11-front-end-specifications)
-      - [A. **Main Page**](#a-main-page)
-      - [B. **Filter Page**](#b-filter-page)
-      - [C. **Research Page**](#c-research-page)
-      - [D. **Product Page**](#d-product-page)
-      - [E. **Favorites Page**](#e-favorites-page)
     - [1.2 Application Architecture](#12-application-architecture)
     - [1.3 Backend Overview (Workflow)](#13-backend-overview-workflow)
-      - [A. Trigger/Event](#a-triggerevent)
-      - [B. Series of Actions](#b-series-of-actions)
-      - [C. Conditions](#c-conditions)
   - [2. Database structure](#2-database-structure)
     - [2.1 Database breakdown](#21-database-breakdown)
     - [2.2 Bubble Database breakdown](#22-bubble-database-breakdown)
-      - [A. Data Types](#a-data-types)
-      - [B. Fields](#b-fields)
-      - [C. Things](#c-things)
-      - [D. Relationships](#d-relationships)
     - [2.3 API database](#23-api-database)
-      - [A. Data Pull](#a-data-pull)
-        - [A.1. Data Isn’t Stored in Bubble](#a1-data-isnt-stored-in-bubble)
-        - [A.2 API Connector](#a2-api-connector)
-        - [A.3 Data Usage](#a3-data-usage)
-        - [A.4 Data Connection to Bubble](#a4-data-connection-to-bubble)
-      - [B. Data Push](#b-data-push)
-        - [B.1. How This Maps in Bubble](#b1-how-this-maps-in-bubble)
-      - [C. Unique ID](#c-unique-id)
   - [3. Bubble building features breakdown](#3-bubble-building-features-breakdown)
     - [3.1 Bubble introduction](#31-bubble-introduction)
-      - [A. Visual Editor (Design Tab)](#a-visual-editor-design-tab)
-      - [B. Workflow Editor](#b-workflow-editor)
-      - [C. Database (Data Tab)](#c-database-data-tab)
-      - [D. Plugins](#d-plugins)
-      - [E. API Connector](#e-api-connector)
-      - [F. Responsive Engine](#f-responsive-engine)
-      - [G. Custom States](#g-custom-states)
-      - [H. Version Control \& Deployment](#h-version-control--deployment)
-      - [I. SEO and Hosting](#i-seo-and-hosting)
     - [3.2 Bubble Offline usage](#32-bubble-offline-usage)
-      - [3.2.1 Initial Content Load](#321-initial-content-load)
-      - [3.2.2 Data \& Workflows](#322-data--workflows)
   - [4. Wine and Cheese Algorithm](#4-wine-and-cheese-algorithm)
     - [4.1 Firebase database structure](#41-firebase-database-structure)
     - [4.2 Compatibility Level](#42-compatibility-level)
@@ -83,14 +49,6 @@ This project's documents are registered under the [MIT License](https://en.wikip
     - [5.1 Language changer](#51-language-changer)
     - [5.2 Barcode scanner](#52-barcode-scanner)
   - [6. Bubble Limitations](#6-bubble-limitations)
-    - [A. Performance and Scalability](#a-performance-and-scalability)
-    - [B. Platform Dependency](#b-platform-dependency)
-    - [C. Design \& UI Constraints](#c-design--ui-constraints)
-    - [D. Logic Limitations](#d-logic-limitations)
-    - [E. Cost Considerations](#e-cost-considerations)
-    - [F. Security](#f-security)
-    - [G. API and Integration Limitations](#g-api-and-integration-limitations)
-    - [H. Not Ideal for Certain Use Cases](#h-not-ideal-for-certain-use-cases)
 - [III. Development Process](#iii-development-process)
   - [1. Development rules](#1-development-rules)
   - [2. Risks and Mitigation Strategies](#2-risks-and-mitigation-strategies)
@@ -132,7 +90,7 @@ Bubble will help us create a user-intuitive application, but we need to keep in 
 - Complete filter of wine and cheese for the application.
 - Scanning function to identify the product.
 
-### 2.3 Out Of Scope
+### 2.2 Out Of Scope
 
 - Geolocalisation of the products on the store's shelves.
 - shipping or delivery services.
@@ -168,7 +126,7 @@ Our team uses multiple machines to work on this project, such as:
 
 During this project, we will use:
 
-- [Bubble](https://bubble.io/home/): Bubble is a site making tool and a PaaS developed by Bubble Group. It can be used by people with limited or no programming experience to make pages.
+- [Bubble](https://bubble.io/home/): Bubble is a web interface making tool and a PaaS developed by Bubble Group that allows users to create their web application while using building block. It can be used by people with limited or no programming experience to make pages.
 
 - Bubble plugins:
   - Barcode scanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or choose 'Front' or 'Back' and allow the plugin to find the correct camera.
@@ -195,22 +153,22 @@ To maintain the **quality** of documents in both the main branch and release ver
 
 The main branch is protected and only allows changes through pull requests. This ensures the branch remains free from unintended modifications. Each pull request must be approved by at least two team members.
 
-#### 4.3.1 GitHub Commits
+#### 4.3.1 GitHub Commits <!-- omit in toc -->
 
 Commits must adhere to specific guidelines, most of which are outlined in this document [here](https://GitHub.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md).
 
-##### A. Commit Titles
+##### A. Commit Titles <!-- omit in toc -->
 
 The title is a crucial part of any commit. It provides a concise summary of the changes, indicating what has been implemented, fixed, or removed. As such, it must comply with the following rules:
 
 - **Clarity:** The title should accurately reflect the content of the commit.
-- **Naming Convention:** It must follow the project's naming standard—PascalCase, in our case.
+- **Naming Convention:** It must follow the project's naming standard—PascalCase, in this case.
 - **Professionalism:** Even if the commit is made in a document branch, the title should be free of grammar mistakes and written in clear, understandable language.
 
 > [!NOTE]
 > Additionally, titles should not exceed 50 characters. They must describe the action taken (using a verb) and include the name of the feature or file affected.
 
-##### B. Commit Body
+##### B. Commit Body <!-- omit in toc -->
 
 The body of a commit provides a more detailed explanation of the changes and, like the title, must follow specific guidelines:
 
@@ -223,7 +181,7 @@ The body of a commit provides a more detailed explanation of the changes and, li
 > [!NOTE]
 > The body can also contain specific keywords that can interact with the repository, such as adding co-authors, closing issues, etc. They can be found [there](https://GitHub.com/FlowingCode/DevelopmentConventions/blob/main/conventional-commits.md/#5-Footer) in the footer section.
 
-##### C. Examples
+##### C. Examples <!-- omit in toc -->
 
 This is a template for a correct commit:
 
@@ -237,14 +195,14 @@ This is a template for a correct commit:
 
 ```
 
-#### 4.3.2 GitHub Comments
+#### 4.3.2 GitHub Comments <!-- omit in toc -->
 
 We follow GitHub standards to enhance readability, but without comments, understanding the commits can take longer than necessary.
 
 To ensure that other team members can **collaborate effectively** and to support long-term maintenance, comments are essential.
 Team members have to **follow the same rules** said before for the comment section to ensure the workflow stays understandable.
 
-### 4.5 File and folder architecture
+### 4.4 File and folder architecture
 
 ```bash
  2024-2025-project-5-bubble-intermarche-team-3
@@ -327,7 +285,7 @@ This is the **section where the technical aspect of the project** will be explai
 
 Based on the mockups approved by the client, the front end will include the following pages:
 
-#### A. **Main Page**
+#### A. Main Page <!-- omit in toc -->
 
 The main page allows users to view and interact with highlighted products.
 
@@ -341,7 +299,7 @@ The main page allows users to view and interact with highlighted products.
 
 ---
 
-#### B. **Filter Page**
+#### B. Filter Page <!-- omit in toc -->
 
 This page lets users filter products based on specific criteria.
 
@@ -359,7 +317,7 @@ For example, if the user is looking for red wine, every unique ID with the Redwi
 
 ---
 
-#### C. **Research Page**
+#### C. Research Page <!-- omit in toc -->
 
 The Research Page enables users to browse products based on their search or filter.
 
@@ -373,7 +331,7 @@ The Research Page enables users to browse products based on their search or filt
 
 ---
 
-#### D. **Product Page**
+#### D. Product Page <!-- omit in toc -->
 
 This page shows detailed information about a selected product.
 
@@ -387,7 +345,7 @@ This page shows detailed information about a selected product.
 
 ---
 
-#### E. **Favorites Page**
+#### E. Favorites Page <!-- omit in toc -->
 
 The favorites page allows users to manage their saved products.
 
@@ -412,9 +370,9 @@ The application will have all the pages interconnected so you can access them an
 
 ### 1.3 Backend Overview (Workflow)
 
-Bubble's workflow is the brain behind the intuitive user interface. You can see it as the backend of the project. Bubble workflows are mainly composed of:
+Bubble's workflow is the brain behind the intuitive user interface. This is the section where is located the backend of the project. Bubble workflows are mainly composed of:
 
-#### A. Trigger/Event
+#### A. Trigger/Event <!-- omit in toc -->
 
 The trigger event is a block that starts the workflow, such as:
 
@@ -424,7 +382,7 @@ The trigger event is a block that starts the workflow, such as:
 - A custom event.
 - An API workflow.
 
-#### B. Series of Actions
+#### B. Series of Actions <!-- omit in toc -->
 
 These are executed sequentially, for example:
 
@@ -432,7 +390,7 @@ These are executed sequentially, for example:
 - Make an API call (to Firebase, for example).
 - Show an element or “Navigate to another page”.
 
-#### C. Conditions
+#### C. Conditions <!-- omit in toc -->
 
 Each action can run only when certain conditions are met, e.g.:
 
@@ -647,13 +605,13 @@ Bubble uses a built-in, no-code database that stores data in "data types", which
   <img src="Images/BubbleDB.png" width="700" alt="Main Page">
 </p>
 
-#### A. Data Types
+#### A. Data Types <!-- omit in toc -->
 
-- These are the main entities in our app.
+- These are the main entities in the app.
 
 ```Example: User, Wine, Cheese, Pairing```
 
-#### B. Fields
+#### B. Fields <!-- omit in toc -->
 
 Each Data Type has fields — think of them as properties or attributes.
 
@@ -661,11 +619,11 @@ Types: text, number, date, yes/no, file, image, geographic address, another Data
 
 ```Example: Wine might have a field Type = red (text), Acidity Level = 4 (number)```
 
-#### C. Things
+#### C. Things <!-- omit in toc -->
 
 - A "Thing" is a single entry in a Data Type, like a single wine.
 
-#### D. Relationships
+#### D. Relationships <!-- omit in toc -->
 
 - Fields can reference other Data Types.
 
@@ -677,17 +635,17 @@ You can also have lists: e.g., User → SavedPairings (list of Pairings).
 
 ### 2.3 API database
 
-Because Bubble database's **is limited**, we decided to use an API to upload our database and **bypass this limit**. We decided to use [Firebase](https://firebase.google.com/) to create our own API dataset.
+Because Bubble database's **is limited**, we decided to use an API to upload the database and **bypass this limit**. We decided to use [Firebase](https://firebase.google.com/) to create our own API dataset.
 
-#### A. Data Pull
+#### 2.3.1. Data Pull <!-- omit in toc -->
 
-##### A.1. Data Isn’t Stored in Bubble
+##### A. Data Isn’t Stored in Bubble <!-- omit in toc -->
 
 **You're not creating Bubble database entries** (like internal records). Instead, you’re pulling data from Firebase, showing it in the app, or sending data back to Firebase.
 
 It’s a live connection, so every time you show or update something, it makes an API call (unless you manually store it in Bubble’s database).
 
-##### A.2 API Connector
+##### B. API Connector <!-- omit in toc -->
 
 The API Connector lets you define requests to external APIs (like the Firebase API we created):
 
@@ -695,7 +653,7 @@ The API Connector lets you define requests to external APIs (like the Firebase A
 
 - **POST/PATCH/DELETE** requests write or modify data in Firebase.
 
-##### A.3 Data Usage
+##### C. Data Usage <!-- omit in toc -->
 
 Works in one way unless you store it. Bubble can display this external data directly, but:
 
@@ -705,7 +663,7 @@ Works in one way unless you store it. Bubble can display this external data dire
 
 You’ll often want to **transform or cache** this data locally for performance or UI needs.
 
-##### A.4 Data Connection to Bubble
+##### D. Data Connection to Bubble <!-- omit in toc -->
 
 With Firebase, data is protected via Firebase **security rules**. Which are separate from Bubble’s privacy system:
 You must handle:
@@ -714,14 +672,14 @@ You must handle:
 
 - **API key permissions**.
 
-#### B. Data Push
+#### 2.3.2 Data Push <!-- omit in toc -->
 
 In Firebase (specifically Cloud Firestore), you can **modify/add** elements to the database by:
 
 - Creating a new document in a collection or updating an existing document.
 This is done by making a **POST or PATCH HTTP** request to Firebase’s REST endpoint, depending on whether you're creating or updating.
   
-##### B.1. How This Maps in Bubble
+##### A. How This Maps in Bubble <!-- omit in toc -->
 
 You can set, using the **API Connector plugin**, the api connection between **Bubble and Firebase**. The API is integrated following these patterns:
 
@@ -737,7 +695,7 @@ Headers:
 
 Body: ```Raw JSON```
 
-#### C. Unique ID
+#### B. Unique ID <!-- omit in toc -->
 
 In Firebase, every element will have an ID automatically generated, which will be the core for data retrieval.
 The Unique ID will be linked to a product, and we will be able to call it and filter it using Bubble's functions.
@@ -756,44 +714,44 @@ Bubble is built on an architecture designed to ensure high performance, security
 - RESTful APIs: Facilitate communication between different services within the application.
 - Node.js: Runs server-side JavaScript code to handle backend logic.
 
-#### A. Visual Editor (Design Tab)
+#### A. Visual Editor (Design Tab) <!-- omit in toc -->
 
 - Drag-and-drop UI builder for creating responsive layouts.
 - Pre-built elements: text, buttons, inputs, repeating groups, icons, images, etc.
 - Custom styling via Bubble's style manager.
 
-#### B. Workflow Editor
+#### B. Workflow Editor <!-- omit in toc -->
 
 - Logic engine to handle actions and events (e.g., when a button is clicked, sign up a user, navigate, show a message).
 - Conditions and triggers (e.g., "Only when...").
 
-#### C. Database (Data Tab)
+#### C. Database (Data Tab) <!-- omit in toc -->
 
 - Built-in database for creating and managing custom data types (like tables) and fields.
 - Includes a dev and live database, and supports privacy rules.
 
-#### D. Plugins
+#### D. Plugins <!-- omit in toc -->
 
 - Extend functionality with third-party or Bubble-made plugins (e.g., API connector, Style animations, etc...).
 
 > [!Note]
 > You can also create your own plugins if needed.
 
-#### E. API Connector
+#### E. API Connector <!-- omit in toc -->
 
 - Allows you to connect to external APIs (RESTful APIs) without writing code.
 - Define API calls and use them in workflows or data sources.
 
-#### F. Responsive Engine
+#### F. Responsive Engine <!-- omit in toc -->
 
 - Helps design layouts that adapt to different screen sizes.
 - Use conditionals and breakpoints to tweak mobile/tablet/desktop experiences.
 
-#### G. Custom States
+#### G. Custom States <!-- omit in toc -->
 
 - Store temporary data on the front end (like UI state) without writing to the database.
 
-#### H. Version Control & Deployment
+#### H. Version Control & Deployment <!-- omit in toc -->
 
 - Built-in version control, including autosave and deployment from dev to live.
 - Ability to create “development versions” for testing.
@@ -801,7 +759,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 - Fine-grained privacy controls for data access.
 - Set rules per data type for who can view/edit/delete entries.
 
-#### I. SEO and Hosting
+#### I. SEO and Hosting <!-- omit in toc -->
 
 - Built-in hosting, with options to add meta tags, custom domains, and SSL.
 - Support for SEO-friendly URLs and content.
@@ -810,7 +768,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 
 In order for the application to work offline, Bubble must work offline after loading for the first time, the main elements. Here is a list of what will and will not work offline.
 
-#### 3.2.1 Initial Content Load
+#### 3.2.1 Initial Content Load <!-- omit in toc -->
 
 When a user first visits your app:
 
@@ -818,7 +776,7 @@ When a user first visits your app:
 
 This means static content (like images or previously loaded pages) might still be visible if the user loses connection after the app has loaded.
 
-#### 3.2.2 Data & Workflows
+#### 3.2.2 Data & Workflows <!-- omit in toc -->
 
 However:
 
@@ -884,41 +842,41 @@ The scanner is using the ITM8 naming system of Intermarché. It means that this 
 
 ## 6. Bubble Limitations
 
-### A. Performance and Scalability
+### A. Performance and Scalability <!-- omit in toc -->
 
 - Slower than code: Apps built on Bubble can be slower than those built with traditional coding, especially under heavy user load or with complex workflows.
 - Limited backend control: You don’t have full access to the server infrastructure, which can restrict optimization.
 
-### B. Platform Dependency
+### B. Platform Dependency <!-- omit in toc -->
 
 - Proprietary system: Your app is tied to Bubble. Migrating away from Bubble (e.g., to a custom codebase) can be difficult and time-consuming.
 - No access to source code: You can’t export your app as traditional code, which limits flexibility and control.
 
-### C. Design & UI Constraints
+### C. Design & UI Constraints <!-- omit in toc -->
 
 - Less pixel-perfect control: While Bubble offers a visual editor, it can be hard to match customized or complex UI designs with precision.
 - Responsiveness issues: Making apps responsive across devices (especially mobile) can be tricky and time-consuming.
 
-### D. Logic Limitations
+### D. Logic Limitations <!-- omit in toc -->
 
 - Workflow complexity: Workflows can get messy and hard to manage or debug.
 - Limited debugging tools: Bubble’s built-in debugger is basic compared to traditional development environments, which can make troubleshooting more difficult.
 
-### E. Cost Considerations
+### E. Cost Considerations <!-- omit in toc -->
 
 - Pricing scales: As your app grows in terms of users, data, or features, Bubble’s pricing can become expensive compared to hosting a custom-coded app.
 - Third-party plugin dependence: Many advanced features rely on paid or community-built plugins, which may not always be free.
 
-### F. Security
+### F. Security <!-- omit in toc -->
 
 - Limited control over security implementation: Bubble handles much of the security for you, but this means you can't fully customize security protocols.
 - No custom server logic: Implementing sensitive or custom backend logic may not be possible without using external services.
 
-### G. API and Integration Limitations
+### G. API and Integration Limitations <!-- omit in toc -->
 
 - Limited flexibility with APIs: While Bubble supports REST and some others, integrating with complex or non-standard APIs may require more work.
 
-### H. Not Ideal for Certain Use Cases
+### H. Not Ideal for Certain Use Cases <!-- omit in toc -->
 
 - Real-time apps with heavy data sync may hit performance bottlenecks.
 - Highly specialized features or unique algorithms may not be easily implemented without external code or services.
@@ -985,7 +943,7 @@ By following these practices, the application will be built to scale, perform ef
 
 Below is a list of potential enhancements that could be considered for future development:
 
-- **Upgrading to a better plan in Bubble:** We are currently running on the free version of Bubble to present to you our application, but Bubble offers various paid plans, including useful features that remove the limitations we had during this project.
+- **Upgrading to a better plan in Bubble:** We are currently running on the free version of Bubble to present to you the application, but Bubble offers various paid plans, including useful features that remove the limitations we had during this project.
 - **Generalisation of the project:** Making it possible to link more Intermarché stores to enhance the French culture in other touristic regions of France.
 - **Real-time stock count:** We could implement, using a real-time database of the product availability, create a tracking system to warn the user if the product they want is unavailable in the store they want to go to.
 - **Personalized Recommendations:** Learn from user behavior: saved pairings, ratings, dislikes. Offering tailored suggestions based on past activity or taste preferences.
@@ -998,6 +956,9 @@ Below is a list of potential enhancements that could be considered for future de
 | Term | Explanation |
 |------|-------------|
 | **Bubble** | A no-code  development platform used to create applications without traditional programming. |
+| **AOP (Appellation d’Origine Protégée)** | An European Union certification ensuring that a product is produced, processed, and prepared in a specific geographic area using recognized know-how. |
+| **IGP (Indication Géographique Protégée)** | This designation means that at least one stage of production (either production, processing, or preparation) occurs in the designated geographic area. |
+| **AOC (Appellation d’Origine Contrôlée)** | This is the French national certification that predates AOP. It ensures that products are made according to strict regional and traditional standards. |
 | **API Connector** | A plugin in Bubble used to define and manage external API calls from within the no-code editor. |
 | **API (Application Programming Interface)** | A way for applications to communicate and exchange data; used here to connect Bubble with Firebase. |
 | **Firebase** | A backend-as-a-service platform by Google, used in this project to host the external database. |

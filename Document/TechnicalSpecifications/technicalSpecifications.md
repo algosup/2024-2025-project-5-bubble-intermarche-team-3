@@ -14,7 +14,7 @@
 
 This project's documents are registered under the [MIT License](https://en.wikipedia.org/wiki/MIT_License) that you can find in the [MIT License](./LICENSE.md) file.
 
-You can find the changelog of the document [here](./Document/TechnicalSpecifications/changeLog.md)
+You can find the changelog of the document [here](./changeLog.md)
 
 ## Table of Content <!-- omit in toc -->
 

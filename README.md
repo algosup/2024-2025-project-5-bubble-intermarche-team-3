@@ -1,6 +1,6 @@
 # 🧀🍷 Intermarché Wine & Cheese Pairing Web App
 
-Welcome to the official repository for the **Intermarché Wine & Cheese Pairing Web Application** – a mobile-friendly digital sommelier built with Bubble for Intermarché Saint-Rémy-de-Provence.
+Welcome to the official repository for the **Intermarché Wine & Cheese Pairing Web Application** – a mobile-friendly digital sommelier, built with Bubble for the Intermarché of Saint-Rémy-de-Provence.
 This application provides personalized wine and cheese recommendations based on selected recipes, ingredients, or scanned barcodes. Designed for quick in-store use, it requires no installation and works offline after initial load. Targeted primarily at tourists and local customers, the app supports both French and English.
 
 ---
@@ -31,8 +31,8 @@ Everything is designed to deliver a seamless, engaging, and fast experience that
 
 ## 📍 Instructions
 
-To launch the Application, just open it on your smartphone or scan the following QR-CODE.
-To see the futher requirements for this project, you can check the [User Manual](./UserManual/Document/userManual.pdf).
+To launch the application, just open it on your smartphone or scan the following QR CODE.
+To see the further requirements for this project, you can check the [User Manual](./UserManual/Document/userManual.pdf).
 
 ---
 
@@ -70,7 +70,7 @@ Each directory corresponds to a project role with related documentation and asse
 - 📋 [Functional Specifications](./Document/FunctionalSpecification/functionalSpecification.md)
 - 🔧 [Technical Specifications](./Document/TechnicalSpecifications/technicalSpecifications.md)
 - 🧪 [Test Plan & QA](./Document/QualityAssurance)
-- 📘 [User Manual](./Document/UserManual)
+- 📘 [User Manual](./Document/UserManual/userManual.pdf)
 - 📚 [Management](./Document/Management/Document)
 
 ---

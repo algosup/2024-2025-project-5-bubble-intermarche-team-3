@@ -281,7 +281,7 @@ The testing process ensures that the web app is outlined clearly by the client's
 |---------------|-------------|---------|--------|
 | [Test Plan](/Document/QualityAssurance/TestPlan/testPlan.md) | Complete test strategy and approach | Guide the testing process | QA Lead |
 | [Test Cases](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=517605026#gid=517605026) | Detailed test scenarios and steps | Execute testing activities | QA Team |
-| [Requirement Traceability Matrix](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=0#gid=0) | Maps requirements to test casesnd tracks coverage | Ensure all requirements are tested and validated | QA Team |
+| [Requirement Traceability Matrix](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=0#gid=0) | Maps requirements to test cases and tracks coverage | Ensure all requirements are tested and validated | QA Team |
 | [Test Results](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=559831432#gid=559831432) | Results of test execution | Track testing progress | QA Team |
 | [Bug Reports](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=1758071504#gid=1758071504) | Detailed defect documentation | Track and resolve issues | QA Team |
 

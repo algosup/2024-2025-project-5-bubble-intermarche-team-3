@@ -126,7 +126,7 @@ Our team uses multiple machines to work on this project, such as:
 
 During this project, we will use:
 
-- [Bubble](https://bubble.io/home/): Bubble is a web interface making tool and a PaaS developed by Bubble Group that allows users to create their web application while using building block. It can be used by people with limited or no programming experience to make pages.
+- [Bubble](https://bubble.io/home/): Bubble is a web interface making tool and a PaaS developed by Bubble Group that allows users to create their web application while using building blocks. It can be used by people with limited or no programming experience to make pages.
 
 - Bubble plugins:
   - Barcode scanner: A barcode scanner that will allow you to scan from any camera on your device! You can choose the camera from a list enumerated from your device and use that to scan barcodes, or choose 'Front' or 'Back' and allow the plugin to find the correct camera.
@@ -370,7 +370,7 @@ The application will have all the pages interconnected so you can access them an
 
 ### 1.3 Backend Overview (Workflow)
 
-Bubble's workflow is the brain behind the intuitive user interface. This is the section where is located the backend of the project. Bubble workflows are mainly composed of:
+Bubble's workflow is the brain behind the intuitive user interface. This is the section where the backend of the project is located. Bubble workflows are mainly composed of:
 
 #### A. Trigger/Event <!-- omit in toc -->
 
@@ -593,7 +593,7 @@ This is the core class for all wine-related items.
 
 **Origin**: Describes the wine’s geographic origin and image, used in both Wine and Cheese classes. This adds reusability and consistency.
 
-The subcategories are connected together to those two categories, allowing the user to find the best wine/cheese combination when checking one of the criteria given.
+The subcategories are connected to those two categories, allowing the user to find the best wine/cheese combination when checking one of the criteria given.
 
 ---
 
@@ -766,7 +766,7 @@ Bubble is built on an architecture designed to ensure high performance, security
 
 ### 3.2 Bubble Offline usage
 
-In order for the application to work offline, Bubble must work offline after loading for the first time, the main elements. Here is a list of what will and will not work offline.
+For the application to work offline, Bubble must work offline after loading for the first time with the main elements. Here is a list of what will and will not work offline.
 
 #### 3.2.1 Initial Content Load <!-- omit in toc -->
 
@@ -955,8 +955,8 @@ Below is a list of potential enhancements that could be considered for future de
 
 | Term | Explanation |
 |------|-------------|
-| **Bubble** | A no-code  development platform used to create applications without traditional programming. |
-| **AOP (Appellation d’Origine Protégée)** | An European Union certification ensuring that a product is produced, processed, and prepared in a specific geographic area using recognized know-how. |
+| **Bubble** | A no-code development platform used to create applications without traditional programming. |
+| **AOP (Appellation d’Origine Protégée)** | A European Union certification ensuring that a product is produced, processed, and prepared in a specific geographic area using recognized know-how. |
 | **IGP (Indication Géographique Protégée)** | This designation means that at least one stage of production (either production, processing, or preparation) occurs in the designated geographic area. |
 | **AOC (Appellation d’Origine Contrôlée)** | This is the French national certification that predates AOP. It ensures that products are made according to strict regional and traditional standards. |
 | **API Connector** | A plugin in Bubble used to define and manage external API calls from within the no-code editor. |

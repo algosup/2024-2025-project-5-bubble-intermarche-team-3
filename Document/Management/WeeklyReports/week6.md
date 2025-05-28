@@ -1,4 +1,4 @@
-# Weekly Report - Week 6
+# Weekly Report - Week 6 ( May 26 - May 28 )
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Overview

@@ -71,7 +71,7 @@ Each directory corresponds to a project role with related documentation and asse
 - 🔧 [Technical Specifications](./Document/TechnicalSpecifications/technicalSpecifications.md)
 - 🧪 [Test Plan & QA](./Document/QualityAssurance)
 - 📘 [User Manual](./Document/UserManual/userManual.pdf)
-- 📚 [Management](./Document/Management/Document)
+- 📚 [Management](./Document/Management)
 
 ---
 

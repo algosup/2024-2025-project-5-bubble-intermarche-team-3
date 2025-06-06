@@ -1,4 +1,52 @@
+<div align="center">
+
 # Test Plan for team 3 bubble web app project
+</div>
+
+<details>
+<summary>Contents</summary>
+
+## Table of Contents
+
+- [Test Plan for team 3 bubble web app project](#test-plan-for-team-3-bubble-web-app-project)
+  - [Table of Contents](#table-of-contents)
+  - [1. Introduction](#1-introduction)
+    - [Purpose](#purpose)
+    - [Scope](#scope)
+    - [Objectives](#objectives)
+  - [2. Test Items](#2-test-items)
+    - [Features to be Tested](#features-to-be-tested)
+    - [Features Not to be Tested](#features-not-to-be-tested)
+  - [3. Testing Strategy](#3-testing-strategy)
+    - [Types of Testing](#types-of-testing)
+    - [Test Levels](#test-levels)
+  - [4. Test Environment](#4-test-environment)
+    - [Hardware \& Software Requirements](#hardware--software-requirements)
+    - [Network Conditions](#network-conditions)
+  - [5. Test Schedule](#5-test-schedule)
+    - [Milestones](#milestones)
+    - [Testing Phases](#testing-phases)
+  - [6. Test Deliverables](#6-test-deliverables)
+    - [Documentation Deliverables](#documentation-deliverables)
+    - [Quality Metrics](#quality-metrics)
+  - [7. Roles and Responsibilities](#7-roles-and-responsibilities)
+    - [Team Members and Responsibilities](#team-members-and-responsibilities)
+    - [Responsibility Matrix](#responsibility-matrix)
+  - [8. Defect Management](#8-defect-management)
+    - [Defect Lifecycle](#defect-lifecycle)
+    - [Severity Levels](#severity-levels)
+    - [Priority Levels](#priority-levels)
+    - [Defect Reporting Process](#defect-reporting-process)
+  - [9. Risks and Mitigation](#9-risks-and-mitigation)
+    - [Risk Assessment Table](#risk-assessment-table)
+    - [Risk Monitoring](#risk-monitoring)
+  - [10. Approval](#10-approval)
+    - [Test Plan Approval](#test-plan-approval)
+    - [Revision History](#revision-history)
+
+
+</details>
+
 
 ## 1. Introduction
 
@@ -279,9 +327,9 @@ The testing process ensures that the web app is outlined clearly by the client's
 
 | Document Type | Description | Purpose | Owner |
 |---------------|-------------|---------|--------|
-| [Test Plan](Testplan.md) | Complete test strategy and approach | Guide the testing process | QA Lead |
+| [Test Plan](/Document/QualityAssurance/TestPlan/testPlan.md) | Complete test strategy and approach | Guide the testing process | QA Lead |
 | [Test Cases](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=517605026#gid=517605026) | Detailed test scenarios and steps | Execute testing activities | QA Team |
-| [Requirement Traceability Matrix](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=0#gid=0) | Maps requirements to test casesnd tracks coverage | Ensure all requirements are tested and validated | QA Team |
+| [Requirement Traceability Matrix](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=0#gid=0) | Maps requirements to test cases and tracks coverage | Ensure all requirements are tested and validated | QA Team |
 | [Test Results](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=559831432#gid=559831432) | Results of test execution | Track testing progress | QA Team |
 | [Bug Reports](https://docs.google.com/spreadsheets/d/1FRRR-pqVDcpOtigRMEDFn3zRUcitUpOYr0SL9AV_RSU/edit?gid=1758071504#gid=1758071504) | Detailed defect documentation | Track and resolve issues | QA Team |
 
@@ -427,9 +475,9 @@ By signing below, stakeholders acknowledge they have reviewed and approved this 
 | Role              | Name                   | Signature          | Date |
 |-------------------|------------------------|--------------------|------|
 | Quality Assurance | Tsangue Vivien Bistrel | _______TCVB_______ | __05__/__14__/__2025__ |
-| Program Manager   | Camille GAYAT          | __________________ | ____/____/__2025__ |
-| Project Manager   | Léna DE GERMAIN        | __________________ | ____/____/__2025__ |
-| Technical Lead    | Julian REINE           | __________________ | ____/____/__2025__ |
+| Program Manager   | Camille GAYAT          | ________CG________ | __06__/__06__/__2025__ |
+| Project Manager   | Léna DE GERMAIN        | ________LNG________ | __06__/__06__/__2025__ |
+| Technical Lead    | Julian REINE           | ________JR________ | __06__/__06__/__2025__ |
 
 ### Revision History
 
@@ -437,3 +485,4 @@ By signing below, stakeholders acknowledge they have reviewed and approved this 
 |---------|------------|------------------------|------------------------|
 | 1.0     | 05/14/2025 | Tsangue Vivien Bistrel | Baseline version       |
 | 1.1     | 05/19/2025 | Tsangue Vivien Bistrel | Ameliorated version    |
+| 1.2     | 06/06/2025 | Tsangue Vivien Bistrel | Latest version         | 

@@ -7,7 +7,7 @@ This week, we completed the main documents, improved the recommendation system, 
 ## Accomplishments
 
 - Document 
-   - The Technical Specifications are done.
+   - The Technical Specifications is done.
    - The User Manual has been completed.
    - The README has been finished.
 

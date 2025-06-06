@@ -7,9 +7,8 @@
 **Document Edited by:** Léna<br>
 **Last Time Modified:** 05/21/2025
 
-</div>
-
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+</div>
 
 ## Project definition
 This project aims to create a web application that recommends which wine or cheese to pair with a dish.
@@ -90,9 +89,10 @@ Finally, we will deliver a 15-minute presentation of our work to the clients.
 
 - **Budget**: €0 (No external funding)
 - **Team:** 6 members
-- **Work Hours:** -- half-days of 3 hours and 15 minutes each
+- **Work Hours:** 40 half-days of 3 hours and 15 minutes each
 
-**Total estimated working hours :** 13h00 hours(Currently)
+**Total estimated working hours :** 130hh00 hours
+
 ## Risks
 
 |Type|Description|Likelihood|Impact|Mitigation Strategy|

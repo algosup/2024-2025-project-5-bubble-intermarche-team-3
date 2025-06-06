@@ -1,4 +1,52 @@
+<div align="center">
+
 # Test Plan for team 3 bubble web app project
+</div>
+
+<details>
+<summary>Contents</summary>
+
+## Table of Contents
+
+- [Test Plan for team 3 bubble web app project](#test-plan-for-team-3-bubble-web-app-project)
+  - [Table of Contents](#table-of-contents)
+  - [1. Introduction](#1-introduction)
+    - [Purpose](#purpose)
+    - [Scope](#scope)
+    - [Objectives](#objectives)
+  - [2. Test Items](#2-test-items)
+    - [Features to be Tested](#features-to-be-tested)
+    - [Features Not to be Tested](#features-not-to-be-tested)
+  - [3. Testing Strategy](#3-testing-strategy)
+    - [Types of Testing](#types-of-testing)
+    - [Test Levels](#test-levels)
+  - [4. Test Environment](#4-test-environment)
+    - [Hardware \& Software Requirements](#hardware--software-requirements)
+    - [Network Conditions](#network-conditions)
+  - [5. Test Schedule](#5-test-schedule)
+    - [Milestones](#milestones)
+    - [Testing Phases](#testing-phases)
+  - [6. Test Deliverables](#6-test-deliverables)
+    - [Documentation Deliverables](#documentation-deliverables)
+    - [Quality Metrics](#quality-metrics)
+  - [7. Roles and Responsibilities](#7-roles-and-responsibilities)
+    - [Team Members and Responsibilities](#team-members-and-responsibilities)
+    - [Responsibility Matrix](#responsibility-matrix)
+  - [8. Defect Management](#8-defect-management)
+    - [Defect Lifecycle](#defect-lifecycle)
+    - [Severity Levels](#severity-levels)
+    - [Priority Levels](#priority-levels)
+    - [Defect Reporting Process](#defect-reporting-process)
+  - [9. Risks and Mitigation](#9-risks-and-mitigation)
+    - [Risk Assessment Table](#risk-assessment-table)
+    - [Risk Monitoring](#risk-monitoring)
+  - [10. Approval](#10-approval)
+    - [Test Plan Approval](#test-plan-approval)
+    - [Revision History](#revision-history)
+
+
+</details>
+
 
 ## 1. Introduction
 

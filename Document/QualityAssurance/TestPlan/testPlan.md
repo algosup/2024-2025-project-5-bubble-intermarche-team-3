@@ -427,9 +427,9 @@ By signing below, stakeholders acknowledge they have reviewed and approved this 
 | Role              | Name                   | Signature          | Date |
 |-------------------|------------------------|--------------------|------|
 | Quality Assurance | Tsangue Vivien Bistrel | _______TCVB_______ | __05__/__14__/__2025__ |
-| Program Manager   | Camille GAYAT          | __________________ | ____/____/__2025__ |
-| Project Manager   | Léna DE GERMAIN        | __________________ | ____/____/__2025__ |
-| Technical Lead    | Julian REINE           | __________________ | ____/____/__2025__ |
+| Program Manager   | Camille GAYAT          | ________CG________ | __06__/__06__/__2025__ |
+| Project Manager   | Léna DE GERMAIN        | ________LNG________ | __06__/__06__/__2025__ |
+| Technical Lead    | Julian REINE           | ________JR________ | __06__/__06__/__2025__ |
 
 ### Revision History
 
@@ -437,3 +437,4 @@ By signing below, stakeholders acknowledge they have reviewed and approved this 
 |---------|------------|------------------------|------------------------|
 | 1.0     | 05/14/2025 | Tsangue Vivien Bistrel | Baseline version       |
 | 1.1     | 05/19/2025 | Tsangue Vivien Bistrel | Ameliorated version    |
+| 1.2     | 06/06/2025 | Tsangue Vivien Bistrel | Latest version         | 

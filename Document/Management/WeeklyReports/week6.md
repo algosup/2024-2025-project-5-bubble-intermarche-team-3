@@ -12,7 +12,7 @@ This week, we completed the main documents, improved the recommendation system, 
    - The README has been finished.
 
 - Filter / Recommendation system
-   - The user can get a dish using the current wine and get wine using the current cheese.
+   - The user can get a dish using the current wine, and get wine using the current cheese.
    - The search bar was finished.
 
 - Database

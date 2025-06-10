@@ -5,7 +5,7 @@
 **Project Name:** Bubble Intermarché <br>
 **Team:** Team 3  
 **Document Edited by:** Léna<br>
-**Last Time Modified:** 05/21/2025
+**Last Time Modified:** 06/06/2025
 
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 </div>
@@ -91,7 +91,7 @@ Finally, we will deliver a 15-minute presentation of our work to the clients.
 - **Team:** 6 members
 - **Work Hours:** 40 half-days of 3 hours and 15 minutes each
 
-**Total estimated working hours :** 130hh00 hours
+**Total estimated working hours :** 130h00 hours
 
 ## Risks
 

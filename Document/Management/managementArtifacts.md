@@ -5,12 +5,11 @@
 **Project Name:** Bubble Intermarché <br>
 **Team:** Team 3  
 **Document Edited by:** Léna<br>
-**Last Time Modified:** 05/28/2025
-
-</div>
+**Last Time Modified:** 06/06/2025
 
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
+</div>
 
 ## Tasks & Schedule
 You can view the breakdown of all the tasks we've identified for the duration of the project by following this [link](https://docs.google.com/spreadsheets/d/19kDQ7eyevCwGY1Zy2LTZ4uv7LgyCFmX7ltNaZI7dZR4/edit?usp=sharing).
@@ -43,10 +42,15 @@ Legend:
 | /      | /           | No interaction with this role for this task     |
 
 
-
-
-
 ## Risks & Assumptions
+
+|ID|Description|Consequence|Impact|Likelihood|Mitigation/Avoidance|
+|-|-|-|-|-|-|
+|1||||||
+|2||||||
+
+
+
 ## Key Performance Indicators
 ## Weekly Reports
 The weekly reports folder can be found by following this [link](./WeeklyReports/).
@@ -64,7 +68,7 @@ To have direct access to each weekly report, click on the links below :
 
 Follow this [link](./WeeklyReports/cumulative.md) to access all reports in one file.
 
-## Post Mortem 
+## Post Mortem
 You can access our Post Mortem Analysis with this [link](postMortem.md).
 
 ## Addendum

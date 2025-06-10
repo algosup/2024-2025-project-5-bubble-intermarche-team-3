@@ -22,12 +22,12 @@ This week, we focused more on the Database.
 
 ## Plan for Next Week
 
-- Document 
+1. Document 
    - A last review of the Technical Specifications.
    - The User Manual should be complete.
    - The README should be done.
 
-- Filter / Recommendation system
+2. Filter / Recommendation system
    - The user can get a dish using the current wine and get wine using the current cheese.
 
 ## Conclusion

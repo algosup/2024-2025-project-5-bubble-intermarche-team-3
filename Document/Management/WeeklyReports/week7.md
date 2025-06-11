@@ -9,7 +9,7 @@ This week was quick and short, allowing us to concentrate on some specific aspec
 1. Document
    - The Test Plan is done.
 2. Filter
-   - The filter was almost done and needs some upgrades regarding the tags.
+   - The filter of the web application was almost done and needs some upgrades regarding the tags.
 
 
 ## Challenges

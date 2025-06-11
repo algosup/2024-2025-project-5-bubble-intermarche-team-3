@@ -5,11 +5,30 @@
 **Project Name:** Bubble Intermarché <br>
 **Team:** Team 3  
 **Document Edited by:** Léna<br>
-**Last Time Modified:** 06/06/2025
+**Last Time Modified:** 06/11/2025
 
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 </div>
+
+## Table Of Contents
+
+<details>
+<summary>Table Of Contents</summary>
+
+- [Tasks & Schedule](#tasks--schedule)
+- [RACI Matrix](#raci-matrix)
+- [Risks & Assumptions](#risks--assumptions)
+- [Key Performance Indicators](#key-performance-indicators)
+    - [Definition of our KPIs](#definition-of-our-kpis)
+    - [Link to the project's KPIs](#link-to-the-projects-kpis)
+- [Weekly Reports](#weekly-reports)
+- [Post Mortem](#post-mortem)
+- [Addendum](#addendum)
+- [Differences Between Gantt Chart and Actual Schedule](#differences-between-gantt-chart-and-actual-schedule)
+
+
+</details>
 
 ## Tasks & Schedule
 You can view the breakdown of all the tasks we've identified for the duration of the project by following this [link](https://docs.google.com/spreadsheets/d/19kDQ7eyevCwGY1Zy2LTZ4uv7LgyCFmX7ltNaZI7dZR4/edit?usp=sharing).
@@ -54,20 +73,84 @@ Legend:
 
 
 ## Key Performance Indicators
-#### Definition of our KPIs
+### Definition of our KPIs
 
 To keep track of the project's advancement, KPIs have been defined. These KPIs are listed below in their respective categories, along with the reasoning behind each.
 
-**Document**
+**Documents**
+
+The following KPIs are included in this section:
+
+- Functional specifications
+- Technical specifications
+- Test Plan
+- User Manual
+
+The progress of these documents is measured using the following formula:
+
+$$\text{percentage} = (\frac{\text{current number of sections}} {\text{total number of sections}})\times{100}$$
+Where :
+
+*current_number_of_sections:* The number of sections that are completely done.
+
+*total_number_of_sections:* The number of predefined sections in the document's outline, which may evolve.
 
 **Design**
 
+The KPIs in this section include:
+
+- First Mock-ups
+- Final Mock-up
+
+The percentage progress for these KPIs is calculated using this formula:
+
+$$\text{percentage} = (\frac{\text{current number of designed pages}} {\text{total number of pages to design}})\times{100}$$
+
+Where :
+
+- *current_number_of_pages_designed*: The number of pages that have been prototyped.
+- *total_number_of_pages_to_design*: The total number of pages planned to be designed during the project analysis.
+
+
 **Development**
+
+The KPIs in this section include:
+- Database
+- Filter
+- Design Page
+
+The percentage progress for these KPIs is calculated using this formula:
+
+$$\text{percentage} = (\frac{\text{the current number of tasks to do}} {\text{total number of tasks}})\times{100}$$
+
+Where :
+- *the_current_number_of_tasks_to_do*: It's the number of tasks done at the time.
+- *total_number_of_tasks*: 
+It's the number of small tasks to be done in total.
 
 **Human Resources**
 
+The following KPIs are tracked in this section:
+- Overtime
+- Unjustified Absence
+
+All this information is collected through a form, which is sent to each teammate at the end of every week.
+
 **Mood**
 
+In the weekly form, team members rate their mood for the week on a scale of 1 to 10.<br>
+
+To calculate the percentage of these KPIs, we add up all the team members' responses and compare the total to the maximum possible score.
+
+The percentage for these KPIs is calculated using this formula:
+$$\text{percentage} = (\frac{\text{total responses}} {\text{max possible score}})\times{100}$$
+
+Where :
+- *total responses* : the addition of all the team members' responses.
+- *max possible score* : the maximum possible score(10*team members' number).
+
+### Link to the Project's KPIs
+You can see our project's KPIs with this [link](https://docs.google.com/spreadsheets/d/17iFJ7PwWQSoVjTCaLwl_vrSgqzctjnoqISNAcJTo3TY/edit?gid=0#gid=0).
 
 ## Weekly Reports
 The weekly reports folder can be found by following this [link](./WeeklyReports/).

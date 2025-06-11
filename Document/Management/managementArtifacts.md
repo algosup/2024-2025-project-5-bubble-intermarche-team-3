@@ -37,7 +37,8 @@ This document has been created with Google Sheets to ensure keeping track of the
 
 ## RACI Matrix
 
-The RACI matrix of this project is as follows, considering the [Project Charter](projectCharter.md) :
+The RACI matrix for this project, based on the [Project Charter](./projectCharter.md).
+The RACI matrix helps clarify and assign responsibilities to team members according to their respective roles.
 
 | Name                     | Project Manager | Program Manager | Technical Leader | Software engineer | Quality assurance | Technical Writer | Client | Stakeholders |
 | ------------------------ | --------------- | --------------- | ---------------- | ----------------- | ----------------- | ---------------- | ------ | ------------ |

@@ -46,12 +46,29 @@ Legend:
 
 |ID|Description|Consequence|Impact|Likelihood|Mitigation/Avoidance|
 |-|-|-|-|-|-|
-|1||||||
-|2||||||
-
+|1|Misinterpretation of Requirements|Incorrect implementation of the software|High|Medium|Regular communication with the client|
+|2|The free version of Bubble does not have all features|We can't use all the potential of the web application|Medium|Medium|Find another solution and anticipate what we can or can't make with the tool|
+|3|The interface is not as comprehensive and intuitive as you might think|Make the product useless|High|Low|Regular testing with no-team-member|
+|4|Short weeks due to public holidays|Lack of time for the project|Low|Medium|Being well organized|
+|5|Team member leaving|Tasks left to the remaining members without any assignee|High|Medium|Sharing the tasks among the remaining team members|
 
 
 ## Key Performance Indicators
+#### Definition of our KPIs
+
+To keep track of the project's advancement, KPIs have been defined. These KPIs are listed below in their respective categories, along with the reasoning behind each.
+
+**Document**
+
+**Design**
+
+**Development**
+
+**Human Resources**
+
+**Mood**
+
+
 ## Weekly Reports
 The weekly reports folder can be found by following this [link](./WeeklyReports/).
 
@@ -72,3 +89,12 @@ Follow this [link](./WeeklyReports/cumulative.md) to access all reports in one f
 You can access our Post Mortem Analysis with this [link](postMortem.md).
 
 ## Addendum
+### Differences Between Gantt Chart and Actual Schedule
+
+The project schedule deviated from the initial Gantt Chart due to several factors, which will be explained in this section.
+
+Firstly, the team got a considerable head start on certain tasks, notably The Technical Specifications, which could be started immediately after finalization of the mock-up.
+
+Secondly, thanks to rigorous preparation and efficient fine-tuning from the outset of the project, everyone had a clear vision of the objectives. This enabled us to work more efficiently, to divide tasks optimally, and to help each other, which accelerated the pace compared with forecasts.
+
+Finally, some weeks were more complicated due to numerous absences, resulting in variations in productivity at different weeks.

@@ -1,4 +1,4 @@
-# Weekly Report - Week 7 ( June 9 - June 13 )
+# Weekly Report - Week 8 ( June 9 - June 13 )
 ![-](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ## Overview

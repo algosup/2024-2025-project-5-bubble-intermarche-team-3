@@ -458,4 +458,3 @@ This section will provide an overview of the workflow of the Bubble project to s
 2. The data will be sorted using the sortingList from the FirestoreDataProcessor wine.
 3. The sorted data will be displayed in the SearchPage under the Group SeachForSingleElement component.
 4. The bestChoice will be the first item of the sorting list split by(,):last item of sortingList.
-4. The bestChoice will be used to display the best choice of wine in the SearchPage.

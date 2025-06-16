@@ -35,6 +35,26 @@
       - [Group SeachForList From SeachBar + Filters](#group-seachforlist-from-seachbar--filters)
     - [Favorite Page](#favorite-page)
     - [Scanner Page](#scanner-page)
+  - [Workflow](#workflow)
+    - [CHEESE DATA FETCH + SORT](#cheese-data-fetch--sort)
+    - [DEBUG](#debug)
+    - [DELETE DATA](#delete-data)
+    - [DISH DATA FETCH + SORT](#dish-data-fetch--sort)
+    - [Favorite From Fav](#favorite-from-fav)
+    - [Favorite From Search Filtered](#favorite-from-search-filtered)
+    - [Favorites From Search](#favorites-from-search)
+    - [FilterMenu](#filtermenu)
+    - [FilterOptions](#filteroptions)
+    - [Indexes](#indexes)
+    - [Languages](#languages)
+    - [Loading](#loading)
+    - [Scanner](#scanner)
+    - [Search From Favorite](#search-from-favorite)
+    - [Search Indexes](#search-indexes)
+    - [Searching by Clicking Items](#searching-by-clicking-items)
+    - [Searching From Seach Filtered](#searching-from-seach-filtered)
+    - [Searching using the headerNavigation](#searching-using-the-headernavigation)
+    - [WINE DATA FETCH + SORT](#wine-data-fetch--sort)
 
 ## Project Overview
 
@@ -318,3 +338,124 @@ Since this Bubble project is a single-page application all the name mentioned af
 
 - **Group DetectedItem**:
   - scannerResult: text to keep track of the scanned item result
+
+## Workflow
+
+This section will provide an overview of the workflow of the Bubble project to show how the each components interacts with each other and how the data is handled.
+
+### CHEESE DATA FETCH + SORT
+
+1. When the FirebaseDataExtractor is used to fetch the cheese data, it will retrieve the data from the Firebase database.
+2. The data will be sorted using the sortingList from the FirestoreDataProcessor cheese.
+3. The sorted data will be displayed in the SearchPage under the Group SeachForSingleElement component.
+
+### DEBUG
+
+1. Refresh each FirebaseDataList when the page is loaded and the data :count is equal to 0.
+
+### DELETE DATA
+
+1. When a new current item is selected, the previous states stored in the SearchPage will be deleted.
+2. The SearchPage will reset the states to their default values.
+3. The SearchPage will then fetch the new data from the Firebase database and display it in the SearchPage under the Group SeachForSingleElement component.
+
+### DISH DATA FETCH + SORT
+
+1. When the FirebaseDataExtractor is used to fetch the dish data, it will retrieve the data from the Firebase database.
+2. The data will be sorted using the sortingList from the FirestoreDataProcessor dish.
+3. The sorted data will be displayed in the SearchPage under the Group SeachForSingleElement component.
+
+### Favorite From Fav
+
+1. When the user clicks on the favorite button in the CurrentItem, it will check if the item is already in the local storage.
+2. If the item is not in the local storage, it will add the item to the local storage and display the new icon.
+3. If the item is already in the local storage, it will remove the item from the local storage and display the old icon.
+
+### Favorite From Search Filtered
+
+1. When the user clicks on the favorite button in the SearchPage, it will check if the item is already in the local storage.
+2. If the item is not in the local storage, it will add the item to the local storage and display the new icon.
+3. If the item is already in the local storage, it will remove the item from the local storage and display the old icon.
+
+### Favorites From Search
+
+1. When the user clicks on the favorite button in the SearchPage, it will check if the item is already in the local storage.
+2. If the item is not in the local storage, it will add the item to the local storage and display the new icon.
+3. If the item is already in the local storage, it will remove the item from the local storage and display the old icon.
+
+### FilterMenu
+
+1. When the user clicks on the filter button in the HomePage, it will open the FilterMenu.
+2. The FilterMenu will display the available filters for the user to select.
+3. When the user selects a filter, it will update the FilterOptions in the HomePage.
+4. The FilterOptions will then be used to filter the data in the SearchPage.
+
+### FilterOptions
+
+1. The FilterOptions will be used to filter the data in the SearchPage.
+2. The FilterOptions will be updated when the user selects a filter in the FilterMenu.
+3. The FilterOptions will be used to filter the data in the SearchPage when the user clicks on the search button.
+
+### Indexes
+
+1. The Indexes will be used to navigate through the different pages of the Bubble project.
+2. The Indexes will be updated when the user clicks on the navigation buttons in the HomePage.
+3. The Indexes will be used to display the current page in the index.
+
+### Languages
+
+1. The Languages will be used to change the language of the Bubble project.
+2. The Languages will be updated when the user clicks on the change language button in the HomePage.
+3. The Languages will be used to display the available languages in the ListOfLanguages.
+
+### Loading
+
+1. The Loading will be used to display a loading animation when the data is being fetched from the Firebase database.
+2. The Loading will be displayed when the FirebaseDataExtractor is used to fetch the data.
+3. The Loading will be hidden when the data is fetched and displayed in the SearchPage.
+
+### Scanner
+
+1. The Scanner will be used to scan the bar code of the item.
+2. When the user clicks on the scanner button in the HomePage, it will open the ScannerPage.
+3. The ScannerPage will display the scanner and allow the user to scan the bar code.
+4. When the user scans the bar code, it will send the bar code to the DataProcessing to check the collection of the bar code.
+5. The DataProcessing will then search for the current item using the bar code and display it in the SearchCurrent component.
+
+### Search From Favorite
+
+1. When the user clicks on the search button in the FavoritePage, it will check if the item is already in the local storage.
+2. If the item is not in the local storage, it will add the item to the local storage and display the new icon.
+3. If the item is already in the local storage, it will remove the item from the local storage and display the old icon.
+
+### Search Indexes
+
+1. The Search Indexes will be used to display the results of the search in the SearchPage depending on the current search.
+2. The Search Indexes will be updated when the user clicks on the search button in the SearchPage.
+3. The Search Indexes will be used to display the current search in the index.
+
+### Searching by Clicking Items
+
+1. When the user clicks on an item it will change the currentSearch in the HomePage to the ID of the item.
+2. The SearchPage will then fetch the data from the Firebase database using the currentSearch.
+3. The SearchPage will display the data in the Group SeachForSingleElement component.
+
+### Searching From Seach Filtered
+
+1. When the user clicks on an item it will change the currentSearch in the HomePage to the ID of the item.
+2. The SearchPage will then fetch the data from the Firebase database using the currentSearch.
+3. The SearchPage will display the data in the Group SeachForSingleElement component.
+
+### Searching using the headerNavigation
+
+1. When the user clicks on the headerNavigation, it will change the currentSearch in the HomePage to the ID of the item.
+2. The SearchPage will then fetch the data from the Firebase database using the currentSearch.
+3. The SearchPage will display the data in the Group SeachForSingleElement component.
+
+### WINE DATA FETCH + SORT
+
+1. When the FirebaseDataExtractor is used to fetch the wine data, it will retrieve the data from the Firebase database.
+2. The data will be sorted using the sortingList from the FirestoreDataProcessor wine.
+3. The sorted data will be displayed in the SearchPage under the Group SeachForSingleElement component.
+4. The bestChoice will be the first item of the sorting list split by(,):last item of sortingList.
+4. The bestChoice will be used to display the best choice of wine in the SearchPage.

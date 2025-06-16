@@ -74,7 +74,7 @@ This document will provide a high-level overview of the logic and structure of t
 
 ### Meal Type / Wines Pairing
 
-![Meal Type / Wines Pairing](./img/meal-wine.png)
+![Meal Type / Wines Pairing](./img/mealWine.png)
 >[!NOTE]
 > The pairing system will be based on the image above.
 ---

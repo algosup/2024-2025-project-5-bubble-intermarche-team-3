@@ -32,7 +32,14 @@ Everything is designed to deliver a seamless, engaging, and fast experience that
 ## 📍 Instructions
 
 To launch the application, just open it on your smartphone or scan the following QR CODE.
-To see the further requirements for this project, you can check the [User Manual](./UserManual/Document/userManual.pdf).
+<div align="center">
+
+![qrcode](./Document/Flyer/QRcode.png)
+
+</div>
+
+To see the further requirements for this project, you can check the [User Manual](./Document/UserManual/userManual.pdf). <br>
+Also, you can see the application's flyers by clicking [here](./Document/Flyer/FlyerUS.png).
 
 ---
 
